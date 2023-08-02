@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mabdillahi8-healthybite-ta0er09e08h.ws-us102.gitpod.io']
+ALLOWED_HOSTS = ['8000-mabdillahi8-healthybite-gp3f7kz4n72.ws-us102.gitpod.io']
 
 
 # Application definition
@@ -85,10 +85,11 @@ WSGI_APPLICATION = 'healthy_bites.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
+print(DATABASES)
 
 
 # Password validation
