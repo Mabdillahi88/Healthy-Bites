@@ -1,1 +1,1 @@
-web: gunicorn healthy-bites.wsgi
+web: gunicorn healthy_bit.wsgi
