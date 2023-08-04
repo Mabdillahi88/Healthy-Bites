@@ -48,3 +48,14 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         related_name='comments'
         )
+    name = models.CharField(
+        max_length=50
+        )
+    email = models.EmailField()
+    body = models.TextField()
+    created_date = models.DateTimeField(
+        auto_now_add=True
+        )
+    approved = models.BooleanField(
+        default=False
+        )
