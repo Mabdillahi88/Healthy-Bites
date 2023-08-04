@@ -21,3 +21,12 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         related_name='blog_posts'
         )
+    created_date = models.DateTimeField(blank=True)
+    updated_date = models.DateTimeField()
+    content = models.TextField()
+    featured_image = CloudinaryField(
+        'image',
+        default='placeholder'
+        )
+    excerpt = models.TextField(blank=True)
+    status = models.IntegerField(choices=STATUS, default=0)
