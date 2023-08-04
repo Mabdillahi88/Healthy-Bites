@@ -30,3 +30,12 @@ class Post(models.Model):
         )
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ['-created_date']
+
+    def __str__(self):
+        return self.title
+
+    def like_count(self):
+        return self.likes.count()
