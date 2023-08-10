@@ -50,3 +50,14 @@ class PostDetail(View):
         else:
             comment_form = CommentForm()
 
+        return render(
+            request,
+            "blog_post.html",
+            {
+                "post": post,
+                "comments": comments,
+                "commented": True,
+                "comment_form": comment_form,
+                "liked": liked
+            },
+        )
