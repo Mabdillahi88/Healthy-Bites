@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mabdillahi8-healthybite-yj61u601jpj.ws-us102.gitpod.io', 'healthy-bites-f515e8b2d14a.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-mabdillahi8-healthybite-lbd3kubhal9.ws-us102.gitpod.io', 'healthy-bites-f515e8b2d14a.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
+    'crispy_forms',
     'blog',
 ]
 
@@ -57,6 +58,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
