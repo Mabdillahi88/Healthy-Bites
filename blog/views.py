@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib import messages  
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
-
 
 
 class PostList(generic.ListView):
@@ -33,8 +33,8 @@ class PostDetail(View):
                 'comment_form': CommentForm()
             },
         )
-    def post(self, request, slug, *args, **kwargs):
 
+    def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_date")
@@ -49,8 +49,9 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request, "Your comment has been added successfully!")  
         else:
-            comment_form = CommentForm()
+            messages.error(request, "There was an error adding your comment. Please try again.")  
 
         return render(
             request,
