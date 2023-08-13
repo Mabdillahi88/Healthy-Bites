@@ -140,3 +140,7 @@ body {
     border: none;
 }
 
+.footer-icon:hover {
+    color: #f47c60; /* Or any other highlight color you prefer */
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
