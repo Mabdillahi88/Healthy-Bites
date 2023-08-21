@@ -24,3 +24,20 @@ class TableAdmin(admin.ModelAdmin):
 # Admin configuration for managing bookings made by customers.
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
+    """
+    Admin interface for managing customer bookings. Provides functionalities
+    like searching, filtering, and confirming bookings.
+    """
+    # Fields to display in the list view, changed the order for distinctiveness
+    list_display = (
+        'user',
+        'name',
+        'phone',
+        'guest_count',
+        'status',
+        'table',
+        'requested_date',
+        'requested_time',
+        'created_date',
+        'id'
+    )
