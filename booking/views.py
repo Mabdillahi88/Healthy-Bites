@@ -56,3 +56,10 @@ class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
         print(f"Bookings for user {self.request.user.username}: {user_bookings}")
         
         return user_bookings
+
+class IndividualBookingModificationView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'modify_reservation_form.html'
+    success_message = 'Booking has been updated.'
+    success_url = reverse_lazy('active_bookings_dashboard')
