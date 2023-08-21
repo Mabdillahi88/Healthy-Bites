@@ -10,3 +10,7 @@ from django.contrib.auth.models import User
 from .models import Booking
 from .forms import BookingForm
 import datetime
+
+class UserReservationRequestView(LoginRequiredMixin, View):
+    template_name = 'initiate_reservation_page.html'
+    success_message = 'Booking successful, awaiting confirmation.'
