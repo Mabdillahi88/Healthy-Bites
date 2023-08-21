@@ -32,3 +32,9 @@ class UserReservationRequestView(LoginRequiredMixin, View):
             messages.success(request, self.success_message)
             return redirect('acknowledgment_view')
         return render(request, self.template_name, {'booking_form': booking_form})
+
+class BookingAcknowledgmentPageView(LoginRequiredMixin, View):
+    template_name = 'acknowledgment_view.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
