@@ -26,7 +26,7 @@
                             <p>Status: <strong>{{ reservation.status }}</strong></p>
                             <p>Guests: {{ reservation.guest_count }}</p>
                             <p>Table No: {{reservation.table}}</p>
-
+                            <!-- Check booking status -->
                             {% if reservation.status == 'booking expired' %}
                                 <button class="btn btn-outline-danger disabled">Expired</button>
                             {% else %}
@@ -37,26 +37,3 @@
                     </div>
                 </div>
             {% empty %}
-                <p class="text-center">No bookings found.</p>
-            {% endfor %}
-            </div>
-
-            <!-- Pagination -->
-            <nav aria-label="Booking pages navigation" class="d-flex justify-content-center mt-4">
-                <ul class="pagination">
-                    {% if booking.has_previous %}
-                        <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
-                        <li class="page-item"><a class="page-link" href="?page={{ booking.previous_page_number }}">Prev</a></li>
-                    {% endif %}
-                    <li class="page-item disabled"><a class="page-link">Page {{ booking.number }} of {{booking.paginator.num_pages }}</a></li>
-                    {% if booking.has_next %}
-                        <li class="page-item"><a class="page-link" href="?page={{ booking.next_page_number }}">Next</a></li>
-                        <li class="page-item"><a class="page-link" href="?page={{ booking.paginator.num_pages }}">Last</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        {% endif %}
-    </div>
-</section>
-
-{%endblock%}
