@@ -20,3 +20,7 @@ class TableAdmin(admin.ModelAdmin):
 
     # Default ordering based on maximum seats
     ordering = ('max_seats', 'name')
+
+# Admin configuration for managing bookings made by customers.
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
