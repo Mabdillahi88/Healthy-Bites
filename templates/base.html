@@ -56,14 +56,14 @@
               <a class="nav-link fs-5" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="#">Book</a>
-            </li>
+              <a class="nav-link" href="{% url 'initiate_reservation_page' %}">Book</a>
+          </li>
             <li class="nav-item">
               <a class="nav-link fs-5" href="#">Contact Us</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link fs-5" href="#">My Bookings</a>
+              <a class="nav-link fs-5" href="{% url 'active_bookings_dashboard' %}">My Bookings</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link fs-5" href="{% url 'account_logout' %}">Logout</a>
