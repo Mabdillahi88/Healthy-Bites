@@ -16,4 +16,12 @@
                     <div class="card-body">
                         <h3>Booking Status: Awaiting Confirmation</h3>
                         <p>Your booking has been received and is pending approval. Please check your dashboard for updates.</p>
-                        
+                        <a href="{% url 'active_bookings_dashboard' %}" class="btn btn-primary mt-3">View My Bookings</a>
+                        <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Return Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
