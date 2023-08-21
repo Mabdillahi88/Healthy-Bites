@@ -26,3 +26,11 @@ class Table(models.Model):
 
     def __str__(self):
         return self.name
+
+class Booking(models.Model):
+
+    id = models.AutoField(primary_key=True)
+    created_date = models.DateTimeField(auto_now_add=True, help_text="Timestamp when the booking was created.")
+    requested_date = models.DateField(help_text="Desired date for the reservation.")
+    requested_time = models.CharField(max_length=25, choices=time_slots, default='17:00', help_text="Desired time for the reservation.")
+    
