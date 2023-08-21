@@ -1,3 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<section>
+    <div class="container mt-4">
+        <!-- Check if user is logged in -->
+        {% if not user.is_authenticated %}
+            <div class="alert alert-warning text-center">
+                <strong>Note:</strong> You need to login to view your bookings.
+                <a href="{% url 'account_login' %}" class="btn btn-primary mt-3">Login Now</a>
+            </div>
+        {% else %}
+            <h2 class="text-center mb-4">Your Bookings</h2>
+            <hr>
