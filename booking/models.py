@@ -44,3 +44,15 @@ class Booking(models.Model):
     name = models.CharField(max_length=50, null=True)
     email = models.EmailField(max_length=254, default="")
     phone = PhoneNumberField(null=True)
+    
+    # Booking status and guest count.
+    status = models.CharField(max_length=25, choices=status_options, default='awaiting confirmation')
+    guest_choices = (
+        (1, "1 Guest"),
+        (2, "2 Guests"),
+        (3, "3 Guests"),
+        (4, "4 Guests"),
+        (5, "5 Guests"),
+        (6, "6 Guests"),
+    )
+    guest_count = models.IntegerField(choices=guest_choices, default=2)
