@@ -24,3 +24,21 @@
                                     <strong>Note:</strong> You need to login to edit bookings.
                                     <a href="{% url 'account_login' %}" class="btn btn-primary mt-3">Login</a>
                                 </div>
+                            {% elif user.is_authenticated and user == booking.user %}
+                                <form action="{% url 'modify_reservation_form' booking.pk %}" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
+                                    <div class="mt-3">
+                                        <button class="btn btn-info" type="submit">Modify Booking</button>
+                                    </div>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
