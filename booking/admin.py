@@ -59,3 +59,15 @@ class BookingAdmin(admin.ModelAdmin):
         'created_date',
         'id'
     )
+
+    # Actions available in the admin panel
+    actions = ['confirm_bookings']
+
+    # Action function to confirm bookings
+    def confirm_bookings(self, request, queryset):
+        # A simple permission check, can be enhanced
+        if not request.user.has_perm('app.change_booking'):  # Replace 'app' with your app name
+            messages.error(request, 'You do not have permission to change bookings.')
+            return
+        queryset.update(status='Booking Confirmed')
+    confirm_bookings.short_description = "Confirm selected bookings"
