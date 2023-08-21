@@ -53,3 +53,20 @@ class BookingForm(forms.ModelForm):
         widget=forms.EmailInput(attrs={'placeholder': 'your-email@example.com'}),
         help_text="We'll send a booking confirmation to the provided email address."
     )
+
+    requested_date = forms.DateField(
+        widget=forms.DateInput(attrs={'type': 'date'}),
+        help_text="Select the date for your booking."
+    )
+
+    class Meta:
+        model = Booking
+        fields = (
+            'name',
+            'email',
+            'phone',
+            'guest_count',
+            'table',
+            'requested_date',
+            'requested_time'
+        )
