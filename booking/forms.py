@@ -43,3 +43,13 @@ class BookingForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'placeholder': 'Your Full Name'}),
         help_text="Please provide your name for the booking."
     )
+
+    phone = PhoneNumberField(
+        widget=forms.TextInput(attrs={'placeholder': '+1 234567890'}),
+        help_text="Provide your phone number, including the country code."
+    )
+
+    email = forms.EmailField(
+        widget=forms.EmailInput(attrs={'placeholder': 'your-email@example.com'}),
+        help_text="We'll send a booking confirmation to the provided email address."
+    )
