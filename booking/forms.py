@@ -30,3 +30,5 @@ class BookingForm(forms.ModelForm):
             Submit('submit', 'Book Now')
         )
         
+        # Set the minimum date for the date picker to ensure only future dates are selected.
+        self.fields['requested_date'].widget.attrs['min'] = datetime.now().date()
