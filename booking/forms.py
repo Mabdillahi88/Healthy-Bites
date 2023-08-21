@@ -12,3 +12,21 @@ class BookingForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper(self)
         
+        # Customize the form layout using Crispy Forms.
+        self.helper.layout = Layout(
+            Row(
+                Column('name', css_class='form-group col-md-6 mb-0'),
+                Column('email', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            Row(
+                Column('phone', css_class='form-group col-md-6 mb-0'),
+                Column('requested_date', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            'guest_count',
+            'table',
+            'requested_time',
+            Submit('submit', 'Book Now')
+        )
+        
