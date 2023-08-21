@@ -9,3 +9,15 @@
             <h1 class="text-center thin">Reservation Desk</h1><hr>
         </div>
     </div>
+<div class="container">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6">
+            <div class="card-body light-bg">
+                <div class="row">
+                    <div class="col-12 p-5 rounded booking-card">
+                        <!-- Display if user is not authenticated -->
+                        {% if not user.is_authenticated %}
+                        <h3 class="thin">Login Needed</h3>
+                        <p class="thin">Sign in to book a spot</p>
+                        <button class="btn btn-signup" type="submit"><a href="{% url 'account_login' %}">Login Page</a></button>
+                        {% else %}
