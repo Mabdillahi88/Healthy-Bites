@@ -23,3 +23,12 @@
                                     <strong>Note:</strong> You need to login to cancel bookings.
                                     <a href="{% url 'account_login' %}" class="btn btn-primary mt-3">Login</a>
                                 </div>
+                            {% elif user.is_authenticated and user == booking.user %}
+                                <h4 class="card-title">{{ booking.name }}</h4>
+                                <p class="card-subtitle mb-2 text-muted">{{ booking.requested_date }} at
+                                    {{ booking.requested_time }}</p>
+                                <p class="card-text">Booking Status: {{ booking.status }}.</p>
+                                <p class="card-text">Guests Count: {{ booking.guest_count }}.</p>
+                                <p class="card-text">Table Number: {{booking.table}}</p>
+                                <form method="POST">
+                                    {% csrf_token %}
