@@ -40,3 +40,10 @@
                 <p class="text-center">No bookings found.</p>
             {% endfor %}
             </div>
+
+            <nav aria-label="Booking pages navigation" class="d-flex justify-content-center mt-4">
+                <ul class="pagination">
+                    {% if booking.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ booking.previous_page_number }}">Prev</a></li>
+                    {% endif %}
