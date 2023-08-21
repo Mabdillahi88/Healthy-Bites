@@ -63,3 +63,19 @@ class IndividualBookingModificationView(LoginRequiredMixin, SuccessMessageMixin,
     template_name = 'modify_reservation_form.html'
     success_message = 'Booking has been updated.'
     success_url = reverse_lazy('active_bookings_dashboard')
+
+class SpecificBookingTerminationView(LoginRequiredMixin, DeleteView):
+    model = Booking
+    template_name = 'terminate_reservation_dialog.html'
+    success_message = "Booking cancelled"
+    success_url = reverse_lazy('active_bookings_dashboard')
+    
+    def get_object(self, queryset=None):
+        booking = get_object_or_404(Booking, pk=self.kwargs['pk'])
+        if booking.user != self.request.user and not self.request.user.is_superuser:
+            raise PermissionDenied("You don't have permission to cancel this booking.")
+        return booking
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(request, self.success_message)
+        return super().delete(request, *args, **kwargs)
