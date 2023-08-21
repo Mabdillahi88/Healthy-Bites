@@ -38,3 +38,21 @@ class BookingAcknowledgmentPageView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
+
+class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
+    model = Booking
+    template_name = 'active_bookings_dashboard.html'
+    paginate_by = 4
+    context_object_name = 'booking'  # This is the important line.
+
+    def get_queryset(self):
+        today = datetime.datetime.now().date()
+        Booking.objects.filter(user=self.request.user, requested_date__lt=today).update(status='Booking Expired')
+        
+        # Fetch bookings
+        user_bookings = Booking.objects.filter(user=self.request.user).order_by('-created_date')
+        
+        # Print bookings for debugging purposes
+        print(f"Bookings for user {self.request.user.username}: {user_bookings}")
+        
+        return user_bookings
