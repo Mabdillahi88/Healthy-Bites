@@ -32,3 +32,14 @@ class BookingForm(forms.ModelForm):
         
         # Set the minimum date for the date picker to ensure only future dates are selected.
         self.fields['requested_date'].widget.attrs['min'] = datetime.now().date()
+
+        # Additional field attributes for styling and functionality.
+        self.fields['name'].widget.attrs['class'] = 'custom-input'
+        self.fields['email'].widget.attrs['class'] = 'custom-input'
+        self.fields['phone'].widget.attrs['class'] = 'custom-input-phone'
+        self.fields['requested_date'].widget.attrs['class'] = 'custom-date-picker'
+
+    name = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'Your Full Name'}),
+        help_text="Please provide your name for the booking."
+    )
