@@ -34,3 +34,13 @@ class Booking(models.Model):
     requested_date = models.DateField(help_text="Desired date for the reservation.")
     requested_time = models.CharField(max_length=25, choices=time_slots, default='17:00', help_text="Desired time for the reservation.")
     
+ 
+    table = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="reservations", null=True)
+    
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookings", null=True)
+    
+    
+    name = models.CharField(max_length=50, null=True)
+    email = models.EmailField(max_length=254, default="")
+    phone = PhoneNumberField(null=True)
