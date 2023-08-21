@@ -56,3 +56,12 @@ class Booking(models.Model):
         (6, "6 Guests"),
     )
     guest_count = models.IntegerField(choices=guest_choices, default=2)
+
+    class Meta:
+        # Order bookings by requested time.
+        # Ensure uniqueness for date, time, and table combination.
+        ordering = ['-requested_time']
+        unique_together = ('requested_date', 'requested_time', 'table')
+
+    def __str__(self):
+        return f"{self.name} on {self.requested_date} at {self.requested_time} - {self.status}"
