@@ -32,3 +32,16 @@
                                 <p class="card-text">Table Number: {{booking.table}}</p>
                                 <form method="POST">
                                     {% csrf_token %}
+                                    <button class="btn btn-warning" type="submit">Confirm Cancellation</button>
+                                    <a href="{% url 'active_bookings_dashboard' %}" class="btn btn-secondary">Go Back</a>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
