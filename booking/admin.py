@@ -41,3 +41,21 @@ class BookingAdmin(admin.ModelAdmin):
         'created_date',
         'id'
     )
+
+    # Fields that can be used for search, added 'user' for searching
+    search_fields = ['name', 'email', 'phone', 'user']
+
+    # Fields that can be used to filter the displayed list, changed the order
+    list_filter = (
+        'status',
+        'user',
+        'name',
+        'email',
+        'phone',
+        'guest_count',
+        'table',
+        ('requested_date', DateRangeFilter),
+        'requested_time',
+        'created_date',
+        'id'
+    )
