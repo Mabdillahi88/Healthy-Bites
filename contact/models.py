@@ -15,3 +15,13 @@ class MyContact(models.Model):
     
     # Associated user for the contact
     user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="contact_thing",
+    )
+    
+    # Personal details of the contact
+    name = models.CharField(max_length=50, null=True)
+    email = models.EmailField(max_length=254, default="")
+    phone = PhoneNumberField(null=True)
+    
