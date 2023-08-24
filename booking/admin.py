@@ -57,7 +57,6 @@ class BookingAdmin(admin.ModelAdmin):
         ('requested_date', DateRangeFilter),
         'requested_time',
         'created_date',
-        'id'
     )
 
     # Actions available in the admin panel
