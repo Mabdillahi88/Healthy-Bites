@@ -18,3 +18,12 @@ class ContactAdmin(admin.ModelAdmin):
     
     # Fields that can be searched in the admin view
     search_fields = ['name', 'email', 'phone']
+
+    # Fields that can be used to filter results in the admin view
+    list_filter = (
+        'user',
+        'name',
+        'email',
+        'phone',
+        ('created_date', DateRangeFilter),
+    )
