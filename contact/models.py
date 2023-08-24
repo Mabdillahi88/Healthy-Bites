@@ -25,3 +25,13 @@ class MyContact(models.Model):
     email = models.EmailField(max_length=254, default="")
     phone = PhoneNumberField(null=True)
     
+    # Message details
+    message = models.TextField()
+
+    class Meta:
+        # Sorting contacts by their creation date
+        ordering = ['created_date']
+
+    # Return the name when the object is printed or converted to a string
+    def __str__(self):
+        return f"Contact: {self.name}"
