@@ -10,3 +10,8 @@ class MyContact(models.Model):
     # Unique identifier for the contact
     message_id = models.AutoField(primary_key=True)
     
+    # Date and time when the contact was created
+    created_date = models.DateTimeField(auto_now_add=True)
+    
+    # Associated user for the contact
+    user = models.ForeignKey(
