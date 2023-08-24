@@ -14,3 +14,5 @@ def get_user_instance(request):
     Returns:
     - User instance or None if not found.
     """
+    user_email = request.user.email
+    return User.objects.filter(email=user_email).first()
