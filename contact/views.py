@@ -16,3 +16,16 @@ def get_user_instance(request):
     """
     user_email = request.user.email
     return User.objects.filter(email=user_email).first()
+
+class ContactMessage(View):
+    """Handles the display and processing of the contact form."""
+    
+    template_name = 'get-in-touch.html'
+
+    def get(self, request, *args, **kwargs):
+        """
+        Serve the contact form. 
+        If the user is authenticated, their email is pre-filled.
+        """
+        initial_data = {'email': request.user.email} if request.user.is_authenticated else {}
+        contact_form = ContactForm(initial=initial_data)
