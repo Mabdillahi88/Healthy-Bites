@@ -21,3 +21,12 @@
                 </div>
             </div>
         {% endif %}
+
+        <!-- If user is authenticated, show the contact form -->
+        {% if user.is_authenticated %}
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="mb-4 text-center">
+                        <h2 class="h3 mb-3" style="font-weight: bold; color: #4169E1;">Farriin Noo Dir</h2>
+                        <hr class="bg-primary">
+                    </div>
