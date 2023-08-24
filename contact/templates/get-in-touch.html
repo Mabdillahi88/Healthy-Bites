@@ -9,3 +9,15 @@
             <hr class="bg-white">
         </div>
     </div>
+
+    <div class="container bg-white p-5 rounded shadow-lg" style="border: 2px solid #4169E1;">
+        <!-- If user is not authenticated, show a message to login -->
+        {% if not user.is_authenticated %}
+            <div class="row justify-content-center my-4">
+                <div class="col-md-6 text-center">
+                    <h2 class="mb-3" style="font-weight: bold; color: #4169E1;">Farriin Noo Dir</h2> <!-- "Farriin Noo Dir" means "Message Us" in Somali -->
+                    <p>Gala soocodsi si aad noogu farriin dirto.</p> <!-- "Gala soocodsi si aad noogu farriin dirto." means "Please login to send us a message." in Somali -->
+                    <button class="btn btn-primary btn-lg mt-2" type="button"><a href="{% url 'account_login' %}" style="text-decoration: none; color: white;">Gala Halkan</a></button> <!-- "Gala Halkan" means "Login Here" in Somali -->
+                </div>
+            </div>
+        {% endif %}
