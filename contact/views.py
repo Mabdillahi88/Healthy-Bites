@@ -47,3 +47,12 @@ class ContactMessage(View):
             contact = form.save(commit=False)
             contact.user = request.user
             contact.save()
+            
+            messages.success(request, "Message has been sent")
+            return render(request, 'confirmation.html')
+        
+        return render(
+            request, 
+            self.template_name, 
+            {'contact_form': form}
+        )
