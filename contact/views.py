@@ -35,3 +35,11 @@ class ContactMessage(View):
             self.template_name, 
             {'contact_form': contact_form}
         )
+
+    def post(self, request):
+        """
+        Process the contact form submission. 
+        If the form is valid, save the contact and display a success message.
+        """
+        form = ContactForm(data=request.POST)
+        
