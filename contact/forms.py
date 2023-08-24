@@ -20,3 +20,11 @@ class ContactForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         self.helper = FormHelper(self)
+
+    class Meta:
+        """
+        Meta information for ContactForm.
+        Specifies the model and fields to use.
+        """
+        model = MyContact
+        fields = ('name', 'phone', 'email', 'message')
