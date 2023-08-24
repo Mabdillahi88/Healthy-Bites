@@ -15,3 +15,6 @@ class ContactAdmin(admin.ModelAdmin):
         'phone',
         'created_date'
     )
+    
+    # Fields that can be searched in the admin view
+    search_fields = ['name', 'email', 'phone']
