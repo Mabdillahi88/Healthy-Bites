@@ -43,3 +43,7 @@ class ContactMessage(View):
         """
         form = ContactForm(data=request.POST)
         
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.user = request.user
+            contact.save()
