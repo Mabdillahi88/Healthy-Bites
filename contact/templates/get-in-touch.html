@@ -30,3 +30,13 @@
                         <h2 class="h3 mb-3" style="font-weight: bold; color: #4169E1;">Farriin Noo Dir</h2>
                         <hr class="bg-primary">
                     </div>
+                    <form method="POST" enctype="multipart/form-data" class="p-4 border rounded">
+                        {% csrf_token %}
+                        {{ contact_form| crispy }}
+                        <div class="text-center mt-3">
+                            <button class="btn btn-primary btn-lg" type="submit">Dir</button> <!-- "Dir" means "Send" in Somali -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
