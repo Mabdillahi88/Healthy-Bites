@@ -13,3 +13,10 @@ class ContactForm(forms.ModelForm):
     phone = PhoneNumberField(
         widget=forms.TextInput(attrs={'placeholder': '+353123456789'})
     )
+
+    def __init__(self, *args, **kwargs):
+        """
+        Initialize the form and integrate with crispy_forms helper.
+        """
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
