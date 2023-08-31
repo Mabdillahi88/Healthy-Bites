@@ -2,91 +2,95 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container-fluid mt-5 py-5" style="background-color: #4169E1;"> <!-- Bright blue inspired by the Somali flag -->
-    <div class="row d-flex justify-content-center">
-        <div class="col-sm-8 mt-5 mb-5">
-            <h1 class="text-center display-4" style="color: white; font-weight: bold;">Nala Soo Xiriir</h1> <!-- "Nala Soo Xiriir" means "Contact Us" in Somali -->
-            <hr class="bg-white">
-        </div>
-    </div>
 
-    <div class="container bg-white p-5 rounded shadow-lg" style="border: 2px solid #4169E1;">
-        <!-- If user is not authenticated, show a message to login -->
-        {% if not user.is_authenticated %}
-            <div class="row justify-content-center my-4">
-                <div class="col-md-6 text-center">
-                    <h2 class="mb-3" style="font-weight: bold; color: #4169E1;">Farriin Noo Dir</h2> <!-- "Farriin Noo Dir" means "Message Us" in Somali -->
-                    <p>Gala soocodsi si aad noogu farriin dirto.</p> <!-- "Gala soocodsi si aad noogu farriin dirto." means "Please login to send us a message." in Somali -->
-                    <button class="btn btn-primary btn-lg mt-2" type="button"><a href="{% url 'account_login' %}" style="text-decoration: none; color: white;">Gala Halkan</a></button> <!-- "Gala Halkan" means "Login Here" in Somali -->
-                </div>
+<section class="mt-5">
+    <div class="container-fluid py-5 bg-light"> 
+        
+        <!-- Header Section -->
+        <header class="row justify-content-center mb-5">
+            <div class="col-sm-8 text-center mb-5">
+                <h1 class="display-3 text-white bg-dark rounded p-3 shadow-lg transition-300ms">Contact Us</h1>
+                <hr class="bg-white w-50 mx-auto">
             </div>
-        {% endif %}
+        </header>
+        
+        <!-- Content Section -->
+        <div class="container bg-white p-5 rounded shadow-lg border-primary">
 
-        <!-- If user is authenticated, show the contact form -->
-        {% if user.is_authenticated %}
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-8">
-                    <div class="mb-4 text-center">
-                        <h2 class="h3 mb-3" style="font-weight: bold; color: #4169E1;">Farriin Noo Dir</h2>
-                        <hr class="bg-primary">
-                    </div>
-                    <form method="POST" enctype="multipart/form-data" class="p-4 border rounded">
-                        {% csrf_token %}
-                        {{ contact_form| crispy }}
-                        <div class="text-center mt-3">
-                            <button class="btn btn-primary btn-lg" type="submit">Dir</button> <!-- "Dir" means "Send" in Somali -->
+            <!-- Notification for Unauthenticated Users -->
+            {% if not user.is_authenticated %}
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle mr-2"></i> Please sign in to send us a message.
+                </div>
+            {% endif %}
+
+            <!-- Contact Form for Authenticated Users -->
+            {% if user.is_authenticated %}
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-8">
+                        <div class="mb-4 text-center">
+                            <h4 class="mb-3 font-weight-bold text-primary">Send Us a Message</h4>
+                            <hr class="bg-primary">
                         </div>
-                    </form>
+                        <form method="POST" enctype="multipart/form-data" class="p-4 border rounded">
+                            {% csrf_token %}
+                            {{ contact_form|crispy }}
+                            <div class="text-center mt-3">
+                                <button class="btn btn-primary btn-lg" type="submit"><i class="fas fa-paper-plane mr-2"></i> Send Message</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        {% endif %}
+            {% endif %}
 
-        <!-- Display errors, if any -->
-        {% if contact_form.errors %}
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-6">
-                    {% for field in contact_form %}
-                        {% for error in field.errors %}
+            <!-- Error Messages -->
+            {% if contact_form.errors %}
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-6">
+                        {% for field in contact_form %}
+                            {% for error in field.errors %}
+                                <div class="alert alert-danger">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i> <strong>{{ error|escape }}</strong>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in contact_form.non_field_errors %}
                             <div class="alert alert-danger">
-                                <strong>{{ error|escape }}</strong>
+                                <i class="fas fa-exclamation-triangle mr-2"></i> <strong>{{ error|escape }}</strong>
                             </div>
                         {% endfor %}
-                    {% endfor %}
-                    {% for error in contact_form.non_field_errors %}
-                        <div class="alert alert-danger">
-                            <strong>{{ error|escape }}</strong>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-
-        <!-- Contact details and map section -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-8 p-4 border rounded">
-                <div class="mb-4 text-center">
-                    <h3 class="h4 mb-3" style="font-weight: bold; color: #4169E1;">Healthy Bites</h3> <!-- "Ziyarad" means "Visit" in Somali -->
-                    <hr class="bg-primary">
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <address style="color: #535c68;">
-                            144 Brompton Rd, <br>
-                            Grand Canal Dock, <br>
-                            London SW3 1HY <br>
-                            <a href="mailto:info@healthybites.com">info@healthybites.com</a> <br>
-                            <a href="tel:+974 123456">++974 (0)1 123456</a>
-                        </address>
-                        <hr>
-                        <p><em>Waqtiga Furista: Mon-Thurs 10:00-00:30, Fri-Sun 10:00-02:00</em></p> <!-- "Waqtiga Furista" means "Opening Hours" in Somali -->
                     </div>
-                    <!-- Map section -->
-                    <div class="col-md-6">
-                        <iframe class="w-100" src="https://www.google.com/maps/embed?q=chapati+karak+in+london&zoom=14&maptype=satellite" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            {% endif %}
+
+            <!-- Contact Details and Map Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 p-4 border rounded">
+                    <div class="mb-4 text-center">
+                        <h5 class="mb-3 font-weight-bold text-primary">Healthy Bites</h5>
+                        <hr class="bg-primary w-50 mx-auto">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <address class="text-muted">
+                                <i class="fas fa-map-marker-alt text-primary mr-2"></i> 144 Brompton Rd,<br>
+                                Grand Canal Dock,<br>
+                                London SW3 1HY<br>
+                                <i class="fas fa-envelope text-primary mr-2"></i> <a href="mailto:info@healthybites.com" class="text-primary">info@healthybites.com</a><br>
+                                <i class="fas fa-phone-alt text-primary mr-2"></i> <a href="tel:+974 123456" class="text-primary">+974 (0)1 123456</a>
+                            </address>
+                            <hr>
+                            <p class="text-muted"><em><i class="fas fa-clock text-primary mr-2"></i> Opening Hours: Mon-Thurs 10:00-00:30, Fri-Sun 10:00-02:00</em></p>
+                        </div>
+                        <!-- Map Section -->
+                        <div class="col-md-6">
+                            <iframe class="w-100" src="https://www.google.com/maps/embed?q=chapati+karak+in+london&zoom=14&maptype=satellite" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
 {% endblock %}

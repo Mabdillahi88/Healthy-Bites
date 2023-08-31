@@ -1,61 +1,70 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <section>
-    <div class="container mt-4">
+    <div class="container mt-5">
+
         <!-- Check if user is logged in -->
         {% if not user.is_authenticated %}
-            <div class="alert alert-warning text-center">
-                <strong>Note:</strong> You need to login to view your bookings.
-                <a href="{% url 'account_login' %}" class="btn btn-primary mt-3">Login Now</a>
-            </div>
+        <div class="alert alert-warning text-center rounded-lg">
+            <i class="fas fa-exclamation-triangle mr-2"></i> <!-- Warning icon -->
+            <strong>Note:</strong> You must be logged in to view your bookings.
+            <a href="{% url 'account_login' %}" class="btn btn-primary mt-3 btn-lg"><i class="fas fa-sign-in-alt mr-2"></i>Login Now</a> 
+        </div>
         {% else %}
-            <h2 class="text-center mb-4">Your Bookings</h2>
-            <hr>
+        <div class="row justify-content-center mb-4">
+            <div class="col-sm-8 text-center">
+                <h2 class="thin"><i class="fas fa-bookmark mr-2"></i>Your Bookings</h2>
+                <hr class="w-50 mx-auto">
+            </div>
+        </div>
 
-            <div class="row justify-content-around">
+        <div class="row justify-content-around">
             {% for reservation in booking %}
-                <div class="col-md-5 mb-4">
-                    <div class="card shadow">
-                        <div class="card-header bg-light">
-                            <h3>{{ reservation.name }}</h3>
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-light text-center">
+                        <h3>{{ reservation.name }}</h3>
+                    </div>
+                    <div class="card-body bg-white">
+                        <h5><i class="fas fa-calendar-alt mr-2"></i>Date: {{ reservation.requested_date }} at {{ reservation.requested_time }}</h5>
+                        <p><i class="fas fa-info-circle mr-2"></i>Status: <span class="fw-bold">{{ reservation.status }}</span></p>
+                        <p><i class="fas fa-users mr-2"></i>Guests: {{ reservation.guest_count }}</p>
+                        <p><i class="fas fa-chair mr-2"></i>Table No: {{reservation.table}}</p>
+
+                        <!-- Check booking status -->
+                        {% if reservation.status == 'booking expired' %}
+                        <button class="btn btn-danger disabled w-100"><i class="fas fa-times-circle mr-2"></i>Expired</button>
+                        {% else %}
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'modify_reservation_form' reservation.pk %}" class="btn btn-outline-primary"><i class="fas fa-edit mr-2"></i>Modify</a>
+                            <a href="{% url 'terminate_reservation_dialog' reservation.pk %}" class="btn btn-outline-danger"><i class="fas fa-trash-alt mr-2"></i>Terminate</a>
                         </div>
-                        <div class="card-body bg-white">
-                            <h4>Date: {{ reservation.requested_date }} at {{ reservation.requested_time }}</h4>
-                            <p>Status: <strong>{{ reservation.status }}</strong></p>
-                            <p>Guests: {{ reservation.guest_count }}</p>
-                            <p>Table No: {{reservation.table}}</p>
-                            <!-- Check booking status -->
-                            {% if reservation.status == 'booking expired' %}
-                                <button class="btn btn-outline-danger disabled">Expired</button>
-                            {% else %}
-                                <a href="{% url 'modify_reservation_form' reservation.pk %}" class="btn btn-outline-success">Modify</a>
-                                <a href="{% url 'terminate_reservation_dialog' reservation.pk %}" class="btn btn-outline-danger">Terminate</a>
-                            {% endif %}
-                        </div>
+                        {% endif %}
                     </div>
                 </div>
-            {% empty %}
-                <p class="text-center">No bookings found.</p>
-            {% endfor %}
             </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-center fw-bold"><i class="fas fa-frown mr-2"></i>No bookings found.</p>
+            </div>
+            {% endfor %}
+        </div>
 
-            <nav aria-label="Booking pages navigation" class="d-flex justify-content-center mt-4">
-                <ul class="pagination">
-                    {% if booking.has_previous %}
-                        <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
-                        <li class="page-item"><a class="page-link" href="?page={{ booking.previous_page_number }}">Prev</a></li>
-                    {% endif %}
-                    <li class="page-item disabled"><a class="page-link">Page {{ booking.number }} of {{booking.paginator.num_pages }}</a></li>
-                    {% if booking.has_next %}
-                        <li class="page-item"><a class="page-link" href="?page={{ booking.next_page_number }}">Next</a></li>
-                        <li class="page-item"><a class="page-link" href="?page={{ booking.paginator.num_pages }}">Last</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
+        <nav aria-label="Booking pages navigation" class="d-flex justify-content-center mt-4">
+            <ul class="pagination">
+                {% if booking.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1"><i class="fas fa-step-backward mr-2"></i>First</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ booking.previous_page_number }}"><i class="fas fa-arrow-left mr-2"></i>Prev</a></li>
+                {% endif %}
+                <li class="page-item disabled"><a class="page-link">Page {{ booking.number }} of {{booking.paginator.num_pages }}</a></li>
+                {% if booking.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ booking.next_page_number }}">Next<i class="fas fa-arrow-right ml-2"></i></a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ booking.paginator.num_pages }}">Last<i class="fas fa-step-forward ml-2"></i></a></li>
+                {% endif %}
+            </ul>
+        </nav>
         {% endif %}
     </div>
 </section>
-
-{%endblock%}
+{% endblock %}

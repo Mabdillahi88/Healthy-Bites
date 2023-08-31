@@ -90,3 +90,18 @@ body {
 }
 
 /* The rest of the styles remain unchanged */
+
+
+.shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* X-offset, Y-offset, blur-radius, and color */
+}
+
+
+.transition-300ms {
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

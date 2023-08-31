@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 {% load crispy_forms_tags %}
 
@@ -8,7 +8,7 @@
         <div class="row g-0">
             <div class="col-md-6 py-4 masthead-text">
                 <h1 class="display-4 text-white">{{ post.title }}</h1>
-                <p class="lead text-light">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="lead text-light"><i class="fas fa-user"></i> {{ post.author }} | <i class="fas fa-calendar-alt"></i> {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6">
                 {% if "placeholder" in post.featured_image.url %}
@@ -33,37 +33,37 @@
             </div>
             <!-- Like and comment count -->
             <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                <div class="text-primary">
+                <div>
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
-                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn btn-link text-danger p-0"><i class="fas fa-heart"></i> {{ post.number_of_likes }}</button>
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn btn-link text-danger p-0">
+                            <i class="fas fa-heart"></i> {{ post.number_of_likes }}
+                        </button>
                         {% else %}
-                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn btn-link text-muted p-0"><i class="far fa-heart"></i> {{ post.number_of_likes }}</button>
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn btn-link text-muted p-0">
+                            <i class="far fa-heart"></i> {{ post.number_of_likes }}
+                        </button>
                         {% endif %}
                     </form>
                     {% else %}
                     <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span>
                     {% endif %}
                 </div>
-                <div class="text-primary">
-                    {% with comments.count as total_comments %}
-                    <i class="far fa-comments"></i> {{ total_comments }}
-                    {% endwith %}
-                </div>
+                <div><i class="far fa-comments"></i> {{ comments.count }}</div>
             </div>
         </div>
 
         <!-- Comment section -->
         <div class="col-lg-4">
-            <h3 class="p-2 mb-3 rounded" style="background-color: #f4f1ea; border-left: 5px solid #4169E1;">Comments:</h3>
+            <h3 class="p-2 mb-3 rounded bg-light border-left border-primary">Comments:</h3>
             {% for comment in comments %}
-            <div class="comments p-3 my-2 rounded shadow" style="background-color: #e7eef8;">
+            <div class="comments p-3 my-2 rounded shadow bg-light">
                 <p class="font-weight-bold mb-2">
-                    {{ comment.name }}
+                    <i class="fas fa-user-circle"></i> {{ comment.name }}
                     <span class="text-muted font-weight-normal">
-                        {{ comment.created_on }}
+                        <i class="fas fa-calendar-day"></i> {{ comment.created_on }}
                     </span>
                 </p>
                 {{ comment.body | linebreaks }}
@@ -72,11 +72,11 @@
 
             <!-- Comment form -->
             {% if user.is_authenticated %}
-            <h4 class="p-2 mb-3 rounded" style="background-color: #f4f1ea; border-left: 5px solid #4169E1;">Leave a Comment:</h4>
-            <form method="post" class="rounded p-4 shadow" style="background-color: #e7eef8;">
+            <h4 class="p-2 mb-3 rounded bg-light border-left border-primary">Leave a Comment:</h4>
+            <form method="post" class="rounded p-4 shadow bg-light">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary btn-lg mt-2">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg mt-2"><i class="fas fa-paper-plane"></i> Submit</button>
             </form>
             {% endif %}
         </div>

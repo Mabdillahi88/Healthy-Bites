@@ -1,3 +1,5 @@
 from django.shortcuts import render
+from .models import MealOption, Beverage
 
-# Create your views here.
+def display_food(request):
+   
