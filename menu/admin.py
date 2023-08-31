@@ -15,3 +15,7 @@ class MealOptionAdmin(SummernoteModelAdmin):
 @admin.register(Beverage)
 class BeverageAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)  
+
+    list_display = ('beverage_name', 'beverage_category', 'price', 'available')
+    search_fields = ('beverage_name', 'description')
+    list_filter = ('available', 'beverage_category')
