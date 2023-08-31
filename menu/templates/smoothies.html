@@ -9,3 +9,17 @@
         </div>
     </div>
     
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            {% for blend in blends_list %}
+            {% if blend.available %}
+            <br><h3>{{ blend.beverage_name }}</h3>
+            {{ blend.description | safe }} €{{ blend.price }}
+            <br>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
