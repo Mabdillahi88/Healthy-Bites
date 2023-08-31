@@ -20,7 +20,7 @@ class MealOption(models.Model):
     A class for the meal options model, contains
     starters, mains, desserts, and new arrivals.
     """
-    meal_id = models.AutoField(primary_key=True) 
+    meal_id = models.AutoField(primary_key=True)  
     meal_name = models.CharField(max_length=50, unique=True)
     description = models.TextField()
     price = models.FloatField()
@@ -38,7 +38,7 @@ class Beverage(models.Model):
     A class for the beverage options, contains
     smoothie blends, shake varieties, and new beverages.
     """
-    beverage_id = models.AutoField(primary_key=True)  # Explicit primary key
+    beverage_id = models.AutoField(primary_key=True)  
     beverage_name = models.CharField(max_length=50, unique=True)
     description = models.TextField()
     price = models.FloatField()
