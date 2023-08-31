@@ -7,3 +7,10 @@ def display_food(request):
     """
     meal_items = MealOption.objects.all()
     return render(request, 'food_menu.html', {'food_items': meal_items})
+
+def display_smoothies(request):
+    """
+    a view to showcase the smoothie blends menu
+    """
+    blends_list = Beverage.objects.filter(beverage_category=0)
+    return render(request, 'smoothies.html', {'blends_list': blends_list})
