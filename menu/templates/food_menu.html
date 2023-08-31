@@ -49,3 +49,16 @@
             <hr>
             <h2><i class="fas fa-ice-cream"></i> Desserts</h2>
             <hr>
+            {% for meal in food_items %}
+                {% if meal.meal_category == 2 and meal.available %}
+                    <div class="mb-3">
+                        <h3><i class="fas fa-utensil-spoon"></i> {{ meal.meal_name }}</h3>
+                        <p>{{ meal.description | safe }} - <span class="font-weight-bold"><i class="fas fa-shopping-cart"></i> €{{ meal.price }}</span></p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
