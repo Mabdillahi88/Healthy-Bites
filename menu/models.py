@@ -7,3 +7,10 @@ FOOD_CATEGORIES = (
     (2, 'Desserts'),
     (3, 'New')
 )
+
+
+BEVERAGE_CATEGORIES = (
+    (0, 'Smoothie Blends'),
+    (1, 'Shake Varieties'),
+    (2, 'New')
+)
