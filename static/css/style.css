@@ -105,3 +105,24 @@ body {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.event-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.event-icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.event-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
