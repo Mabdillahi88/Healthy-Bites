@@ -126,3 +126,31 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s;
 }
+
+.carousel-inner img {
+    transition: transform 0.3s;
+}
+
+.carousel-inner:hover img {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.display-4 {
+    font-weight: 500;
+    color: #333;
+}
+
+.lead.text-muted {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.grow:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
