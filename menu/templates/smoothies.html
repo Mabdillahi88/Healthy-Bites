@@ -3,19 +3,24 @@
 {% block content %}
 
 <div class="container-fluid">
-    <div class="row d-flex justify-content-center">
-        <div class="col-sm-8 mt-5 mb-5">
-            <h1 class="text-center">Smoothie Blends</h1>
+
+    <!-- Title -->
+    <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8 mt-5 mb-5">
+            <h1 class="text-center menu-title">Smoothie Blends</h1>
         </div>
     </div>
-    
+
+    <!-- Smoothie Listings -->
     <div class="row justify-content-center">
-        <div class="col-sm-8">
+        <div class="col-sm-10 col-md-8">
             {% for blend in blends_list %}
             {% if blend.available %}
-            <br><h3>{{ blend.beverage_name }}</h3>
-            {{ blend.description | safe }} €{{ blend.price }}
-            <br>
+                <div class="menu-item-card">
+                    <h3 class="menu-item-name">{{ blend.beverage_name }}</h3>
+                    <span class="menu-item-description">{{ blend.description | safe }}</span>
+                    <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ blend.price }}</span>
+                </div>
             {% endif %}
             {% endfor %}
         </div>

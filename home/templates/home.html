@@ -8,23 +8,26 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner rounded">
                 <div class="carousel-item active">
-                    <img src="{% static 'images/image-carousel-1b.webp' %}" class="d-block w-100 rounded"
-                        alt="A fresh and healthy meal setting">
+                    <div class="carousel-image-container">
+                        <img src="{% static 'images/quino rice.jpg' %}" class="d-block w-100 rounded" alt="A fresh and healthy meal setting">
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{% static 'images/image-carousel-2b.webp' %}" class="d-block w-100 rounded"
-                        alt="Delicious organic smoothies selection">
+                    <div class="carousel-image-container">
+                        <img src="{% static 'images/vegan burger.jpg' %}" class="d-block w-100 rounded" alt="Delicious organic smoothies selection">
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{% static 'images/image-carousel-3b.webp' %}" class="d-block w-100 rounded"
-                        alt="Vibrant vegan and vegetarian dishes">
+                    <div class="carousel-image-container">
+                        <img src="{% static 'images/gluten pizza.jpg' %}" class="d-block w-100 rounded" alt="Vibrant vegan and vegetarian dishes">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid text-center mt-5">
+<div class="container-fluid text-center mt-5 welcome-section">
     <h1 class="display-4">Welcome to Healthy Bites</h1>
     <p class="lead text-muted"><em>Experience the finest in healthy, organic, and specialized dietary delights.</em></p>
 </div>
@@ -33,9 +36,9 @@
     <div class="row justify-content-center text-center">
         <div class="col-10 col-md-3 col-lg-2 m-3 card shadow grow">
             <a href="{% url 'food_menu' %}" class="text-decoration-none">
-                <img src="{% static 'images/image-food-menu2b.webp' %}" class="card-img-top rounded img-fluid"
+                <img src="{% static 'images/vegan burger.jpg' %}" class="card-img-top rounded img-fluid"
                     alt="A variety of vegan and vegetarian dishes">
-                <div class="mt-3 mb-3">
+                <div class="mt-3 mb-3 menu-title">
                     <h2><i class="fas fa-utensils"></i> Food Menu</h2>
                 </div>
             </a>
@@ -43,9 +46,9 @@
 
         <div class="col-10 col-md-3 col-lg-2 m-3 card shadow grow">
             <a href="{% url 'milkshakes' %}" class="text-decoration-none">
-                <img src="{% static 'images/image-milkshakes-b.webp' %}" class="card-img-top rounded img-fluid"
+                <img src="{% static 'images/milkshake .jpg' %}" class="card-img-top rounded img-fluid"
                     alt="A selection of delicious milkshakes">
-                <div class="mt-3 mb-3">
+                <div class="mt-3 mb-3 menu-title">
                     <h2><i class="fas fa-glass-whiskey"></i> Milkshakes</h2>
                 </div>
             </a>
@@ -53,9 +56,9 @@
 
         <div class="col-10 col-md-3 col-lg-2 m-3 card shadow grow">
             <a href="{% url 'smoothies' %}" class="text-decoration-none">
-                <img src="{% static 'images/image-smoothies-b.webp' %}" class="card-img-top rounded img-fluid"
+                <img src="{% static 'images/protein shake.jpg' %}" class="card-img-top rounded img-fluid"
                     alt="A selection of refreshing smoothies">
-                <div class="mt-3 mb-3">
+                <div class="mt-3 mb-3 menu-title">
                     <h2><i class="fas fa-blender"></i> Smoothies</h2>
                 </div>
             </a>
@@ -63,32 +66,8 @@
     </div>
 </section>
 
-<div class="container-fluid text-center my-5">
+<div class="container-fluid text-center my-5 footer-text">
     <p class="h5"><em>Embark on a culinary journey that soothes the soul and delights the palate.</em></p>
 </div>
 
-<section class="container-fluid py-5" style="background-color: #f8fafb;">
-    <div class="row justify-content-center">
-        <div class="col-11 col-md-5 card bg-white p-4 mt-5 border-0 event-card">
-            <div class="text-center mb-4">
-                <h2 class="mb-3" style="color: #5a6268;">Events at Healthy Bites</h2>
-                <p style="color: #858d91;"><em>Experience a unique celebration with us!</em></p>
-            </div>
-            <ul class="list-unstyled pl-4">
-                <li class="mb-2"><span class="event-icon text-primary mr-2"><i class="fas fa-utensils"></i></span>Private Gatherings</li>
-                <li class="mb-2"><span class="event-icon text-warning mr-2"><i class="fas fa-seedling"></i></span>Healthy Workshops</li>
-                <li class="mb-2"><span class="event-icon text-success mr-2"><i class="fas fa-carrot"></i></span>Vegan Celebrations</li>
-                <li class="mb-2"><span class="event-icon text-danger mr-2"><i class="fas fa-apple-alt"></i></span>Vegetarian Retreats</li>
-                <li class="mb-2"><span class="event-icon text-info mr-2"><i class="fas fa-wine-glass"></i></span>Organic Tasting Nights</li>
-                <li class="mb-2"><span class="event-icon text-secondary mr-2"><i class="fas fa-blender"></i></span>Smoothie and Shake Parties</li>
-            </ul>
-            <div class="mt-4 text-center">
-                <img src="{% static 'images/image-events-catered-b.webp' %}" class="img-fluid rounded event-image"
-                    alt="An organic food spread">
-            </div>
-        </div>
-    </div>
-</section>
-
-{%endblock%}
-
+{% endblock %}

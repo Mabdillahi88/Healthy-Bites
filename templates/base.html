@@ -4,17 +4,23 @@
 <html class="h-100">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Healthy Bites</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+
+    <!-- Bootstrap CSS & JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -61,9 +67,9 @@
               <a class="nav-link fs-5" href="{% url 'active_bookings_dashboard' %}"><i class="fas fa-book"></i> My Bookings</a>
             </li>
             <li class="nav-item">
-            <li class="nav-item">
               <a class="nav-link fs-5" href="{% url 'initiate_reservation_page' %}"><i class="fas fa-envelope"></i> Book</a>
             </li>
+            <li class="nav-item">
                 <a class="nav-link fs-5" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
             {% else %}
@@ -79,7 +85,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col-md-8 offset-md-2">
             {% for message in messages %}
@@ -92,7 +98,7 @@
     </div>
 </div>
 
-<main class="flex-shrink-0 main-bg">
+<main class="flex-shrink-0 main-bg mt-3">
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
@@ -104,22 +110,26 @@
         <p class="text-white fs-3 mb-3">Healthy Bites</p>
         <div class="d-flex justify-content-center align-items-center">
             <span class="text-white fs-3 me-3">Follow us:</span>
-            <a href="#" class="text-white footer-icon me-3"><i class="fab fa-facebook-square fs-3"></i></a>
-            <a href="#" class="text-white footer-icon me-3"><i class="fab fa-twitter-square fs-3"></i></a>
-            <a href="#" class="text-white footer-icon me-3"><i class="fab fa-instagram-square fs-3"></i></a>
-            <a href="#" class="text-white footer-icon"><i class="fab fa-youtube-square fs-3"></i></a>
+            <!-- Social Icons -->
+            <a href="#" class="text-white fs-3 me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white fs-3 me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white fs-3 me-3"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="text-white mt-3">
+            &copy; 2023 Healthy Bites. All Rights Reserved.
         </div>
     </div>
 </footer>
 
 <script>
-    setTimeout(function () {
-        let messages = document.getElementById('msg');
-        let alert = new bootstrap.Alert(messages);
-        alert.close();
-    }, 2500);
+    if (document.getElementById('msg')) {
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2500);
+    }
 </script>
 
 </body>
-
 </html>

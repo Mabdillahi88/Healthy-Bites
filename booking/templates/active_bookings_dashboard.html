@@ -1,44 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section>
-    <div class="container mt-5">
+<section class="mt-5">
+    <div class="container">
 
         <!-- Check if user is logged in -->
         {% if not user.is_authenticated %}
         <div class="alert alert-warning text-center rounded-lg">
-            <i class="fas fa-exclamation-triangle mr-2"></i> <!-- Warning icon -->
-            <strong>Note:</strong> You must be logged in to view your bookings.
-            <a href="{% url 'account_login' %}" class="btn btn-primary mt-3 btn-lg"><i class="fas fa-sign-in-alt mr-2"></i>Login Now</a> 
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            <strong class="reservation-title">Healthy Reminder:</strong> Please log in to view your reservations.
+            <a href="{% url 'account_login' %}" class="btn btn-green mt-3 btn-lg"><i class="fas fa-sign-in-alt mr-2"></i>Login Now</a>
         </div>
         {% else %}
         <div class="row justify-content-center mb-4">
             <div class="col-sm-8 text-center">
-                <h2 class="thin"><i class="fas fa-bookmark mr-2"></i>Your Bookings</h2>
-                <hr class="w-50 mx-auto">
+                <h2 class="reservation-title"><i class="fas fa-leaf mr-2"></i>Your Healthy Reservations</h2>
+                <hr class="menu-divider">
             </div>
         </div>
 
         <div class="row justify-content-around">
             {% for reservation in booking %}
             <div class="col-md-5 mb-4">
-                <div class="card shadow-lg">
-                    <div class="card-header bg-light text-center">
+                <div class="card reservation-card">
+                    <div class="card-header reservation-card-header text-center">
                         <h3>{{ reservation.name }}</h3>
                     </div>
                     <div class="card-body bg-white">
-                        <h5><i class="fas fa-calendar-alt mr-2"></i>Date: {{ reservation.requested_date }} at {{ reservation.requested_time }}</h5>
-                        <p><i class="fas fa-info-circle mr-2"></i>Status: <span class="fw-bold">{{ reservation.status }}</span></p>
-                        <p><i class="fas fa-users mr-2"></i>Guests: {{ reservation.guest_count }}</p>
-                        <p><i class="fas fa-chair mr-2"></i>Table No: {{reservation.table}}</p>
+                        <h5 class="reservation-description"><i class="fas fa-calendar-alt mr-2"></i>Date: {{ reservation.requested_date }} at {{ reservation.requested_time }}</h5>
+                        <p class="reservation-description"><i class="fas fa-info-circle mr-2"></i>Status: <span class="fw-bold">{{ reservation.status }}</span></p>
+                        <p class="reservation-description"><i class="fas fa-users mr-2"></i>Guests: {{ reservation.guest_count }}</p>
+                        <p class="reservation-description"><i class="fas fa-chair mr-2"></i>Table No: {{reservation.table}}</p>
 
                         <!-- Check booking status -->
                         {% if reservation.status == 'booking expired' %}
                         <button class="btn btn-danger disabled w-100"><i class="fas fa-times-circle mr-2"></i>Expired</button>
                         {% else %}
                         <div class="d-flex justify-content-between">
-                            <a href="{% url 'modify_reservation_form' reservation.pk %}" class="btn btn-outline-primary"><i class="fas fa-edit mr-2"></i>Modify</a>
-                            <a href="{% url 'terminate_reservation_dialog' reservation.pk %}" class="btn btn-outline-danger"><i class="fas fa-trash-alt mr-2"></i>Terminate</a>
+                            <a href="{% url 'modify_reservation_form' reservation.pk %}" class="btn btn-outline-primary"><i class="fas fa-edit mr-2"></i>Edit</a>
+                            <a href="{% url 'terminate_reservation_dialog' reservation.pk %}" class="btn btn-outline-danger"><i class="fas fa-trash-alt mr-2"></i>Cancel</a>
                         </div>
                         {% endif %}
                     </div>
@@ -46,12 +46,13 @@
             </div>
             {% empty %}
             <div class="col-12">
-                <p class="text-center fw-bold"><i class="fas fa-frown mr-2"></i>No bookings found.</p>
+                <p class="text-center reservation-description"><i class="fas fa-salad mr-2"></i>No reservations found. Time to plan another healthy outing!</p>
             </div>
             {% endfor %}
         </div>
 
-        <nav aria-label="Booking pages navigation" class="d-flex justify-content-center mt-4">
+        <!-- Pagination section -->
+        <nav aria-label="Reservation pages navigation" class="d-flex justify-content-center mt-4">
             <ul class="pagination">
                 {% if booking.has_previous %}
                 <li class="page-item"><a class="page-link" href="?page=1"><i class="fas fa-step-backward mr-2"></i>First</a></li>

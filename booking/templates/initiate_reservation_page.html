@@ -7,54 +7,55 @@
     <!-- Header Section -->
     <div class="row justify-content-center mb-5">
         <div class="col-sm-8 text-center">
-            <h1 class="thin"><i class="fas fa-concierge-bell mr-2"></i>Reservation Desk</h1> <!-- Added bell icon -->
-            <hr class="w-50 mx-auto">
+            <h1 class="menu-title"><i class="fas fa-carrot mr-2"></i>Healthy Bites Reservation</h1>
+            <hr class="menu-divider">
+            <p class="lead menu-description">Organic | Halal | Vegan | Vegetarian | Protein-Rich</p>
         </div>
     </div>
 
     <!-- Content Section -->
     <div class="row justify-content-center mt-3">
-        <div class="col-md-6">
-            <div class="card shadow-lg p-5 rounded">
+        <div class="col-md-8">
+            <div class="menu-item-card p-5 rounded-lg">
+
+                <!-- User Authentication Check -->
+                {% if not user.is_authenticated %}
                 <div class="text-center">
-
-                    <!-- User Authentication Check -->
-                    {% if not user.is_authenticated %}
-                    <i class="fas fa-lock fa-3x text-warning mb-3"></i>
-                    <h3 class="thin mb-2">Login Required</h3>
-                    <p class="thin mb-3">Please sign in to book a spot.</p>
-                    <a href="{% url 'account_login' %}" class="btn btn-primary mt-3 btn-lg"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
-                    {% else %}
-
-                    <!-- Booking Form -->
-                    <h5 class="fw-bold mt-3 thin text-center mb-4"><i class="fas fa-clipboard-check mr-2"></i>Book Your Spot</h5>
-                    <form method="POST" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ booking_form|crispy }}
-                        <button class="btn btn-primary mt-3 btn-lg" type="submit"><i class="fas fa-calendar-check mr-2"></i>Confirm Reservation</button>
-                    </form>
-                    {% endif %}
-
-                    <!-- Error Messages for Form -->
-                    {% if booking_form.errors %}
-                    <div class="mt-4">
-                    {% for field in booking_form %}
-                    {% for error in field.errors %}
-                    <div class="alert alert-danger mt-3">
-                        <i class="fas fa-exclamation-circle mr-2"></i>
-                        <strong>{{ error|escape }}</strong>
-                    </div>
-                    {% endfor %}
-                    {% endfor %}
-                    {% for error in booking_form.non_field_errors %}
-                    <div class="alert alert-danger mt-3">
-                        <i class="fas fa-exclamation-circle mr-2"></i>
-                        <strong>{{ error|escape }}</strong>
-                    </div>
-                    {% endfor %}
-                    </div>
-                    {% endif %}
+                    <i class="fas fa-lock fa-4x text-muted mb-4"></i>
+                    <h3 class="menu-item-name">Login Required</h3>
+                    <p class="menu-item-description mb-4">Sign in to experience a healthy culinary delight!</p>
+                    <a href="{% url 'account_login' %}" class="btn btn-green mt-3 btn-lg"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
                 </div>
+                {% else %}
+
+                <!-- Booking Form -->
+                <h4 class="fw-bold mt-3 text-primary text-center mb-4"><i class="fas fa-clipboard-check mr-2"></i>Book Your Table</h4>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ booking_form|crispy }}
+                    <button class="btn btn-green btn-block mt-3 btn-lg" type="submit"><i class="fas fa-chair mr-2"></i>Reserve Now</button>
+                </form>
+                {% endif %}
+
+                <!-- Error Messages for Form -->
+                {% if booking_form.errors %}
+                <div class="mt-4">
+                {% for field in booking_form %}
+                {% for error in field.errors %}
+                <div class="alert alert-danger rounded mt-3">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <strong>{{ error|escape }}</strong>
+                </div>
+                {% endfor %}
+                {% endfor %}
+                {% for error in booking_form.non_field_errors %}
+                <div class="alert alert-danger rounded mt-3">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <strong>{{ error|escape }}</strong>
+                </div>
+                {% endfor %}
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

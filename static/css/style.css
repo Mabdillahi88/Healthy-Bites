@@ -1,19 +1,24 @@
+/* Global Styles */
 body {
-    background-color: #f4f1ea;  /* Sandy tan */
-    font-size: 1rem;  /* Ensuring a base readable font size */
-    line-height: 1.5;  /* Improved readability */
+    background-color: #f9f6f2;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
 }
 
+/* Branding */
 .brand {
-    font-family: 'Zilla Slab', serif; /* Updated to the new font */
-    font-size: 2rem;  /* Larger for better visibility */
+    font-family: 'Zilla Slab', serif;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: #34495e;  /* Dark blue */
-    text-transform: uppercase;  /* Make the brand stand out more */
+    color: #306648;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Color Modifiers */
 .red-o {
-    color: #E84610;  /* Original red */
+    color: #E84610;
 }
 
 .thin {
@@ -21,24 +26,33 @@ body {
 }
 
 .light-bg {
-    background-color: #eaf2f8;  /* Lighter blue */
+    background-color: #f7f7f7;
 }
 
 .dark-bg {
-    background-color: #5dade2;  /* Mediterranean blue */
+    background-color: #99a89e;
 }
 
 .main-bg {
-    background-color: #f4f1ea;  /* Sandy tan */
+    background-color: #f9f6f2;
 }
 
+/* Card Styles */
 .card {
     border: none;
-    background-color: transparent;
-    padding: 20px; /* Added some padding for whitespace */
-    margin: 20px 0; /* Margin to space out cards */
+    background-color: #fdfcfb;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.hover-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Containers */
 .image-container {
     position: relative;
 }
@@ -48,9 +62,9 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;  /* Mediterranean turquoise */
-    padding: 10px; /* Added some padding for the flash */
-    border-radius: 5px;  /* Rounded edges */
+    background-color: #63a675;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .author {
@@ -59,61 +73,82 @@ body {
     text-transform: uppercase;
 }
 
+/* Masthead Styles */
 .masthead {
-    margin-top: 20px;  /* Added more margin for whitespace */
+    margin-top: 20px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 40vh;  /* Increased the height slightly */
-    width: 100%;
-}
-
-.post-link {
-    font-size: 1.2rem;  /* Making post links larger for better readability */
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
 }
 
 .post-title {
-    margin-top: 25%;  /* Adjusting margin */
+    margin-top: 25%;
 }
 
-.btn-signup, .btn-like {
-    padding: 10px 20px;  /* Larger buttons for easier click/tap */
-    border-radius: 5px;  /* Rounded edges */
-}
-
-.footer-icon {
-    margin: 0 10px;  /* Spacing out the icons */
-}
-
-.navbar-light .navbar-toggler-icon {
-    background-color: #34495e; /* Dark blue for the navbar toggler on mobile */
-}
-
-/* The rest of the styles remain unchanged */
-
-
-.shadow-text {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* X-offset, Y-offset, blur-radius, and color */
-}
-
-
-.transition-300ms {
+/* Button Styles */
+.btn-signup, .btn-like, .custom-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    background-color: #5BA150;
+    color: white;
 }
 
-.hover-shadow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.btn-green {
+    background-color: #63a675;
+    color: white;
 }
 
-.event-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.btn-green:hover, .custom-btn:hover {
+    background-color: #4CAF50;
 }
 
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+.btn-outline-primary {
+    border-color: #63a675;
+    color: #63a675;
+}
+
+.btn-outline-primary:hover {
+    background-color: #63a675;
+    color: white;
+}
+
+.btn-outline-danger {
+    border-color: #E84610;
+    color: #E84610;
+}
+
+.btn-outline-danger:hover {
+    background-color: #E84610;
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar-light .navbar-toggler-icon {
+    background-color: #306648;
+}
+
+/* Footer Styles */
+.footer-icon {
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-icon:hover {
+    color: #63a675;
+}
+
+.footer-text .h5 {
+    color: #306648;
+}
+
+/* Additional Styles */
+.shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .event-icon {
@@ -122,21 +157,7 @@ body {
     font-size: 1.2rem;
 }
 
-.event-image:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-}
-
 .carousel-inner img {
-    transition: transform 0.3s;
-}
-
-.carousel-inner:hover img {
-    transform: scale(1.05);
-}
-
-.card:hover {
-    transform: translateY(-5px);
     transition: transform 0.3s;
 }
 
@@ -150,7 +171,108 @@ body {
     color: #6c757d;
 }
 
-.grow:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
+/* Healthy Bites Theme Colors */
+.fas.fa-leaf, .fas.fa-salad, .menu-title .fas {
+    color: #63a675;
+}
+
+.carousel-image-container {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-image-container img {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.menu-title {
+    color: #63a675;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-title:hover {
+    color: #4CAF50;
+}
+
+.menu-item-name {
+    color: #63a675;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.menu-item-name:hover {
+    font-size: 1.6rem;
+}
+
+.menu-item-description {
+    color: #777;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-item-description:hover {
+    color: #555;
+}
+
+.menu-item-price {
+    font-weight: bold;
+}
+
+.menu-item-card {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-item-card:hover {
+    background-color: #f9f6f2;
+}
+
+/* Alerts */
+.custom-alert {
+    background-color: #FFE5D4;
+    border-color: #FFC3A0;
+    color: #D43F00;
+}
+
+.custom-danger-alert {
+    background-color: #FFE5D4;
+    border-color: #FFC3A0;
+    color: #D43F00;
+}
+
+/* Welcome section styling */
+.welcome-section .display-4 {
+    color: #306648;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .masthead {
+        height: 70vh;
+    }
+
+    .post-title {
+        margin-top: 35%;
+    }
+}
+
+@media (max-width: 992px) {
+    .masthead {
+        height: 50vh;
+    }
+
+    .post-title {
+        margin-top: 25%;
+    }
 }
