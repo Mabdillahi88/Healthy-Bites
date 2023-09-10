@@ -12,6 +12,7 @@ class PostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
+
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -49,7 +50,8 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, "Your comment has been added successfully!")  
+            messages.success(request, "Your comment has been added successfully!")
+            comment_form = CommentForm()  # Reset the form after saving the comment
         else:
             messages.error(request, "There was an error adding your comment. Please try again.")  
 
@@ -64,6 +66,7 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
 
 class PostLike(View):
     
