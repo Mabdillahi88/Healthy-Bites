@@ -7,7 +7,7 @@
     <!-- Title -->
     <div class="row justify-content-center">
         <div class="col-sm-10 col-md-8 mt-5 mb-5">
-            <h1 class="text-center menu-title">Smoothie Blends</h1>
+            <h1 class="text-center menu-title">Smoothie Blends <i class="fas fa-glass-whiskey"></i></h1>
         </div>
     </div>
 
@@ -17,7 +17,7 @@
             {% for blend in blends_list %}
             {% if blend.available %}
                 <div class="menu-item-card">
-                    <h3 class="menu-item-name">{{ blend.beverage_name }}</h3>
+                    <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ blend.beverage_name }}</h3>
                     <span class="menu-item-description">{{ blend.description | safe }}</span>
                     <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ blend.price }}</span>
                 </div>
