@@ -118,3 +118,12 @@ Healthy Bites is a unique dining experience offering nourishing food options for
  - Key features were outlined as Epics with the help of the milestones functionality.
  - The board was structured with the statuses "To Do", "Doing", and "Done" to ensure a smooth flow of tasks and assignments.
 
+
+<details><summary>Epics</summary>
+
+
+![Epic 1](docs/features/epic_1.jpg)
+![Epic 2](/workspace/Healthy-Bites/docs/features/epic_2.jpg)
+![Epic 3](docs/features/epic_3.jpg)
+![Epic 4](/workspace/Healthy-Bites/docs/features/epic_4.jpg)
+</details>
