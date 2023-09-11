@@ -123,7 +123,20 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 
 
 ![Epic 1](docs/features/epic_1.jpg)
-![Epic 2](/workspace/Healthy-Bites/docs/features/epic_2.jpg)
+![Epic 2](docs/features/epic_2.jpg)
 ![Epic 3](docs/features/epic_3.jpg)
-![Epic 4](/workspace/Healthy-Bites/docs/features/epic_4.jpg)
+![Epic 4](docs/features/epic_4.jpg)
+</details>
+
+<details><summary>User Stories</summary>
+
+![User stories](docs/features/user stories_1.jpg)
+
+</details>
+
+![Kanban 1](docs/features/kanban_1.jpg)
+![Kanban 2](docs/features/kanban_2.jpg)
+![Kanban 3](docs/features/kanban_3.jpg)
+![Kanban 4](docs/features/kanban_4.jpg)
+
 </details>
