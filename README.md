@@ -42,7 +42,7 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 
  - To make a reservation for a health-focused dining experience.
  - To view, edit, and cancel reservations as needed.
- - To explore nutritious food and drink menus, read health-related blogs, and access contact information.
+ - To explore nutritious food, smoothies and milkshake menus, read health-related blogs, and access contact information.
 
 ### Site Owner Goals
 
@@ -93,7 +93,7 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 13. As a User, I can view my login status, providing clarity on my session's state (Must have).
 14. As an Admin/Authorized User, I can switch booking confirmations between auto and manual modes, ensuring efficient management during peak periods and preventing overbookings (Must have).
 15. As a User, I can explore the site's blog, enriching my knowledge on healthy living and the latest updates from Healthy Bites (Should have).
-16. As a User, I can peruse the food and drink menu, aiding my decision on whether to dine at Healthy Bites (Must have).
+16. As a User, I can peruse the food, smoothies and milkshake menus, aiding my decision on whether to dine at Healthy Bites (Must have).
 17. As a User, I'm restricted from reserving past dates, ensuring all bookings are valid (Must have).
 18. As a User, I can browse blog content page by page, offering a user-friendly experience without overwhelming information (Should have).
 19. As a User, I'm prevented from double booking a table, maintaining the integrity and accuracy of reservations (Must have).
