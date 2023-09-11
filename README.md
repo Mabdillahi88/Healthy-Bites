@@ -130,7 +130,7 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 
 <details><summary>User Stories</summary>
 
-![User stories](docs/features/user stories_1.jpg)
+![User stories](docs/features/user_stories_1.jpg)
 
 </details>
 
