@@ -134,6 +134,8 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 
 </details>
 
+<details><summary>Kanban</summary>
+
 ![Kanban 1](docs/features/kanban_1.jpg)
 ![Kanban 2](docs/features/kanban_2.jpg)
 ![Kanban 3](docs/features/kanban_3.jpg)
