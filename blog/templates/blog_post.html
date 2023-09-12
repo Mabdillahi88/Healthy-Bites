@@ -7,22 +7,22 @@
 <div class="masthead light-bg py-5"> <!-- Consistent background -->
     <div class="container">
         <div class="row g-0 align-items-center">
-            
+
             <!-- Post Details on Masthead -->
             <div class="col-md-6 py-4 masthead-text">
                 <h1 class="thin brand">{{ post.title }}</h1> <!-- Consistent font-weight and color -->
                 <p class="lead">
-                    <i class="fas fa-user"></i> {{ post.author }} | 
+                    <i class="fas fa-user"></i> {{ post.author }} |
                     <i class="fas fa-calendar-alt"></i> {{ post.created_on }}
                 </p>
             </div>
-            
+
             <!-- Post Image on Masthead -->
             <div class="d-none d-md-flex col-md-6 justify-content-center">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="img-fluid rounded shadow hover-shadow"> <!-- Added hover-shadow for consistency -->
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="img-fluid rounded shadow hover-shadow" alt="Placeholder Image"> <!-- Added hover-shadow for consistency -->
                 {% else %}
-                <img src="{{ post.featured_image.url }}" class="img-fluid rounded shadow hover-shadow"> <!-- Added hover-shadow for consistency -->
+                <img src="{{ post.featured_image.url }}" class="img-fluid rounded shadow hover-shadow" alt="{{ post.title }} Image"> <!-- Added hover-shadow for consistency -->
                 {% endif %}
             </div>
         </div>
@@ -32,15 +32,13 @@
 <!-- Main content -->
 <div class="container my-5">
     <div class="row">
-        
+
         <!-- Post content -->
         <div class="col-lg-8 card mb-4 mt-3 shadow hover-shadow bg-light"> <!-- Added hover-shadow for consistency -->
             <div class="card-body">
-                <p class="card-text mb-4">
-                    {{ post.content | safe }}
-                </p>
+                {{ post.content | safe }}
             </div>
-            
+
             <!-- Like and comment count -->
             <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
                 <div>
@@ -67,7 +65,7 @@
 
         <!-- Comment section -->
         <div class="col-lg-4">
-            
+
             <h3 class="p-2 mb-3 rounded light-bg border-left border-green">Comments:</h3> <!-- Consistent bg and border colors -->
             {% for comment in comments %}
             <div class="comments p-3 my-2 rounded shadow-sm bg-white">

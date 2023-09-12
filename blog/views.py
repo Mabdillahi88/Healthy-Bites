@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.contrib import messages  
+from django.contrib import messages
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -31,7 +31,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                'comment_form': CommentForm()
+                'comment_form': CommentForm(),
             },
         )
 
@@ -50,10 +50,10 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, "Your comment has been added successfully!")
-            comment_form = CommentForm()  # Reset the form after saving the comment
+            messages.success(request, "Your comment has been added successfully!")    # noqa
+            comment_form = CommentForm()
         else:
-            messages.error(request, "There was an error adding your comment. Please try again.")  
+            messages.error(request, "There was an error adding your comment. Please try again.")  # noqa
 
         return render(
             request,
@@ -69,7 +69,7 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():

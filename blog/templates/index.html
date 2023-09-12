@@ -17,9 +17,11 @@
                     <div class="image-container">
                         {% if "placeholder" in post.featured_image.url %}
                         <img class="card-img-top"
-                             src="https://c.pxhere.com/photos/d8/bd/beef_cooking_cuisine_delicious_dinner_dish_eating_eating_healthy-962838.jpg!d">
+                             src="https://c.pxhere.com/photos/d8/bd/beef_cooking_cuisine_delicious_dinner_dish_eating_eating_healthy-962838.jpg!d"
+                             alt="Placeholder Image">
                         {% else %}
-                        <img class="card-img-top" src="{{ post.featured_image.url }}">
+                        <img class="card-img-top" src="{{ post.featured_image.url }}"
+                             alt="{{ post.title }} - Featured Image">
                         {% endif %}
                         <div class="image-flash brand-bg">
                             <p class="author">Author: {{ post.author }}</p>
