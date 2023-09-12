@@ -14,7 +14,7 @@
             {% if shake.available %}
             <div class="menu-item-card">
                 <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ shake.beverage_name }}</h3>
-                <span class="menu-item-description">{{ shake.description | safe }}</span>
+                {{ shake.description | safe }}
                 <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ shake.price }}</span>
             </div>
             {% endif %}

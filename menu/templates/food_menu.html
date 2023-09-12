@@ -3,7 +3,6 @@
 {% block content %}
 
 <div class="container-fluid">
-
     <!-- Title -->
     <div class="row justify-content-center">
         <div class="col-sm-10 col-md-8 mt-5 mb-5">
@@ -19,7 +18,9 @@
                 {% if meal.meal_category == 0 and meal.available %}
                     <div class="menu-item-card">
                         <h3 class="menu-item-name"><i class="fas fa-utensil-spoon"></i> {{ meal.meal_name }}</h3>
-                        <span class="menu-item-description">{{ meal.description | safe }}</span>
+                        <div class="font-verdana color-3d3d3d">
+                            {{ meal.description | safe }}
+                        </div>
                         <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ meal.price }}</span>
                     </div>
                 {% endif %}
@@ -35,7 +36,7 @@
                 {% if meal.meal_category == 1 and meal.available %}
                     <div class="menu-item-card">
                         <h3 class="menu-item-name"><i class="fas fa-utensil-spoon"></i> {{ meal.meal_name }}</h3>
-                        <span class="menu-item-description">{{ meal.description | safe }}</span>
+                        <div class="font-verdana color-111111">{{ meal.description | safe }}</div>
                         <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ meal.price }}</span>
                     </div>
                 {% endif %}
@@ -51,7 +52,7 @@
                 {% if meal.meal_category == 2 and meal.available %}
                     <div class="menu-item-card">
                         <h3 class="menu-item-name"><i class="fas fa-utensil-spoon"></i> {{ meal.meal_name }}</h3>
-                        <span class="menu-item-description">{{ meal.description | safe }}</span>
+                        <div class="font-system color-0d2e51">{{ meal.description | safe }}</div>
                         <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ meal.price }}</span>
                     </div>
                 {% endif %}

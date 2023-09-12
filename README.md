@@ -154,7 +154,18 @@ For Healthy Bites, I opted for a light color palette that embodies the joy and v
 
 This color scheme perfectly resonates with the core values of Healthy Bites, emphasizing the importance of natural, nutritious choices.
 
-details><summary>Colour pallet</summary>
- [color.adobe.com](docs/colour_pallete.jpg)
+<details><summary>Colour pallet</summary>
+
+![Colour pallet](docs/colour_pallete.jpg)
 
 </details>
+
+### Fonts
+
+ The fonts selected were from Google Fonts, Montserrat wits sans-serif as a backup font.
+
+### Structure
+
+#### Website pages
+
+The site was designed for the user to be familiar with the layout such as a navigation bar along the top of the pages and a hamburger menu button for smaller screen.

@@ -18,7 +18,7 @@
             {% if blend.available %}
                 <div class="menu-item-card">
                     <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ blend.beverage_name }}</h3>
-                    <span class="menu-item-description">{{ blend.description | safe }}</span>
+                    {{ blend.description | safe }}
                     <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ blend.price }}</span>
                 </div>
             {% endif %}
