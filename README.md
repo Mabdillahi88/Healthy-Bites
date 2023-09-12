@@ -150,7 +150,9 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 
 ### Colours
 
-I chose light  colors to keep a theme of a ligh colours and happy and healthy vibes. i made the text green to respresent organic food or grown food and colour of leaves and nature.
+For Healthy Bites, I opted for a light color palette that embodies the joy and vitality associated with wholesome eating. The intention was to craft a visual environment that exudes both happiness and health. In particular, the green text was chosen to symbolize organic, farm-fresh produce, echoing the shades of verdant leaves and the essence of nature.
+
+This color scheme perfectly resonates with the core values of Healthy Bites, emphasizing the importance of natural, nutritious choices.
 
 details><summary>Colour pallet</summary>
  [color.adobe.com](docs/colour_pallete.jpg)
