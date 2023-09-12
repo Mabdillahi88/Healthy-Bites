@@ -142,3 +142,17 @@ Healthy Bites is a unique dining experience offering nourishing food options for
 ![Kanban 4](docs/features/kanban_4.jpg)
 
 </details>
+
+##### Back to [top](#table-of-contents)<hr>
+
+
+## Design
+
+### Colours
+
+I chose light  colors to keep a theme of a ligh colours and happy and healthy vibes. i made the text green to respresent organic food or grown food and colour of leaves and nature.
+
+details><summary>Colour pallet</summary>
+ [color.adobe.com](docs/colour_pallete.jpg)
+
+</details>
