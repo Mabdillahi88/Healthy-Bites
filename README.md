@@ -259,3 +259,37 @@ The Post Model contains the following:
  - price 
  - beverage_category 
  - available 
+
+
+
+   The Table Model contains the following:
+
+  - id 
+  - name 
+  - max_seats 
+
+
+     The Table Model contains the following:
+
+ - id 
+ - created_date 
+ - requested_date 
+ - requested_time 
+ - table_id 
+ - user_id 
+ - name 
+ - email 
+ - phone 
+ - status 
+ - guest_count 
+
+
+    The MyContact Model contains the following:
+
+ - message_id 
+ - created_date 
+ - user_id 
+ - name 
+ - email 
+ - phone 
+ - message 
