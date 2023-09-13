@@ -21,7 +21,10 @@ class BookingForm(forms.ModelForm):
             ),
             Row(
                 Column('phone', css_class='form-group col-md-6 mb-0'),
-                Column('requested_date', css_class='form-group col-md-6 mb-0'),
+                Column(
+                    'requested_date',
+                    css_class='form-group col-md-6 mb-0'
+                ),
                 css_class='form-row'
             ),
             'guest_count',
@@ -30,7 +33,7 @@ class BookingForm(forms.ModelForm):
             Submit('submit', 'Book Now')
         )
 
-        # Set minimum date for date picker to ensure only future dates are selected.
+        # Set minimum date for date picker
         min_date = datetime.now().date()
         self.fields['requested_date'].widget.attrs['min'] = min_date
 
@@ -53,8 +56,8 @@ class BookingForm(forms.ModelForm):
         help_text="Provide your phone number, including the country code."
     )
     email = forms.EmailField(
-        widget=forms.EmailInput(attrs={'placeholder': 'your-email@example.com'}),
-        help_text="We'll send a booking confirmation to the provided email address."
+        widget=forms.EmailInput(attrs={'placeholder': 'your-email@example.com'}),   # noqa
+        help_text="We'll send a booking confirmation to the provided email."
     )
     requested_date = forms.DateField(
         widget=forms.DateInput(attrs={'type': 'date'}),

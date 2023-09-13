@@ -1,7 +1,7 @@
-# Importing necessary modules
 from django.contrib import admin
 from rangefilter.filters import DateRangeFilter
 from .models import MyContact
+
 
 # Registering the MyContact model with Django Admin
 @admin.register(MyContact)
@@ -15,7 +15,7 @@ class ContactAdmin(admin.ModelAdmin):
         'phone',
         'created_date'
     )
-    
+
     # Fields that can be searched in the admin view
     search_fields = ['name', 'email', 'phone']
 

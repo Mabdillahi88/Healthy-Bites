@@ -4,18 +4,21 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, 'Draft'), (1, 'Posted'))
 
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     post_id = models.AutoField(primary_key=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='blog_posts'
+    )
     created_date = models.DateTimeField(blank=True)
     updated_date = models.DateTimeField()
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='liked_posts')  
+    likes = models.ManyToManyField(User, related_name='liked_posts')
 
     class Meta:
         ordering = ['-created_date']
@@ -26,8 +29,9 @@ class Post(models.Model):
     def like_count(self):
         return self.likes.count()
 
+
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')   # noqa
     name = models.CharField(max_length=50)
     email = models.EmailField()
     body = models.TextField()
