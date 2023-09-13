@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'menu',
     'contact',
     'home',
-    'rangefilter',
 ]
 
 SITE_ID = 1
