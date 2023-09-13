@@ -162,10 +162,40 @@ This color scheme perfectly resonates with the core values of Healthy Bites, emp
 
 ### Fonts
 
- The fonts selected were from Google Fonts, Montserrat wits sans-serif as a backup font.
+ For Healthy Bites, I chose the 'Open Sans' font due to its clean and modern aesthetics, aligning perfectly with our fresh and health-conscious brand image. For branding elements, we utilized the 'Zilla Slab' font, offering a distinct contrast. As a fallback, the sans-serif and serif fonts ensure consistent readability across different platforms
 
 ### Structure
 
 #### Website pages
 
-The site was designed for the user to be familiar with the layout such as a navigation bar along the top of the pages and a hamburger menu button for smaller screen.
+Aiming for an intuitive and user-friendly experience, Healthy Bites' website layout is designed with familiarity in mind. This includes a navigation bar situated at the top of all pages, ensuring easy access to all features. Furthermore, for optimal mobile viewing, a hamburger menu icon is incorporated for smaller screens, promoting seamless navigation regardless of device size.
+
+The footer is designed to bridge the online gap between Healthy Bites and our patrons. It showcases relevant social media icons, inviting users to connect with our brand on various platforms. By doing so, we aim to foster a sense of community, boost our digital presence, and share the joys of healthy living with a broader audience.
+
+Website Breakdown:
+
+ - Homepage: A welcoming space featuring curated cards, enabling users to instantly book a table or browse our nutritious food and drink menus.
+
+ - Food Menu: An appetizing display of our diverse culinary options, all fetched from our database and neatly categorized into starters, mains, and desserts.
+
+ - Smoothies and milkshakes menu: Quench your thirst by exploring our assortment of beverages, all listed according to their type.
+
+ - Blog Section: Dive into a collection of health-centric articles, with content curated by our team and displayed in sets of four per page for easy browsing.
+
+ - Detailed Blog View: Engage deeper with a chosen blog article. Registered members can also share their insights through comments, awaiting moderation for quality assurance.
+
+ - Reservation Desk: Registered patrons can seamlessly book their dining experience by specifying the table location, date, time, and guest count.
+
+ - My Reservations: Users can revisit their booking history, with past reservations automatically archived for clarity.
+
+ - Modify Reservation: Flexibility is key, and users can easily amend details like date, time, table position, and number of guests.
+
+ - Terminate Reservation: In case plans change, users can effortlessly cancel their bookings, with data being promptly removed from our database.
+
+ - Reach Out: Got queries or feedback? Our "Contact Us" page offers registered members the convenience of direct messaging. Alternatively, visitors can get in touch via provided email, phone, or even drop by our physical address.
+
+ - Authentication Desk: A portal for users to either log in for personalized services or log out post their session.
+
+ - Join Us: A streamlined registration process invites users to become part of the Healthy Bites community and make the most of our booking features.
+
+ - Oops! 404: An aesthetically designed error page ensures users are informed and guided aptly when they stumble upon non-existent content.
