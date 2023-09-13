@@ -199,3 +199,63 @@ Website Breakdown:
  - Join Us: A streamlined registration process invites users to become part of the Healthy Bites community and make the most of our booking features.
 
  - Oops! 404: An aesthetically designed error page ensures users are informed and guided aptly when they stumble upon non-existent content.
+
+
+#### Database
+
+- Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
+
+
+
+##### Post Model
+
+The Post Model contains the following:
+
+ - post_id 
+ - title 
+ - slug 
+ - author_id 
+ - created_date 
+ - updated_date 
+ - content 
+ - featured_image 
+ - excerpt 
+ - status 
+ - likes 
+
+ 
+
+
+ The Comment Model contains the following:
+
+ - id 
+ - post_id 
+ - name 
+ - email 
+ - body 
+ - created_date 
+ - approved 
+
+
+
+  
+  The MealOption Model contains the following:
+
+ - meal_id 
+ - meal_name 
+ - description 
+ - price 
+ - meal_category 
+ - available 
+
+
+
+   
+   The Beverage Model contains the following:
+
+ - beverage_id 
+ - beverage_name 
+ - description 
+ - price 
+ - beverage_category 
+ - available 
