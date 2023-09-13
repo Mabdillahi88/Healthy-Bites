@@ -1,1 +1,1 @@
-web: gunicorn healthy_bites.wsgi
+web: gunicorn healthy_bites.wsgi:application
