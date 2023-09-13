@@ -201,11 +201,11 @@ body {
 }
 
 .menu-title:hover {
-    color: #4CAF50;
+    color: #203726;
 }
 
 .menu-item-name {
-    color: #63a675;
+    color: #203726;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     transition: font-size 0.3s ease-in-out;

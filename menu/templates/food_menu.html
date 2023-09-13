@@ -13,11 +13,18 @@
     <!-- Starter Food Items -->
     <div class="row justify-content-center">
         <div class="col-sm-10 col-md-8">
-            <h2 class="section-header"><i class="fas fa-utensils"></i> Starters</h2>
+            <h2 class="section-header" aria-label="Starters Section">
+                <i class="fas fa-utensils" aria-hidden="true"></i> 
+                Starters
+            </h2>
+            
             {% for meal in food_items %}
                 {% if meal.meal_category == 0 and meal.available %}
                     <div class="menu-item-card">
-                        <h3 class="menu-item-name"><i class="fas fa-utensil-spoon"></i> {{ meal.meal_name }}</h3>
+                        <h3 class="menu-item-name" aria-label="{{ meal.meal_name }} Menu Item">
+                            <i class="fas fa-utensil-spoon" aria-hidden="true"></i> 
+                            {{ meal.meal_name }}
+                        </h3>                        
                         <div class="font-verdana color-3d3d3d">
                             {{ meal.description | safe }}
                         </div>
