@@ -11,17 +11,20 @@ from .models import Booking
 from .forms import BookingForm
 import datetime
 
+
 class UserReservationRequestView(LoginRequiredMixin, View):
     template_name = 'initiate_reservation_page.html'
     success_message = 'Booking successful, awaiting confirmation.'
 
     def get_booking_form(self, request):
-        initial_data = {'email': request.user.email} if request.user.is_authenticated else {}
+        initial_data = {
+            'email': request.user.email
+        } if request.user.is_authenticated else {}
         return BookingForm(initial=initial_data)
 
     def get(self, request, *args, **kwargs):
         booking_form = self.get_booking_form(request)
-        return render(request, self.template_name, {'booking_form': booking_form})
+        return render(request, self.template_name, {'booking_form': booking_form})  # noqa
 
     def post(self, request, *args, **kwargs):
         booking_form = BookingForm(data=request.POST)
@@ -31,7 +34,8 @@ class UserReservationRequestView(LoginRequiredMixin, View):
             booking.save()
             messages.success(request, self.success_message)
             return redirect('acknowledgment_view')
-        return render(request, self.template_name, {'booking_form': booking_form})
+        return render(request, self.template_name, {'booking_form': booking_form})   # noqa
+
 
 class BookingAcknowledgmentPageView(LoginRequiredMixin, View):
     template_name = 'acknowledgment_view.html'
@@ -39,41 +43,48 @@ class BookingAcknowledgmentPageView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
+
 class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
     model = Booking
     template_name = 'active_bookings_dashboard.html'
     paginate_by = 4
-    context_object_name = 'booking'  # This is the important line.
+    context_object_name = 'booking'
 
     def get_queryset(self):
         today = datetime.datetime.now().date()
-        Booking.objects.filter(user=self.request.user, requested_date__lt=today).update(status='Booking Expired')
-        
-        # Fetch bookings
-        user_bookings = Booking.objects.filter(user=self.request.user).order_by('-created_date')
-        
-        # Print bookings for debugging purposes
-        print(f"Bookings for user {self.request.user.username}: {user_bookings}")
-        
+        Booking.objects.filter(
+            user=self.request.user,
+            requested_date__lt=today
+        ).update(status='Booking Expired')
+
+        user_bookings = Booking.objects.filter(
+            user=self.request.user
+        ).order_by('-created_date')
+
+        print(f"Bookings for user {self.request.user.username}: "
+              f"{user_bookings}")
+
         return user_bookings
 
-class IndividualBookingModificationView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+
+class IndividualBookingModificationView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):   # noqa
     model = Booking
     form_class = BookingForm
     template_name = 'modify_reservation_form.html'
     success_message = 'Booking has been updated.'
     success_url = reverse_lazy('active_bookings_dashboard')
 
+
 class SpecificBookingTerminationView(LoginRequiredMixin, DeleteView):
     model = Booking
     template_name = 'terminate_reservation_dialog.html'
     success_message = "Booking cancelled"
     success_url = reverse_lazy('active_bookings_dashboard')
-    
+
     def get_object(self, queryset=None):
         booking = get_object_or_404(Booking, pk=self.kwargs['pk'])
-        if booking.user != self.request.user and not self.request.user.is_superuser:
-            raise PermissionDenied("You don't have permission to cancel this booking.")
+        if booking.user != self.request.user and not self.request.user.is_superuser:   # noqa
+            raise PermissionDenied("You don't have permission to cancel this booking.")   # noqa
         return booking
 
     def delete(self, request, *args, **kwargs):

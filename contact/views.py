@@ -29,7 +29,7 @@ class ContactMessage(View):
         """
         initial_data = {'email': request.user.email} if request.user.is_authenticated else {}
         contact_form = ContactForm(initial=initial_data)
-        
+
         return render(
             request, 
             self.template_name, 
@@ -45,7 +45,7 @@ class ContactMessage(View):
         
         if form.is_valid():
             contact = form.save(commit=False)
-            contact.user = request.user
+            contact.user = get_user_instance(request)
             contact.save()
             
             messages.success(request, "Message has been sent")
