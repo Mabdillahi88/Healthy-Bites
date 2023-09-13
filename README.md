@@ -207,8 +207,14 @@ Website Breakdown:
 
 
 
-##### Post Model
+##### Database scheme Model
 
+  _______________________________________________________________________________________________
+
+
+
+
+  
 The Blog Model contains the following:
 
  - post_id 
@@ -241,6 +247,11 @@ The Blog Model contains the following:
 
 </details>
 
+  _______________________________________________________________________________________________
+
+
+
+
   
   The MealOption Model contains the following:
 
@@ -269,6 +280,12 @@ The Blog Model contains the following:
 
 </details>
 
+  _______________________________________________________________________________________________
+
+
+
+
+  
    The Table Model contains the following:
 
   - id 
@@ -297,6 +314,12 @@ The Blog Model contains the following:
 
 </details>
 
+  _______________________________________________________________________________________________
+
+
+
+
+  
 
     The MyContact Model contains the following:
 
