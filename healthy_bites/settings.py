@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'menu',
     'contact',
     'home',
-    'phonenumber_field',
     'rangefilter',
 ]
 
