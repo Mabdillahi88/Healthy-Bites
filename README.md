@@ -209,7 +209,7 @@ Website Breakdown:
 
 ##### Post Model
 
-The Post Model contains the following:
+The Blog Model contains the following:
 
  - post_id 
  - title 
@@ -223,7 +223,6 @@ The Post Model contains the following:
  - status 
  - likes 
 
- 
 
 
  The Comment Model contains the following:
@@ -236,7 +235,11 @@ The Post Model contains the following:
  - created_date 
  - approved 
 
+ <details><summary>Blog and Comment Model</summary>
 
+![Blog and Comment Model](docs/database_scheme_blog.jpg)
+
+</details>
 
   
   The MealOption Model contains the following:
@@ -260,7 +263,11 @@ The Post Model contains the following:
  - beverage_category 
  - available 
 
+ <details><summary>MealOption and Beverage Model</summary>
 
+![MealOption and Beverage Model](docs/database_scheme_menu.jpg)
+
+</details>
 
    The Table Model contains the following:
 
@@ -269,7 +276,7 @@ The Post Model contains the following:
   - max_seats 
 
 
-     The Table Model contains the following:
+     The Booking Model contains the following:
 
  - id 
  - created_date 
@@ -284,6 +291,13 @@ The Post Model contains the following:
  - guest_count 
 
 
+ <details><summary>Table and Booking Model</summary>
+
+![Table and Booking Model](docs/database_scheme_booking.jpg)
+
+</details>
+
+
     The MyContact Model contains the following:
 
  - message_id 
@@ -293,3 +307,10 @@ The Post Model contains the following:
  - email 
  - phone 
  - message 
+
+
+<details><summary>MyContact Model</summary>
+
+![MyContact Model](docs/database_scheme_contact.jpg)
+
+</details>
