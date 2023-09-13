@@ -1,6 +1,6 @@
 # Healthy Bites
 
-![Am I Responsive](#)
+![Am I Responsive](docs/healthy_bites.jpg)
 
 **Mohamed Abdillahi**
 
@@ -337,3 +337,49 @@ The Blog Model contains the following:
 ![MyContact Model](docs/database_scheme_contact.jpg)
 
 </details>
+
+
+### Wireframes
+The wireframes were created using Balsamiq
+<details><summary></summary>
+<img src="docs/wireframes.png">
+</details>
+
+
+## Technologies Used
+
+### Languages & Frameworks
+
+ - HTML: The backbone of web pages, used for structuring content.
+ - CSS: Applied for styling and visually enhancing the website's design.
+ - JavaScript: Used for adding interactive features and functionality.
+ - Python: Utilized for server-side scripting and logic.
+ - Django: A powerful Python web framework for building web applications efficiently.
+
+
+### Libraries & Tools
+
+ - Am I Responsive: Ensured responsiveness and compatibility on various devices.
+ - Balsamiq: Employed for creating wireframes and mockups.
+ - Bootstrap v5.2: A popular CSS framework for responsive and visually appealing design.
+ - Cloudinary: Used for media management and optimization.
+ - Favicon.io: Generated custom favicons for the website.
+ - Chrome DevTools: Assisted in debugging and optimizing web pages.
+ - Font Awesome: Provided a wide range of icons for enhancing user interface.
+ - Git: Version control system for tracking changes in code.
+ - GitHub: Platform for hosting and collaborating on code repositories.
+ - Google Fonts: Offered a diverse collection of web fonts for improved typography.
+ - Heroku Platform: Deployed the application on the Heroku cloud platform.
+ - Postgres: Chosen as the database management system for the production version.
+ - Summernote: Integrated a rich text editor for enhanced content creation.
+
+Validation Tools:
+
+ - WC3 Validator: Ensured compliance with HTML and XHTML standards.
+ - Jigsaw W3 Validator: Checked CSS files for validity.
+ - JShint: Helped detect and fix errors in JavaScript code.
+ - Pycodestyle (PEP8): Enforced Python code style standards.
+ - Lighthouse: Analyzed and improved web page performance.
+ - Wave Validator: Ensured accessibility compliance.
+
+##### Back to [top](#table-of-contents)
