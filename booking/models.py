@@ -9,10 +9,10 @@ time_slots = tuple(
 
 # Define potential statuses for a booking.
 statuses = [
-    'Awaiting Confirmation',
-    'Booking Confirmed',
-    'Booking Rejected',
-    'Booking Expired'
+    'Pending Confirmation',
+    'Confirmed Booking',
+    'Rejected Booking',
+    'Expired Booking'
 ]
 status_options = tuple(
     (status.lower(), status) for status in statuses

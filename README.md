@@ -384,3 +384,201 @@ Validation Tools:
 
 ##### Back to [top](#table-of-contents)
 
+## Features
+
+### Home page
+- The home page is a blend of modern design elements that highlight the essence of health and nutrition.
+ - It includes a navigation bar, main content area showcasing the best of Healthy Bites, and a footer for essential links and information.
+
+
+<details><summary>See feature images</summary>
+
+![Home page](docs/features/features_homepage.jpg)
+</details>
+
+
+### Logo & Navigation
+ - A bespoke logo represents Healthy Bites, encapsulating its core values.
+ - The design is fully responsive, catering to various screen sizes.
+ - On smaller screens, it gracefully transitions to a hamburger menu.
+ - Clear indicators show whether a user is logged in or out.
+ - The navigation bar is consistently present across all pages for easy access.
+
+<details><summary>See feature images</summary>
+
+![Footer](docs/features/features_logo1.jpg)
+![Footer](docs/features/features_logo2.jpg)
+![Footer](docs/features/features_logo3.jpg)
+</details>
+
+
+### Footer
+ - The footer houses links to Healthy Bites' active social media profiles.
+ - It's uniformly present on all pages, ensuring continuity.
+
+<details><summary>See feature images</summary>
+
+![Footer](docs/features/features_socialmedialinks.jpg)
+</details>
+
+
+### Sign up / Register
+ - Enables users to create an account for a personalized experience.
+ - Essential fields include a username and password, with email being optional for user convenience.
+
+<details><summary>See feature images</summary>
+
+![Register](docs/features/features_register.jpg)
+</details>
+
+
+### Login
+- Secure login functionality lets users access special features such as booking and viewing their reservation history.
+
+<details><summary>See feature images</summary>
+
+![Login](docs/features/features_register.jpg)
+
+</details>
+
+
+### Logout
+
+  - Users can safely log out with a prompt ensuring they genuinely intend to do so.
+
+<details><summary>See feature images</summary>
+
+![Logout](docs/features/features_signout.jpg)
+</details>
+
+
+### Book
+ - Users can swiftly reserve a table using a comprehensive booking form.
+ - Informative prompts guide users when input data might be invalid or incomplete.
+
+<details><summary>See feature images</summary>
+
+![Book](docs/features/features_reservation1.jpg)
+![Book](docs/features/features_reservation2.jpg)
+
+</details>
+
+
+### My Bookings
+ - Allows users to view all their bookings in a paginated layout (4 bookings per page).
+ - Automatically expires bookings older than the current date.
+ - Displays booking status, including "awaiting confirmation" and "confirmed" for a seamless experience.
+
+<details><summary>See feature images</summary>
+
+![My Bookings](docs/features/features_viewreservation.jpg)
+</details>
+
+
+### Edit Booking
+- Provides users with the capability to edit their bookings, allowing changes to the date, time, guest count, and table.
+
+<details><summary>See feature images</summary>
+
+![Edit Booking](docs/features/features_modifyreservation.jpg)
+</details>
+
+
+### Cancel Booking 
+- Enables users to cancel their bookings with a confirmation prompt to prevent accidental cancellations.
+  
+<details><summary>See feature images</summary>
+
+![Cancel Booking](docs/features/feature-cancel-booking.PNG)
+</details>
+
+
+### Food Menu
+ - Displays the complete food menu, categorized into starters, mains, and desserts.
+ - Allows staff to add, update, and delete food items via the admin panel.
+  
+<details><summary>See feature images</summary>
+
+![Food Menu](docs/features/features_foodmenu.jpg)
+</details>
+
+
+### Drinks Menu
+- The drinks menu displays all available foods on the menu
+- Menu is seperated by wines, beers and cocktails
+- Items can be added via the admin panel in the backend by staff
+- Staff can create, update and delete foods via the admin panel 
+  
+<details><summary>See feature images</summary>
+
+![Drinks Menu](docs/features/feature-drinks-menu.PNG)
+</details>
+
+
+### Blog
+- The blog displays each post made by a staff member
+- Paginations is used to display 4 posts per page
+  
+<details><summary>See feature images</summary>
+
+![Blog](docs/features/feature-blog.PNG)
+</details>
+
+
+### Blog Expanded
+- Expands into the selected blog the user wishes to read
+- Displays a featured image uploaded by the poster
+- If no image is uploaded a default image is then used
+- Registerd user can comment on the blog
+  
+<details><summary>See feature images</summary>
+
+![Blog Expanded](docs/features/feature-blog2.PNG)
+</details>
+
+
+### Comments
+- Comments made are set to pending approval status to ensure nothing bad is displayed
+- Only registered users can comment on a blog post
+- Staff can approve comments via the admin panel on the backend
+  
+<details><summary>See feature images</summary>
+
+![Comments](docs/features/feature-comments.PNG)
+</details>
+
+
+### Contact Us
+- Registered users can DM staff via the message box
+- Contact info such as, phone, email, and address is displayed
+- A Google Map is embedded with the address for users to use
+  
+<details><summary>See feature images</summary>
+
+![Contact Us](docs/features/feature-contact-us.PNG)
+![Contact Us](docs/features/feature-contact-us2.PNG)
+</details>
+
+
+### Social Media Links
+- A logo and link is used for each social media displayed
+- All links open in a new tab to ensure user is not directed away from the business
+- Displayed on all pages
+  
+<details><summary>See feature images</summary>
+
+![Social Media Links](docs/features/feature-social-links.PNG)
+</details>
+
+
+### Pagination
+- Pagination is used on the bookings list and the blog page
+- Ensures the page is kept tidy as only 4 items are displayed per page
+  
+<details><summary>See feature images</summary>
+
+![Pagination](docs/features/feature-pagination.PNG)
+</details>
+
+
+##### Back to [top](#table-of-contents)<hr>

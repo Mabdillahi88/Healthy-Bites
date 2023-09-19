@@ -5,7 +5,6 @@ from datetime import datetime
 from phonenumber_field.formfields import PhoneNumberField
 from .models import Booking
 
-
 # This form is used for users to make a booking at our restaurant.
 class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -52,11 +51,11 @@ class BookingForm(forms.ModelForm):
         help_text="Please provide your name for the booking."
     )
     phone = PhoneNumberField(
-        widget=forms.TextInput(attrs={'placeholder': '+1 234567890'}),
-        help_text="Provide your phone number, including the country code."
+        widget=forms.TextInput(attrs={'placeholder': '+44 1234 567890'}),
+        help_text="Provide your phone number, including the country code (+44 for UK)."
     )
     email = forms.EmailField(
-        widget=forms.EmailInput(attrs={'placeholder': 'your-email@example.com'}),   # noqa
+        widget=forms.EmailInput(attrs={'placeholder': 'your-email@example.com'}),
         help_text="We'll send a booking confirmation to the provided email."
     )
     requested_date = forms.DateField(
