@@ -489,11 +489,11 @@ Validation Tools:
   
 <details><summary>See feature images</summary>
 
-![Cancel Booking](docs/features/feature-cancel-booking.PNG)
+![Cancel Booking](docs/features/features_terminate_reservation.jpg)
 </details>
 
 
-### Food Menu
+### Food
  - Displays the complete food menu, categorized into starters, mains, and desserts.
  - Allows staff to add, update, and delete food items via the admin panel.
   
@@ -503,81 +503,97 @@ Validation Tools:
 </details>
 
 
-### Drinks Menu
-- The drinks menu displays all available foods on the menu
-- Menu is seperated by wines, beers and cocktails
-- Items can be added via the admin panel in the backend by staff
-- Staff can create, update and delete foods via the admin panel 
+### Smoothies Menu
+ - The smoothies menu offers a variety of refreshing blends, each crafted to provide a burst of nutrition and flavor.
+ - Admin can effortlessly add, update, or remove smoothie options via the backend admin panel.
   
 <details><summary>See feature images</summary>
 
-![Drinks Menu](docs/features/feature-drinks-menu.PNG)
+![Smoothies](docs/features/features_smoothiemenu.jpg)
+![Smoothies](docs/features/features_smoothies_milkshakes_admin.jpg)
 </details>
 
 
-### Blog
-- The blog displays each post made by a staff member
-- Paginations is used to display 4 posts per page
+### Milkshake Menu
+ - The milkshake menu showcases a range of creamy, delicious beverages, perfect for those looking for a delightful treat.
+ - Through the admin panel, staff have the capability to manage the milkshake offerings, ensuring the menu remains current and enticing.
   
 <details><summary>See feature images</summary>
 
-![Blog](docs/features/feature-blog.PNG)
+![Milkshake](docs/features/features_milkshakesmenu.jpg)
+![Milkshake](docs/features/features_smoothies_milkshakes_admin.jpg)
 </details>
 
 
-### Blog Expanded
-- Expands into the selected blog the user wishes to read
-- Displays a featured image uploaded by the poster
-- If no image is uploaded a default image is then used
-- Registerd user can comment on the blog
+
+### Blog Page
+ - The blog page is a hub for health-conscious content, where users can explore a variety of articles and tips.
+ - Articles are presented in a clean grid or list layout, each with a preview image, title, and a brief snippet to entice the reader.
+ - Pagination ensures a streamlined user experience, displaying a set number of posts per page to avoid overwhelming the reader.
+ - Users can easily access individual blog posts by clicking on their titles or preview images.
   
 <details><summary>See feature images</summary>
 
-![Blog Expanded](docs/features/feature-blog2.PNG)
+![Blog Page](docs/features/features_blog_post1.jpg)
+![Blog Page](docs/features/features_blog_post2.jpg)
+</details>
+
+
+### Blog Post
+ - Each individual blog post offers a focused reading experience, with a prominent title, featured image, and the full article content.
+ - The date of publication and the author's name are displayed, giving credit to the content creators of "Healthy Bites".
+ - Registered users can engage with the content by leaving comments at the end of the article. Commenting promotes community engagement and allows for feedback on the content.
+  
+<details><summary>See feature images</summary>
+
+![Blog Post](docs/features/features_blog_post.jpg)
+![Blog Post](docs/features/features_blog_comments.jpg)
 </details>
 
 
 ### Comments
-- Comments made are set to pending approval status to ensure nothing bad is displayed
-- Only registered users can comment on a blog post
-- Staff can approve comments via the admin panel on the backend
+ - Engagement: Allows readers to share thoughts or ask questions about the article.
+ - User Details: Comments display the user's name/username and a date/time stamp.
+ - Admin Tools: Staff can approve, decline, or delete comments via the backend.
   
 <details><summary>See feature images</summary>
 
-![Comments](docs/features/feature-comments.PNG)
+![Comments](docs/features/features_blog_comments.jpg)
+![Comments](docs/features/features_comments_admin.jpg)
 </details>
 
 
 ### Contact Us
-- Registered users can DM staff via the message box
-- Contact info such as, phone, email, and address is displayed
-- A Google Map is embedded with the address for users to use
+ - Direct Communication: Allows registered users to message staff directly.
+ - Essential Information: Displays phone, email, and physical address for user reference.
+ - Map Integration: Features an embedded Google Map pinpointing the restaurant's location.
   
 <details><summary>See feature images</summary>
 
-![Contact Us](docs/features/feature-contact-us.PNG)
-![Contact Us](docs/features/feature-contact-us2.PNG)
+![Contact Us](docs/features/features_contact.jpg)
+![Contact Us](docs/features/features_contact2.jpg)
 </details>
 
 
 ### Social Media Links
-- A logo and link is used for each social media displayed
-- All links open in a new tab to ensure user is not directed away from the business
-- Displayed on all pages
+ - Connectivity: Features logos and direct links to the restaurant's active social media profiles.
+ - User Experience: Links open in new tabs, ensuring users remain on the main site.
+ - Consistency: These links are accessible across all pages for easy access.
   
 <details><summary>See feature images</summary>
 
-![Social Media Links](docs/features/feature-social-links.PNG)
+![Social Media Links](docs/features/features_socialmedialinks.jpg)
 </details>
 
 
 ### Pagination
-- Pagination is used on the bookings list and the blog page
-- Ensures the page is kept tidy as only 4 items are displayed per page
+- Pagination is used on the blog page
+- Ensures the page is kept tidy as only 6 items are displayed per page
   
 <details><summary>See feature images</summary>
 
-![Pagination](docs/features/feature-pagination.PNG)
+![Pagination](docs/features/features_blog_post1.jpg)
+![Pagination](docs/features/features_blog_post2.jpg)
 </details>
 
 
