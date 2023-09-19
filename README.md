@@ -598,3 +598,28 @@ Validation Tools:
 
 
 ##### Back to [top](#table-of-contents)<hr>
+
+
+## Validation
+
+
+
+
+## Testing
+
+
+1. As a user, I aim to effortlessly navigate the Healthy Bites platform, ensuring seamless access to its diverse features.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Access 'Home' from navigation | Land on the main page of Healthy Bites| Successful |
+| Use 'Register' option from navbar | Directed to the account creation page| Successful |
+| Used 'Login' link | Navigate to the login page| Successful |
+| Chose 'Food Menu' from 'Menus' | 	Display food options| Successful|
+| Click on the 'Menus' link in the navigation bar, select 'smoothie Menu' | View smoothie choices| Successful |
+| Click on the 'Menus' link in the navigation bar, select 'Milkshake Menu' | Milkshake menu page will load| Successful |
+| Clicked 'Blog' | Enter the blog section| Successful |
+| Used 'Book' link | Start table book reservation process| Successful |
+| Clicked 'Contact Us' | View contact details and form| Successful |
+|Selected 'My Bookings' | See my list of reservations| Successful |
+| Clicked 'Logout' | Exit and return to main page| Successful |
