@@ -610,6 +610,7 @@ Validation Tools:
 
 1. As a user, I aim to effortlessly navigate the Healthy Bites platform, ensuring seamless access to its diverse features.
 
+
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Access 'Home' from navigation | Land on the main page of Healthy Bites| Successful |
@@ -630,13 +631,17 @@ Validation Tools:
 
 2. As a user, I aim to utilize the navbar, footer, and social icons on the Healthy Bites platform to navigate efficiently, access various menus, and connect to the restaurant's social media channels.
 
+
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Scrolled to website's end | View Healthy Bites footer with additional navigation | Successful |
 | Scrolled to website's end | Identify Healthy Bites' social media connections | Successful |
 
 
+
+
 3. As a Site Owne, I provide a "Contact Us" page so patrons can easily reach out to us.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -644,7 +649,9 @@ Validation Tools:
 
 
 
+
 4. As a User,  I can access the operating hours and contact information, ensuring I know when to visit and how to reach out through email, phone, or social channels.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -654,54 +661,97 @@ Validation Tools:
 
 5. As a User, I can secure a reservation by choosing a desired date and time, ensuring my table is reserved upon arrival.
 
+
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Selected 'Book' in navbar | Expect to see the reservation form on Healthy Bites' booking page | Successful |
 
 
+
+
 6. As a User,  I have the flexibility to modify my reservation, allowing me to select an alternative date and time that suits me.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | From 'My Reservations' at Healthy Bites, selected 'Edit' for a specific reservation | Expect to access the modification form for that reservation | Successful |
 
 
+
+
 7. As a User, I can remove my reservation, ensuring my table booking is canceled as per my plans.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | From 'My Reservations' at Healthy Bites, selected 'Cancel' for a specific reservation | Expect to see the cancellation prompt for that booking | Successful |
 
 
+
+
 8. As a user, I can review my reservations, allowing me to confirm the exact date and time of my booking.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Selected 'My Reservations' in Healthy Bites navbar | Expect to view a list of all my table reservations | Successful |
 
 
+
+
 9. As an Admin / Authorised User, I can sign in to gain access to the backend operations of my platform.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Accessed the Healthy Bites admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/ | Input django admin login details to see the back end | Successful |
 
 
+
+
 10. As an Admin / Authorised User I can manually add a booking so that I can book a table if someone phones, or emails the business
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage bookings | Successful |
-
 | In the admin dashboard, clicked on 'Bookings' in the left side, then selected 'Add Booking' | Expected to be presented with the booking form | Successful |
+
+
 
 
 11. As an Admin / Authorised User I can accept or reject bookings so that we avoid double bookings
 
+
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage bookings | Successful |
-
 | In the admin dashboard, navigated to 'Bookings' and viewed the list of user bookings | Intended to review and manage user bookings | Successful |
-
 | For a user booking, activated the 'Status' dropdown | Sought options to either accept or decline the booking, ensuring no double bookings | Successful |
+
+
+
+
+12. As an Admin, I aim to sign in to the Healthy Bites backend to manage the food, smoothies, and milkshake menus, ensuring we can introduce new offerings or discontinue existing ones as required.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage Meal options and beverages | Successful |
+| In the admin dashboard, clicked on 'Meal options' on the left side, then chose 'Add Meal options' | Expected the Meal options form to load | Successful |
+| In the admin dashboard, clicked on 'beverages' on the left side, then chose 'Add beverages' | Expected the beverages addition form to load and the smoothie and milkshake to be avaliable  | Successful |
+
+
+
+
+
+13. As a Admin I can create, read, update and delete food and drinks items from the database so that we can add, remove, rename and view all our food and drinks items
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage Meal options and beverages | Successful |
+| In the admin dashboard, clicked on either 'Food Items' or 'Beverages' on the left panel, then selected an item by its ID | The respective item's form loaded, enabling edits or deletion (For item creation, refer to Test 12) | Successful |
+
+
+
+
+
