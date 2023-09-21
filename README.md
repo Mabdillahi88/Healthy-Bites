@@ -744,12 +744,12 @@ Validation Tools:
 
 
 
-13. As a Admin I can create, read, update and delete food and drinks items from the database so that we can add, remove, rename and view all our food and drinks items
+13. As a Admin,  I aim to perform CRUD (Create, Read, Update, Delete) operations on food, smoothies, and milkshake items within my database. This ensures i can efficiently add, view, modify, or discontinue my culinary offerings as needed.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage Meal options and beverages | Successful |
-| In the admin dashboard, clicked on either 'Food Items' or 'Beverages' on the left panel, then selected an item by its ID | The respective item's form loaded, enabling edits or deletion (For item creation, refer to Test 12) | Successful |
+| Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/ | Input django admin login details, aiming to manage meal options and beverages | Successful |
+| In the admin dashboard, navigated to 'Food Items' or 'Beverages' on the left side, then selected an item by its meal name or beverage name | The corresponding form for the chosen meal or beverage loaded, allowing for modifications or deletion | Successful |
 
 
 
