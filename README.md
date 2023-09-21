@@ -754,4 +754,38 @@ Validation Tools:
 
 
 
+14. As a User, I expect to see clear messages after I make, change, or cancel a booking, so I'm sure it's been done correctly.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| From the Healthy Bites reservation section, initiate a table booking | Once submitted, a confirmation message appears | Successful |
+| Within the "My Bookings" section of Healthy Bites, opt to modify a reservation | After changes, a confirmation message displays | Successful |
+| In the "My Bookings" section of Healthy Bites, decide to terminate a reservation | Post-cancellation, a message shows up | Successful |
+
+
+
+
+15. As a User,  I have the option to sign up, enabling me to secure a table reservation.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Select 'Register' from the navigation bar | I should be taken to a page where I can create a Healthy Bites account, enabling me to make reservations | Successful |
+
+
+
+
+16.  As a User,  I can sign up so that next time I book a table, it's quicker and easier.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+
+| Select 'Book' from the Healthy Bites navigation bar | Expect to see the reservation form | Successful |
+
+
+
+
+
+
+
+
 
