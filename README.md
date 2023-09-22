@@ -992,6 +992,15 @@ Validation Tools:
 | Click on 'Menu' then press Smoothies menu in Healthy Bites navigation | All available smoothies should be shown | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story21.1.jpg)
+![User Story ](docs/testing/user_story21.2.jpg)
+![User Story ](docs/testing/user_story21.3.jpg)
+![User Story ](docs/testing/user_story21.4.jpg)
+![User Story ](docs/testing/user_story21.5.jpg)
+</details>
+
 
 
 22. As a Site Owner, I aim to ensure data integrity by validating user inputs, thus preventing potential discrepancies and ensuring seamless user experience.
@@ -1003,6 +1012,13 @@ Validation Tools:
 | In the same reservation process, pick a date and table that's previously been reserved | An alert should notify that the selection is unavailable | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story22.1.jpg)
+![User Story ](docs/testing/user_story22.2.jpg)
+</details>
+
+
 
 
 23. As a User, I'm restricted from reserving dates that have already passed to ensure my reservation is for a future date.
@@ -1012,7 +1028,10 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | On the reservation page, tap on the calendar icon for desired date | Calendar displays, blocking dates from the previous day and before from selection | Successful|
 
+<details><summary>See feature images</summary>
 
+![User Story ](docs/testing/user_story23.1.jpg)
+</details>
 
 
 24. As a User, I can scroll through the articles section by section, ensuring a streamlined browsing experience without an overwhelming amount of content at once.
@@ -1022,6 +1041,10 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Choose 'Blog' from the navigation bar at the top | Posts page appears, showing only 6 entries at a time | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story24.1.jpg)
+</details>
 
 
 
@@ -1034,6 +1057,10 @@ Validation Tools:
 
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story25.1.jpg)
+</details>
 
 
 
