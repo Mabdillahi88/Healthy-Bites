@@ -784,6 +784,115 @@ Validation Tools:
 
 
 
+17. As a user, I want to sign in to Healthy Bites so I can reserve a spot for dining.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Select 'Login' from the Healthy Bites navigation | Expect to access account and gain booking rights | Successful |
+| Choose 'Book' within the Healthy Bites navigation | The booking form should appear to make a reservation | Successful |
+
+
+
+
+18. As a user,  want to view my sign-in status on Healthy Bites to understand if I'm currently signed in.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Look at the top menu while signed in to Healthy Bites | There should be a 'Logout' button to click on | Successful |
+
+
+
+
+19. As an Admin, I want to search through reservations and menu items in the Healthy Bites admin panel to quickly locate specific details.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In the Healthy Bites admin dashboard, click 'booking' or 'Menus' | Expect to see a search bar and filter options on the page | Successful |
+
+
+
+
+20. As an Admin, I can sort reservations by their dates to easily view bookings specific to any given day.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In the Healthy Bites admin area, choose 'booking' | Expect to see filters on the right side of the page | Successful |
+
+
+
+
+21. As a User, I want to see the Healthy Bites's posts so I can read and learn more.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Press on 'Posts' at the left side of the menu | Posts page shows up with all articles | Successful |
+
+
+
+
+22. As a User, I wish to explore the food, milkshake, and smoothie menus at Healthy Bites to decide if it's the right dining choice for me.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click on 'Menu' then press food menu in Healthy Bites navigation | Sub-menus for starters, mains, and desserts should appear | Successful |
+| Click on 'Menu' then press Milkshakes menu  in Healthy Bites navigation | All available milkshakes should be shown | Successful |
+| Click on 'Menu' then press Smoothies menu in Healthy Bites navigation | All available smoothies should be shown | Successful |
+
+
+
+
+23. As a Site Owner, I aim to ensure data integrity by validating user inputs, thus preventing potential discrepancies and ensuring seamless user experience.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| While reserving on Healthy Bites' 'Booking' page, input a shortened phone number | An alert should appear, signaling an invalid phone number | Successful |
+| In the same reservation process, pick a date and table that's previously been reserved | An alert should notify that the selection is unavailable | Successful |
+
+
+
+
+24. As a User, I'm restricted from reserving dates that have already passed to ensure my reservation is for a future date.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| On the reservation page, tap on the calendar icon for desired date | Calendar displays, blocking dates from the previous day and before from selection | Successful|
+
+
+
+
+25. As a User, I can scroll through the articles section by section, ensuring a streamlined browsing experience without an overwhelming amount of content at once.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Choose 'Blog' from the navigation bar at the top | Posts page appears, showing only 6 entries at a time | Successful |
+
+
+
+
+26. As a User, I aim to avoid reserving an already occupied table to ensure my reservation is unique and prevents overlaps.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| On the reservations page, try to reserve a table and date previously reserved | An alert appears indicating the slot is already taken | Works as expected |
+
+
+
+
+
+
+
+
+
+
 
 
 
