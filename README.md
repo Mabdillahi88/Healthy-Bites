@@ -629,7 +629,7 @@ Validation Tools:
 
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story1.1.jpg)
 ![User Story ](docs/testing/user_story1.2.jpg)
@@ -657,7 +657,7 @@ Validation Tools:
 | Scrolled to website's end | Identify Healthy Bites' social media connections | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story2.1.jpg)
 ![User Story ](docs/testing/user_story2.2.jpg)
@@ -676,7 +676,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Selected 'Contact Us' from navbar | Transition to Healthy Bites' contact page | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story3.1.jpg)
 </details>
@@ -694,7 +694,7 @@ Validation Tools:
 | Selected 'Contact Us' in navbar and scrolled down | Expect to see Healthy Bites' contact details and operating hours | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story4.1.jpg)
 </details>
@@ -711,7 +711,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Selected 'Book' in navbar | Expect to see the reservation form on Healthy Bites' booking page | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story5.1.jpg)
 </details>
@@ -729,7 +729,7 @@ Validation Tools:
 | From 'My Reservations' at Healthy Bites, selected 'Edit' for a specific reservation | Expect to access the modification form for that reservation | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story6.1.jpg)
 </details>
@@ -748,7 +748,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | From 'My Reservations' at Healthy Bites, selected 'Cancel' for a specific reservation | Expect to see the cancellation prompt for that booking | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story7.1.jpg)
 </details>
@@ -766,7 +766,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Selected 'My Bookings' in Healthy Bites navbar | Expect to view a list of all my table reservations | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story8.1.jpg)
 </details>
@@ -784,7 +784,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Accessed the Healthy Bites admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/ | Input django admin login details to see the back end | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story9.1.jpg)
 </details>
@@ -802,7 +802,7 @@ Validation Tools:
 | Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage bookings | Successful |
 | In the admin dashboard, clicked on 'Bookings' in the left side, then selected 'Add Booking' | Expected to be presented with the booking form | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story10.1.jpg)
 ![User Story ](docs/testing/user_story10.2.jpg)
@@ -825,7 +825,7 @@ Validation Tools:
 | For a user booking, activated the 'Status' dropdown | Sought options to either accept or decline the booking, ensuring no double bookings | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story11.1.jpg)
 ![User Story ](docs/testing/user_story11.2.jpg)
@@ -849,7 +849,7 @@ Validation Tools:
 | In the admin dashboard, clicked on 'beverages' on the left side, then chose 'Add beverages' | Expected the beverages addition form to load and the smoothie and milkshake to be avaliable  | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story12.1.jpg)
 ![User Story ](docs/testing/user_story12.2.jpg)
@@ -866,7 +866,7 @@ Validation Tools:
 | In the admin dashboard, navigated to 'Food Items' or 'Beverages' on the left side, then selected an item by its meal name or beverage name | The corresponding form for the chosen meal or beverage loaded, allowing for modifications or deletion | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story13.1.jpg)
 ![User Story ](docs/testing/user_story13.2.jpg)
@@ -882,7 +882,7 @@ Validation Tools:
 | Within the "My Bookings" section of Healthy Bites, opt to modify a reservation | After changes, a confirmation message displays | Successful |
 | In the "My Bookings" section of Healthy Bites, decide to terminate a reservation | Post-cancellation, a message shows up | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story14.1.jpg)
 ![User Story ](docs/testing/user_story14.2.jpg)
@@ -899,7 +899,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Select 'Register' from the navigation bar | I should be taken to a page where I can create a Healthy Bites account, enabling me to make reservations | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story15.1.jpg)
 </details>
@@ -911,7 +911,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Select 'Book' from the Healthy Bites navigation bar | Expect to see the reservation form | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story16.1.jpg)
 </details>
@@ -925,7 +925,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Look at the top menu while signed in to Healthy Bites | There should be a 'Logout' button to click on | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story17.1.jpg)
 </details>
@@ -942,7 +942,7 @@ Validation Tools:
 | In the Healthy Bites admin dashboard, press 'Beverages' | Expect to see a search bar and filter options on the page | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story18.1.jpg)
 ![User Story ](docs/testing/user_story18.2.jpg)
@@ -960,7 +960,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | In the Healthy Bites admin area, choose 'booking' | Expect to see filters on the right side of the page | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story19.1.jpg)
 
@@ -976,7 +976,7 @@ Validation Tools:
 | Press on 'Posts' at the left side of the menu | Posts page shows up with all articles | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story20.1.jpg)
 
@@ -992,7 +992,7 @@ Validation Tools:
 | Click on 'Menu' then press Smoothies menu in Healthy Bites navigation | All available smoothies should be shown | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story21.1.jpg)
 ![User Story ](docs/testing/user_story21.2.jpg)
@@ -1012,7 +1012,7 @@ Validation Tools:
 | In the same reservation process, pick a date and table that's previously been reserved | An alert should notify that the selection is unavailable | Successful |
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story22.1.jpg)
 ![User Story ](docs/testing/user_story22.2.jpg)
@@ -1028,7 +1028,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | On the reservation page, tap on the calendar icon for desired date | Calendar displays, blocking dates from the previous day and before from selection | Successful|
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story23.1.jpg)
 </details>
@@ -1041,7 +1041,7 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Choose 'Blog' from the navigation bar at the top | Posts page appears, showing only 6 entries at a time | Successful |
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story24.1.jpg)
 </details>
@@ -1057,7 +1057,7 @@ Validation Tools:
 
 
 
-<details><summary>See feature images</summary>
+<details><summary></summary>
 
 ![User Story ](docs/testing/user_story25.1.jpg)
 </details>
