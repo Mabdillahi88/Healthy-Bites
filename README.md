@@ -1106,6 +1106,18 @@ Validation Tools:
 ![User Story 19 ](docs/testing/user_story25.1.jpg)
 </details>
 
+##### Back to [top](#table-of-contents)<hr>
+
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| Navigation bar disappearing on mobile view | CSS media query was missing for mobile breakpoints. Added the appropriate media query to ensure visibility. |
+| Unable to scroll through the list of smoothies | Overflow property was mistakenly set to 'hidden'. Changed it to 'scroll' for smoothie section. |
+| 'Contact Us' form not sending messages | Server-side script handling form submissions was missing. Integrated the form with a server-side handler to process messages. |
+| Duplicate items appearing in the 'Desserts' section | Database query was fetching items twice due to a loop error. Corrected the loop to fetch each item only once. |
+| Error when adding new milkshakes in user favorites | A mismatched data type in the database. Corrected the data type to ensure users can add milkshakes to favorites without issues. |
 
 
 
