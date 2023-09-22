@@ -602,6 +602,95 @@ Validation Tools:
 
 ## Validation
 
+### HTML Validation
+
+
+<details><summary>Home page</summary>
+
+![Home page](docs/validations/html_validation_home.jpg)
+</details>
+
+<details><summary>Food menu</summary>
+
+![Food menu](docs/validations/html_validation_foodmenu.jpg)
+</details>
+
+<details><summary>Milkshake menu</summary>
+
+![Milshake menu](docs/validations/html_validation_milkshakes.jpg)
+</details>
+
+<details><summary>Smoothies menu</summary>
+
+![Smoothies menu](docs/validations/html_validation_smoothies.jpg)
+</details>
+
+<details><summary>Register</summary>
+
+![Register ](docs/validations/html_validation_register.jpg)
+</details>
+
+<details><summary>login</summary>
+
+![login ](docs/validations/html_validation_login.jpg)
+</details>
+
+<details><summary>logout</summary>
+
+![logout ](docs/validations/html_validation_logout.jpg)
+</details>
+
+<details><summary>Blog homepage</summary>
+
+![Blog Homepage ](docs/validations/html_validation_blog_homepage.jpg)
+</details>
+
+<details><summary>Blog post</summary>
+
+![Blog post ](docs/validations/html_validation_blog_post.jpg)
+</details>
+
+<details><summary>Making Reservation</summary>
+
+![Making Reservation ](docs/validations/html_validation_making_booking.jpg)
+</details>
+
+<details><summary>view Reservation</summary>
+
+![View Reservation ](docs/validations/html_validation_view_booking.jpg)
+</details>
+
+<details><summary>Change Reservation</summary>
+
+![Change Reservation ](docs/validations/html_validation_change_booking.jpg)
+</details>
+
+<details><summary>Terminate Reservation</summary>
+
+![Terminate Reservation ](docs/validations/html_validation_terminate_booking.jpg)
+</details>
+
+
+<details><summary>Contact</summary>
+
+![Contact ](docs/validations/html_validation_contact_us_received.jpg)
+</details>
+
+<details><summary>Contact received</summary>
+
+![Contact received ](docs/validations/html_validation_contact_us_received.jpg)
+</details>
+
+
+### CSS Validation
+
+
+<details><summary>css</summary>
+
+![Style CSS ](docs/validations/css_validation_style_css.jpg)
+</details>
+
+
 
 
 
