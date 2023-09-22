@@ -685,10 +685,185 @@ Validation Tools:
 ### CSS Validation
 
 
-<details><summary>css</summary>
+<details><summary>CSS style</summary>
 
 ![Style CSS ](docs/validations/css_validation_style_css.jpg)
 </details>
+
+
+### Jshint Validation
+
+<details><summary>Javscript</summary>
+
+![Javscript](docs/validations/jshint_validation.jpg)
+</details>
+
+
+
+### PEP8 Validation
+
+<details><summary>Homepage views</summary>
+
+![Homepage](docs/validations/pep8_validation_home_views.jpg)
+</details>
+
+<details><summary>Homepage urls</summary>
+
+![Homepage urls](docs/validations/pep8_validation_home_urls.jpg)
+</details>
+
+<details><summary>Menu views</summary>
+
+![Menu views](docs/validations/pep8_validation_menu_views.jpg)
+</details>
+
+<details><summary>Menu admin</summary>
+
+![Menu admin](docs/validations/pep8_validation_menu_admin.jpg)
+</details>
+
+<details><summary>Menu models</summary>
+
+![Menu models](docs/validations/pep8_validation_menu_models.jpg)
+</details>
+
+<details><summary>Menu urls</summary>
+
+![Menu urls](docs/validations/pep8_validation_menu_urls.jpg)
+</details>
+
+<details><summary>contact urls</summary>
+
+![contact urls](docs/validations/pep8_validation_contact_urls.jpg)
+</details>
+
+<details><summary>contact views</summary>
+
+![contact views](docs/validations/pep8_validation_contact_views.jpg)
+</details>
+
+
+<details><summary>contact models</summary>
+
+![contact models](docs/validations/pep8_validation_contact_models.jpg)
+</details>
+
+<details><summary>contact admin</summary>
+
+![contact admin](docs/validations/pep8_validation_contact_admin.jpg)
+</details>
+
+<details><summary>contact forms</summary>
+
+![contact forms](docs/validations/pep8_validation_contact_forms.jpg)
+</details>
+
+<details><summary>booking forms</summary>
+
+![booking forms](docs/validations/pep8_validation_booking_forms.jpg)
+</details>
+
+<details><summary>booking views</summary>
+
+![booking views](docs/validations/pep8_validation_booking_views.jpg)
+</details>
+
+<details><summary>booking models</summary>
+
+![booking models](docs/validations/pep8_validation_booking_models.jpg)
+</details>
+
+<details><summary>booking urls</summary>
+
+![booking urls](docs/validations/pep8_validation_booking_urls.jpg)
+</details>
+
+<details><summary>booking admin</summary>
+
+![booking admin](docs/validations/pep8_validation_booking_admins.jpg)
+</details>
+
+<details><summary>blog admin</summary>
+
+![blog admin](docs/validations/pep8_validation_blog_admins.jpg)
+</details>
+
+<details><summary>blog models</summary>
+
+![blog models](docs/validations/pep8_validation_blog_models.jpg)
+</details>
+
+<details><summary>blog views</summary>
+
+![blog views](docs/validations/pep8_validation_blog_views.jpg)
+</details>
+
+<details><summary>blog urls</summary>
+
+![blog urls](docs/validations/pep8_validation_blog_urls.jpg)
+</details>
+
+<details><summary>blog forms</summary>
+
+![blog forms](docs/validations/pep8_validation_blog_forms.jpg)
+</details>
+
+<details><summary>blog app</summary>
+
+![blog app](docs/validations/pep8_validation_blog_apps.jpg)
+</details>
+
+
+### WAVE Validation
+
+<details><summary>homepage</summary>
+
+![homepage](docs/validations/wave_validation_home.jpg)
+</details>
+
+
+<details><summary>food menu</summary>
+
+![food menu](docs/validations/wave_validation_foodmenu.jpg)
+</details>
+
+<details><summary>milshakes menu</summary>
+
+![milkshakes menu](docs/validations/wave_validation_milkshakesmenu.jpg)
+</details>
+
+
+<details><summary>smoothies menu</summary>
+
+![smoothies menu](docs/validations/wave_validation_smoothiesmenu.jpg)
+</details>
+
+
+<details><summary>register</summary>
+
+![register](docs/validations/wave_validation_register.jpg)
+</details>
+
+<details><summary>signup</summary>
+
+![signup](docs/validations/wave_validation_signup.jpg)
+</details>
+
+<details><summary>contact</summary>
+
+![contact](docs/validations/wave_validation_contact.jpg)
+</details>
+
+<details><summary>blog post</summary>
+
+![blog post](docs/validations/wave_validation_blog_post.jpg)
+</details>
+
+<details><summary>blog home</summary>
+
+![blog home](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
 
 
 
