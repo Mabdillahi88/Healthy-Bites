@@ -840,7 +840,7 @@ Validation Tools:
 
 
 
-12. As an Admin, I aim to sign in to the Healthy Bites backend to manage the food, smoothies, and milkshake menus, ensuring we can introduce new offerings or discontinue existing ones as required.
+12. As an Admin, I have the authority to approve or decline reservations, ensuring no overlaps or conflicts.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -849,10 +849,16 @@ Validation Tools:
 | In the admin dashboard, clicked on 'beverages' on the left side, then chose 'Add beverages' | Expected the beverages addition form to load and the smoothie and milkshake to be avaliable  | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story12.1.jpg)
+![User Story ](docs/testing/user_story12.2.jpg)
+![User Story ](docs/testing/user_story12.3.jpg)
+</details>
 
 
 
-13. As a Admin,  I aim to perform CRUD (Create, Read, Update, Delete) operations on food, smoothies, and milkshake items within my database. This ensures i can efficiently add, view, modify, or discontinue my culinary offerings as needed.
+13. As a Admin, I have the capability to manage the listings of food, smoothies, and milkshakes in my database. This flexibility allows me to adapt my menu offerings based on demand and availability.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -860,6 +866,12 @@ Validation Tools:
 | In the admin dashboard, navigated to 'Food Items' or 'Beverages' on the left side, then selected an item by its meal name or beverage name | The corresponding form for the chosen meal or beverage loaded, allowing for modifications or deletion | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story13.1.jpg)
+![User Story ](docs/testing/user_story13.2.jpg)
+![User Story ](docs/testing/user_story13.3.jpg)
+</details>
 
 
 14. As a User, I expect to see clear messages after I make, change, or cancel a booking, so I'm sure it's been done correctly.
@@ -870,6 +882,14 @@ Validation Tools:
 | Within the "My Bookings" section of Healthy Bites, opt to modify a reservation | After changes, a confirmation message displays | Successful |
 | In the "My Bookings" section of Healthy Bites, decide to terminate a reservation | Post-cancellation, a message shows up | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story14.1.jpg)
+![User Story ](docs/testing/user_story14.2.jpg)
+![User Story ](docs/testing/user_story14.3.jpg)
+![User Story ](docs/testing/user_story14.4.jpg)
+![User Story ](docs/testing/user_story14.5.jpg)
+</details>
 
 
 
@@ -879,7 +899,10 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Select 'Register' from the navigation bar | I should be taken to a page where I can create a Healthy Bites account, enabling me to make reservations | Successful |
 
+<details><summary>See feature images</summary>
 
+![User Story ](docs/testing/user_story15.1.jpg)
+</details>
 
 
 16.  As a User,  I can sign up so that next time I book a table, it's quicker and easier.
@@ -888,51 +911,64 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | Select 'Book' from the Healthy Bites navigation bar | Expect to see the reservation form | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story16.1.jpg)
+</details>
 
 
 
-17. As a user, I want to sign in to Healthy Bites so I can reserve a spot for dining.
-
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-| Select 'Login' from the Healthy Bites navigation | Expect to access account and gain booking rights | Successful |
-| Choose 'Book' within the Healthy Bites navigation | The booking form should appear to make a reservation | Successful |
-
-
-
-
-18. As a user,  want to view my sign-in status on Healthy Bites to understand if I'm currently signed in.
+17. As a user,  want to view my sign-in status on Healthy Bites to understand if I'm currently signed in.
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Look at the top menu while signed in to Healthy Bites | There should be a 'Logout' button to click on | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story17.1.jpg)
+</details>
 
 
 
-19. As an Admin, I want to search through reservations and menu items in the Healthy Bites admin panel to quickly locate specific details.
+18. As an Admin, I want to search through reservations and menu items in the Healthy Bites admin panel to quickly locate specific details.
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| In the Healthy Bites admin dashboard, click 'booking' or 'Menus' | Expect to see a search bar and filter options on the page | Successful |
+| In the Healthy Bites admin dashboard, press 'booking' | Expect to see a search bar and filter options on the page | Successful |
+| In the Healthy Bites admin dashboard, press 'Meal options' | Expect to see a search bar and filter options on the page | Successful |
+| In the Healthy Bites admin dashboard, press 'Beverages' | Expect to see a search bar and filter options on the page | Successful |
+
+
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story18.1.jpg)
+![User Story ](docs/testing/user_story18.2.jpg)
+![User Story ](docs/testing/user_story18.3.jpg)
+
+</details>
 
 
 
 
-20. As an Admin, I can sort reservations by their dates to easily view bookings specific to any given day.
+19. As an Admin, I can sort reservations by their dates to easily view bookings specific to any given day.
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | In the Healthy Bites admin area, choose 'booking' | Expect to see filters on the right side of the page | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story19.1.jpg)
+
+</details>
 
 
 
-21. As a User, I want to see the Healthy Bites's posts so I can read and learn more.
+20. As a User, I want to see the Healthy Bites's posts so I can read and learn more.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -940,9 +976,14 @@ Validation Tools:
 | Press on 'Posts' at the left side of the menu | Posts page shows up with all articles | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story20.1.jpg)
+
+</details>
 
 
-22. As a User, I wish to explore the food, milkshake, and smoothie menus at Healthy Bites to decide if it's the right dining choice for me.
+21. As a User, I wish to explore the food, milkshake, and smoothie menus at Healthy Bites to decide if it's the right dining choice for me.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -953,7 +994,7 @@ Validation Tools:
 
 
 
-23. As a Site Owner, I aim to ensure data integrity by validating user inputs, thus preventing potential discrepancies and ensuring seamless user experience.
+22. As a Site Owner, I aim to ensure data integrity by validating user inputs, thus preventing potential discrepancies and ensuring seamless user experience.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -964,7 +1005,7 @@ Validation Tools:
 
 
 
-24. As a User, I'm restricted from reserving dates that have already passed to ensure my reservation is for a future date.
+23. As a User, I'm restricted from reserving dates that have already passed to ensure my reservation is for a future date.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -974,7 +1015,7 @@ Validation Tools:
 
 
 
-25. As a User, I can scroll through the articles section by section, ensuring a streamlined browsing experience without an overwhelming amount of content at once.
+24. As a User, I can scroll through the articles section by section, ensuring a streamlined browsing experience without an overwhelming amount of content at once.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -984,7 +1025,7 @@ Validation Tools:
 
 
 
-26. As a User, I aim to avoid reserving an already occupied table to ensure my reservation is unique and prevents overlaps.
+25. As a User, I aim to avoid reserving an already occupied table to ensure my reservation is unique and prevents overlaps.
 
 
 **Step** | **Expected Result** | **Actual Result**
