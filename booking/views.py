@@ -11,10 +11,9 @@ from .models import Booking
 from .forms import BookingForm
 import datetime
 
-
 class UserReservationRequestView(LoginRequiredMixin, View):
     template_name = 'initiate_reservation_page.html'
-    success_message = 'Booking successful, awaiting confirmation.'
+    success_message = 'Booking successful, waiting.'  # Updated message to match new statuses
 
     def get_booking_form(self, request):
         initial_data = {
@@ -36,13 +35,11 @@ class UserReservationRequestView(LoginRequiredMixin, View):
             return redirect('acknowledgment_view')
         return render(request, self.template_name, {'booking_form': booking_form})   # noqa
 
-
 class BookingAcknowledgmentPageView(LoginRequiredMixin, View):
     template_name = 'acknowledgment_view.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
-
 
 class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
     model = Booking
@@ -55,7 +52,7 @@ class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
         Booking.objects.filter(
             user=self.request.user,
             requested_date__lt=today
-        ).update(status='Booking Expired')
+        ).update(status='Timed Out')  # Updated status to 'Timed Out'
 
         user_bookings = Booking.objects.filter(
             user=self.request.user
@@ -66,14 +63,12 @@ class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
 
         return user_bookings
 
-
 class IndividualBookingModificationView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):   # noqa
     model = Booking
     form_class = BookingForm
     template_name = 'modify_reservation_form.html'
     success_message = 'Booking has been updated.'
     success_url = reverse_lazy('active_bookings_dashboard')
-
 
 class SpecificBookingTerminationView(LoginRequiredMixin, DeleteView):
     model = Booking

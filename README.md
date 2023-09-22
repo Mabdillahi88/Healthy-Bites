@@ -629,6 +629,25 @@ Validation Tools:
 
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story1.1.jpg)
+![User Story ](docs/testing/user_story1.2.jpg)
+![User Story ](docs/testing/user_story1.3.jpg)
+![User Story ](docs/testing/user_story1.4.jpg)
+![User Story ](docs/testing/user_story1.5.jpg)
+![User Story ](docs/testing/user_story1.6.jpg)
+![User Story ](docs/testing/user_story1.7.jpg)
+![User Story ](docs/testing/user_story1.8.jpg)
+![User Story ](docs/testing/user_story1.9.jpg)
+![User Story ](docs/testing/user_story1.10.jpg)
+![User Story ](docs/testing/user_story1.11.jpg)
+</details>
+
+
+
+
+
 2. As a user, I aim to utilize the navbar, footer, and social icons on the Healthy Bites platform to navigate efficiently, access various menus, and connect to the restaurant's social media channels.
 
 
@@ -638,14 +657,31 @@ Validation Tools:
 | Scrolled to website's end | Identify Healthy Bites' social media connections | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story2.1.jpg)
+![User Story ](docs/testing/user_story2.2.jpg)
+</details>
 
 
-3. As a Site Owne, I provide a "Contact Us" page so patrons can easily reach out to us.
+
+
+
+
+
+3. As a Site Owner, I provide a "Contact Us" page so patrons can easily reach out to us.
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Selected 'Contact Us' from navbar | Transition to Healthy Bites' contact page | Successful |
+
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story3.1.jpg)
+</details>
+
+
 
 
 
@@ -658,6 +694,15 @@ Validation Tools:
 | Selected 'Contact Us' in navbar and scrolled down | Expect to see Healthy Bites' contact details and operating hours | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story4.1.jpg)
+</details>
+
+
+
+
+
 
 5. As a User, I can secure a reservation by choosing a desired date and time, ensuring my table is reserved upon arrival.
 
@@ -665,6 +710,13 @@ Validation Tools:
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Selected 'Book' in navbar | Expect to see the reservation form on Healthy Bites' booking page | Successful |
+
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story5.1.jpg)
+</details>
+
+
 
 
 
@@ -677,6 +729,16 @@ Validation Tools:
 | From 'My Reservations' at Healthy Bites, selected 'Edit' for a specific reservation | Expect to access the modification form for that reservation | Successful |
 
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story6.1.jpg)
+</details>
+
+
+
+
+
+
 
 
 7. As a User, I can remove my reservation, ensuring my table booking is canceled as per my plans.
@@ -686,6 +748,14 @@ Validation Tools:
 ------------ | ------------ | ------------ |
 | From 'My Reservations' at Healthy Bites, selected 'Cancel' for a specific reservation | Expect to see the cancellation prompt for that booking | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story7.1.jpg)
+</details>
+
+
+
+
 
 
 
@@ -694,17 +764,32 @@ Validation Tools:
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Selected 'My Reservations' in Healthy Bites navbar | Expect to view a list of all my table reservations | Successful |
+| Selected 'My Bookings' in Healthy Bites navbar | Expect to view a list of all my table reservations | Successful |
+
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story8.1.jpg)
+</details>
 
 
 
 
-9. As an Admin / Authorised User, I can sign in to gain access to the backend operations of my platform.
+
+
+
+9. As an Admin, I can log in to oversee and manage the internal workings of the platform.
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 | Accessed the Healthy Bites admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/ | Input django admin login details to see the back end | Successful |
+
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story9.1.jpg)
+</details>
+
+
 
 
 
@@ -717,6 +802,16 @@ Validation Tools:
 | Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage bookings | Successful |
 | In the admin dashboard, clicked on 'Bookings' in the left side, then selected 'Add Booking' | Expected to be presented with the booking form | Successful |
 
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story10.1.jpg)
+![User Story ](docs/testing/user_story10.2.jpg)
+</details>
+
+
+
+
+
 
 
 
@@ -728,6 +823,19 @@ Validation Tools:
 | Accessed the Healthy Bites Django admin portal at https://healthy-bites-f515e8b2d14a.herokuapp.com/admin/booking/booking/ | Input django admin login details, aiming to manage bookings | Successful |
 | In the admin dashboard, navigated to 'Bookings' and viewed the list of user bookings | Intended to review and manage user bookings | Successful |
 | For a user booking, activated the 'Status' dropdown | Sought options to either accept or decline the booking, ensuring no double bookings | Successful |
+
+
+<details><summary>See feature images</summary>
+
+![User Story ](docs/testing/user_story11.1.jpg)
+![User Story ](docs/testing/user_story11.2.jpg)
+![User Story ](docs/testing/user_story11.3.jpg)
+</details>
+
+
+
+
+
 
 
 
@@ -778,7 +886,6 @@ Validation Tools:
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-
 | Select 'Book' from the Healthy Bites navigation bar | Expect to see the reservation form | Successful |
 
 
@@ -882,7 +989,7 @@ Validation Tools:
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| On the reservations page, try to reserve a table and date previously reserved | An alert appears indicating the slot is already taken | Works as expected |
+| On the reservations page, try to reserve a table and date previously reserved | An alert appears indicating the slot is already taken | Successful |
 
 
 

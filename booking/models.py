@@ -9,11 +9,12 @@ time_slots = tuple(
 
 # Define potential statuses for a booking.
 statuses = [
-    'Pending Confirmation',
-    'Confirmed Booking',
-    'Rejected Booking',
-    'Expired Booking'
+    'Waiting',
+    'Booked',
+    'Declined',
+    'Timed Out'
 ]
+
 status_options = tuple(
     (status.lower(), status) for status in statuses
 )
@@ -71,9 +72,8 @@ class Booking(models.Model):
     email = models.EmailField(max_length=254, default="")
     phone = PhoneNumberField(null=True)
 
-    # Booking status and guest count.
     status = models.CharField(
-        max_length=25, choices=status_options, default='awaiting confirmation'
+        max_length=25, choices=status_options, default='waiting'  # Updated default to 'waiting'
     )
     guest_choices = (
         (1, "1 Guest"),
