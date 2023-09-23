@@ -937,6 +937,85 @@ I used Lighthouse to check performance.
 </details>
 
 
+<details><summary>blog page</summary>
+
+![blog page](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+
+<details><summary>blog home</summary>
+
+![blog home](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+
+<details><summary>contact us</summary>
+
+![contact us](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>my booking</summary>
+
+![my booking](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>book</summary>
+
+![book](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>edit booking</summary>
+
+![dir booking](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>cancel booking</summary>
+
+![cancel booking](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>login</summary>
+
+![login](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+
+<details><summary>logout</summary>
+
+![logut](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>food menu</summary>
+
+![food menu](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>milkshake menu</summary>
+
+![milkshake menu](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>smoothie menu</summary>
+
+![smoothie menu](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+<details><summary>register</summary>
+
+![register](docs/validations/wave_validation_blog_home.jpg)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Testing
 
