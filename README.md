@@ -1605,3 +1605,29 @@ The Healthy Bites application has been seamlessly deployed to the web using Hero
 6. Type git clone and paste the URL you copied earlier (it should look something like this: git clone 7. 
   https://github.com/YOUR-USERNAME/YOUR-REPOSITORY).
 7. Press "Enter" to create your local clone.
+
+
+
+
+## Credits
+
+### Images
+
+For the visuals on Healthy Bites, I sourced images from Unsplash, ensuring I only utilized the free ones available to avoid any licensing issues.
+
+### Code
+
+When building Healthy Bites, I extensively used Bootstrap. It was my first deep dive into using it, and I must say, I've become quite fond of it. The responsiveness and design elements it offers made the development process smoother and more efficient.
+
+I greatly benefited from the Django tutorials on Code Institute. Additionally, several blog posts and GitHub repositories were instrumental in my learning. Key GitHub pages that were particularly helpful include:
+
+- [Restaurant System With Python and Django](https://github.com/younesaitmha/restaurant-System-With-Python-and-Django)
+- [Online Restaurant Web App](https://github.com/hmisonne/OnlineRestaurantWebApp)
+- [Booking Example](https://github.com/andreagrandi/booking-example)
+
+
+## Acknowledgements
+
+First and foremost, my heartfelt gratitude goes to my wife, Filsan. Her unwavering patience, support, and understanding have been the backbone of this project. Balancing time between our young ones and this project was made feasible due to her continuous encouragement.
+
+I'd also like to extend a special thank you to my mentor, Mo Shami. His expertise, constructive feedback, and continuous guidance have been instrumental in shaping this project to what it is today.
