@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 <div class="container-fluid">
@@ -7,7 +6,7 @@
     <!-- Title -->
     <div class="row justify-content-center">
         <div class="col-sm-10 col-md-8 mt-5 mb-5">
-            <h1 class="text-center menu-title">Smoothie Blends <i class="fas fa-glass-whiskey"></i></h1>
+            <h1 class="text-center menu-title">Smoothie Blends <i class="fas fa-glass-whiskey"></i></h1> <!-- Title for the Smoothie Blends page -->
         </div>
     </div>
 
@@ -17,9 +16,9 @@
             {% for blend in blends_list %}
             {% if blend.available %}
                 <div class="menu-item-card">
-                    <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ blend.beverage_name }}</h3>
-                    {{ blend.description | safe }}
-                    <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ blend.price }}</span>
+                    <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ blend.beverage_name }}</h3> <!-- Name of the smoothie blend -->
+                    {{ blend.description | safe }} <!-- Description of the smoothie blend -->
+                    <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ blend.price }}</span> <!-- Price of the smoothie blend -->
                 </div>
             {% endif %}
             {% endfor %}

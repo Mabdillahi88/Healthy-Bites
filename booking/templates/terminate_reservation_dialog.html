@@ -30,11 +30,15 @@
                         </div>
                         
                         {% elif user.is_authenticated and user == booking.user %}
+                        
+                        <!-- Display booking details -->
                         <h4 class="card-title">{{ booking.name }}</h4>
                         <p class="card-subtitle mb-2 text-muted">{{ booking.requested_date }} at {{ booking.requested_time }}</p>
                         <p class="card-text"><i class="fas fa-spinner mr-2"></i>Booking Status: {{ booking.status }}.</p>
                         <p class="card-text"><i class="fas fa-users mr-2"></i>Guests Count: {{ booking.guest_count }}.</p>
                         <p class="card-text"><i class="fas fa-chair mr-2"></i>Table Number: {{booking.table}}</p>
+                        
+                        <!-- Cancellation form -->
                         <form method="POST">
                             {% csrf_token %}
                             <button class="btn btn-danger" type="submit"><i class="fas fa-times mr-2"></i>Confirm Cancellation</button>

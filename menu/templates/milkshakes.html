@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-sm-10 col-md-8 mt-5 mb-5">
-            <h1 class="text-center menu-title">Shake Varieties</h1>
+            <h1 class="text-center menu-title">Shake Varieties</h1> <!-- Title for the Shake Varieties page -->
         </div>
     </div>
     
@@ -13,9 +13,9 @@
             {% for shake in shake_list %}
             {% if shake.available %}
             <div class="menu-item-card">
-                <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ shake.beverage_name }}</h3>
-                {{ shake.description | safe }}
-                <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ shake.price }}</span>
+                <h3 class="menu-item-name"><i class="fas fa-glass-whiskey"></i> {{ shake.beverage_name }}</h3> <!-- Name of the shake -->
+                {{ shake.description | safe }} <!-- Description of the shake -->
+                <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ shake.price }}</span> <!-- Price of the shake -->
             </div>
             {% endif %}
             {% endfor %}

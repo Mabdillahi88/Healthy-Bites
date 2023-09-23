@@ -5,14 +5,14 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 
-
+# View for listing blog posts
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("created_date")
     template_name = "index.html"
     paginate_by = 6
 
-
+# View for displaying a single blog post and handling comments
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -50,10 +50,10 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, "Your comment has been added successfully!")    # noqa
+            messages.success(request, "Your comment has been added successfully!")
             comment_form = CommentForm()
         else:
-            messages.error(request, "There was an error adding your comment. Please try again.")  # noqa
+            messages.error(request, "There was an error adding your comment. Please try again.")
 
         return render(
             request,
@@ -67,7 +67,7 @@ class PostDetail(View):
             },
         )
 
-
+# View for handling post likes
 class PostLike(View):
 
     def post(self, request, slug, *args, **kwargs):

@@ -10,4 +10,4 @@ def home(request):
     Returns:
         HttpResponse: Rendered home page.
     """
-    return render(request, 'home.html')
+    return render(request, 'home.html')  # Render the 'home.html' template for the main landing page

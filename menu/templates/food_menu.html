@@ -6,7 +6,7 @@
     <!-- Title -->
     <div class="row justify-content-center">
         <div class="col-sm-10 col-md-8 mt-5 mb-5">
-            <h1 class="text-center menu-title">Food Menu</h1>
+            <h1 class="text-center menu-title">Food Menu</h1> <!-- Title for the food menu page -->
         </div>
     </div>
 
@@ -26,9 +26,9 @@
                             {{ meal.meal_name }}
                         </h3>                        
                         <div class="font-verdana color-3d3d3d">
-                            {{ meal.description | safe }}
+                            {{ meal.description | safe }} <!-- Description of the starter item -->
                         </div>
-                        <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ meal.price }}</span>
+                        <span class="menu-item-price"><i class="fas fa-shopping-cart"></i> €{{ meal.price }}</span> <!-- Price of the starter item -->
                     </div>
                 {% endif %}
             {% endfor %}

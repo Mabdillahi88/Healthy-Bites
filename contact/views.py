@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import ContactForm
 
-
+# Utility function to fetch the user instance based on the current session
 def get_user_instance(request):
     """
     Fetch the user instance based on the current session.
@@ -18,7 +18,7 @@ def get_user_instance(request):
     user_email = request.user.email
     return User.objects.filter(email=user_email).first()
 
-
+# View class to handle the contact form display and processing
 class ContactMessage(View):
     """Handles the display and processing of the contact form."""
 

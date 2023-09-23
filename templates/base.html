@@ -4,6 +4,7 @@
 <html lang="en" class="h-100">
 
 <head>
+    <!-- Meta information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Healthy Bites</title>
@@ -38,6 +39,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
+            <!-- Navigation items -->
             <li class="nav-item">
               <a class="nav-link fs-5" href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
             </li>
@@ -47,7 +49,7 @@
                   aria-expanded="false">
                   <i class="fas fa-utensils"></i> Menus
                 </a>
-                <!-- Menu dropdown to food and drink menus-->
+                <!-- Menu dropdown to food and smoothies, milkshakes menus -->
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item fs-5" href="{% url 'food_menu' %}"><i class="fas fa-hamburger"></i> Food Menu</a></li>
                   <li><a class="dropdown-item fs-5" href="{% url 'smoothies' %}"><i class="fas fa-glass-whiskey"></i> Smoothies Menu </a></li>
@@ -61,7 +63,7 @@
             <li class="nav-item">
               <a class="nav-link fs-5" href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact Us</a>
             </li>
-            <!-- ... User Auth ... -->
+            <!-- User Authentication -->
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link fs-5" href="{% url 'active_bookings_dashboard' %}"><i class="fas fa-book"></i> My Bookings</a>
@@ -88,6 +90,7 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-8 offset-md-2">
+            <!-- Messages -->
             {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                 {{ message | safe }}
@@ -139,7 +142,7 @@
   </div>
 </footer>
 
-
+<!-- JavaScript for closing alerts -->
 <script>
   if (document.getElementById('msg')) {
       setTimeout(function () {
@@ -149,7 +152,6 @@
       }, 2500);
   }
 </script>
-
 
 </body>
 </html>

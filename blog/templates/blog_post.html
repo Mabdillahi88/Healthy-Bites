@@ -1,45 +1,41 @@
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
+{% extends 'base.html' %}  <!-- Extends the base template -->
+{% load crispy_forms_tags %}  <!-- Load crispy forms for better form rendering -->
 
-{% block content %}
+{% block content %}  <!-- Start of the main content block -->
 
-<!-- Masthead with post title and image -->
-<div class="masthead light-bg py-5"> <!-- Consistent background -->
+<!-- Masthead section containing post title and image -->
+<div class="masthead light-bg py-5"> 
     <div class="container">
         <div class="row g-0 align-items-center">
-
-            <!-- Post Details on Masthead -->
+            <!-- Displaying post details -->
             <div class="col-md-6 py-4 masthead-text">
-                <h1 class="thin brand">{{ post.title }}</h1> <!-- Consistent font-weight and color -->
+                <h1 class="thin brand">{{ post.title }}</h1> 
                 <p class="lead">
                     <i class="fas fa-user"></i> {{ post.author }} |
                     <i class="fas fa-calendar-alt"></i> {{ post.created_on }}
                 </p>
             </div>
-
-            <!-- Post Image on Masthead -->
+            <!-- Displaying post image -->
             <div class="d-none d-md-flex col-md-6 justify-content-center">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="img-fluid rounded shadow hover-shadow" alt="Placeholder Image"> <!-- Added hover-shadow for consistency -->
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="img-fluid rounded shadow hover-shadow" alt="Placeholder Image">
                 {% else %}
-                <img src="{{ post.featured_image.url }}" class="img-fluid rounded shadow hover-shadow" alt="{{ post.title }} Image"> <!-- Added hover-shadow for consistency -->
+                <img src="{{ post.featured_image.url }}" class="img-fluid rounded shadow hover-shadow" alt="{{ post.title }} Image">
                 {% endif %}
             </div>
         </div>
     </div>
 </div>
 
-<!-- Main content -->
+<!-- Main content of the post -->
 <div class="container my-5">
     <div class="row">
-
-        <!-- Post content -->
-        <div class="col-lg-8 card mb-4 mt-3 shadow hover-shadow bg-light"> <!-- Added hover-shadow for consistency -->
+        <!-- Displaying post content -->
+        <div class="col-lg-8 card mb-4 mt-3 shadow hover-shadow bg-light">
             <div class="card-body">
                 {{ post.content | safe }}
             </div>
-
-            <!-- Like and comment count -->
+            <!-- Displaying likes and comments count -->
             <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
                 <div>
                     {% if user.is_authenticated %}
@@ -59,14 +55,12 @@
                     <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span>
                     {% endif %}
                 </div>
-                <div class="brand"><i class="far fa-comments"></i> {{ comments.count }}</div> <!-- Consistent brand color -->
+                <div class="brand"><i class="far fa-comments"></i> {{ comments.count }}</div>
             </div>
         </div>
-
-        <!-- Comment section -->
+        <!-- Comments section -->
         <div class="col-lg-4">
-
-            <h3 class="p-2 mb-3 rounded light-bg border-left border-green">Comments:</h3> <!-- Consistent bg and border colors -->
+            <h3 class="p-2 mb-3 rounded light-bg border-left border-green">Comments:</h3>
             {% for comment in comments %}
             <div class="comments p-3 my-2 rounded shadow-sm bg-white">
                 <p class="font-weight-bold mb-2">
@@ -78,14 +72,13 @@
                 {{ comment.body | linebreaks }}
             </div>
             {% endfor %}
-
-            <!-- Comment form -->
+            <!-- Comment form for authenticated users -->
             {% if user.is_authenticated %}
-            <h4 class="p-2 mb-3 rounded light-bg border-left border-green">Leave a Comment:</h4> <!-- Consistent bg and border colors -->
+            <h4 class="p-2 mb-3 rounded light-bg border-left border-green">Leave a Comment:</h4>
             <form method="post" class="rounded p-4 shadow-sm bg-white">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-green btn-lg mt-2"><i class="fas fa-paper-plane"></i> Submit</button> <!-- Consistent button design -->
+                <button type="submit" class="btn btn-green btn-lg mt-2"><i class="fas fa-paper-plane"></i> Submit</button>
             </form>
             {% endif %}
         </div>

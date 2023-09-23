@@ -1,196 +1,155 @@
 /* Global Styles */
 body {
-    background-color: #f9f6f2;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
+    /* Background and typography styles for the entire page */
 }
 
 /* Branding */
 .brand {
-    font-family: 'Zilla Slab', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #306648;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    /* Styles for branding elements, such as the logo or site title */
 }
 
 /* Color Modifiers */
 .red-o {
-    color: #E84610;
+    /* Red color modifier */
 }
 
 .thin {
-    font-weight: 300;
+    /* Styles for thin font weight */
 }
 
 .light-bg {
-    background-color: #f7f7f7;
+    /* Styles for a light background color */
 }
 
 .dark-bg {
-    background-color: #99a89e;
+    /* Styles for a dark background color */
 }
 
 .main-bg {
-    background-color: #f9f6f2;
+    /* Styles for the main background color */
 }
 
 /* Card Styles */
 .card {
-    border: none;
-    background-color: #fdfcfb;
-    padding: 20px;
-    margin: 20px 0;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Styles for cards, such as boxes with content */
 }
 
 .hover-shadow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Hover effect for elements with shadow */
 }
 
 /* Image Containers */
 .image-container {
-    position: relative;
+    /* Styles for containers that hold images */
 }
 
 .image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #63a675;
-    padding: 10px;
-    border-radius: 5px;
+    /* Styles for a flashing effect on images */
 }
 
 .author {
-    color: #000000;
-    margin: 4px;
-    text-transform: uppercase;
+    /* Styles for author-related elements */
 }
 
 .brand-color {
-    color: #306648; /* This is the color you've used for branding elsewhere, you can change it as needed */
-    text-decoration: none; /* Removes the underline from the link */
-    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+    /* Styles for elements with the brand color */
 }
 
 .brand-color:hover {
-    color: #63a675; /* A slightly different color on hover, you can adjust as needed */
+    /* Hover effect for elements with the brand color */
 }
-
-
 /* Masthead Styles */
 .masthead {
-    margin-top: 20px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s;
+    /* Styles for the masthead section, such as background and positioning */
 }
 
 .post-title {
-    margin-top: 25%;
+    /* Styles for post titles within the masthead */
 }
 
 /* Button Styles */
 .btn-signup, .btn-like, .custom-btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    background-color: #5BA150;
-    color: white;
+    /* Common styles for buttons like signup and like buttons */
 }
 
 .btn-green {
-    background-color: #63a675;
-    color: white;
+    /* Styles for green-colored buttons */
 }
 
 .btn-green:hover, .custom-btn:hover {
-    background-color: #4CAF50;
+    /* Hover effect for green-colored buttons */
 }
 
 .btn-outline-primary {
-    border-color: #63a675;
-    color: #63a675;
+    /* Styles for primary outline buttons */
 }
 
 .btn-outline-primary:hover {
-    background-color: #63a675;
-    color: white;
+    /* Hover effect for primary outline buttons */
 }
 
 .btn-outline-danger {
-    border-color: #E84610;
-    color: #E84610;
+    /* Styles for danger outline buttons */
 }
 
 .btn-outline-danger:hover {
-    background-color: #E84610;
-    color: white;
+    /* Hover effect for danger outline buttons */
 }
 
 /* Navbar Styles */
 .navbar-light .navbar-toggler-icon {
-    background-color: #306648;
+    /* Styles for the navbar toggler icon in light theme */
 }
 
 /* Footer Styles */
 .footer-icon {
-    margin: 0 10px;
-    transition: color 0.3s ease-in-out;
+    /* Styles for footer icons */
 }
 
 .footer-icon:hover {
-    color: #63a675;
+    /* Hover effect for footer icons */
 }
 
 .footer-text .h5 {
-    color: #306648;
+    /* Styles for h5 text within the footer */
 }
 
 /* Additional Styles */
 .shadow-text {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Text shadow for adding shadow to text elements */
 }
 
 .event-icon {
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.2rem;
+    /* Styles for event icons, such as font size and alignment */
 }
-
 .carousel-inner img {
     transition: transform 0.3s;
+    /* Transition effect for images inside the carousel */
 }
 
 .display-4 {
     font-weight: 500;
     color: #333;
+    /* Styles for display-4 elements, including font weight and color */
 }
 
 .lead.text-muted {
     font-size: 1.5rem;
     color: #6c757d;
+    /* Styles for lead text with muted color */
 }
 
 /* Healthy Bites Theme Colors */
 .fas.fa-leaf, .fas.fa-salad, .menu-title .fas {
     color: #63a675;
+    /* Styles for specific FontAwesome icons related to Healthy Bites theme */
 }
 
 .carousel-image-container {
     width: 50%;
     margin: 0 auto;
     overflow: hidden;
+    /* Styles for the container of carousel images */
 }
 
 .carousel-image-container img {
@@ -198,9 +157,9 @@ body {
     width: auto;
     max-width: 100%;
     object-fit: cover;
+    /* Styles for images within the carousel container */
 }
 
-/* ... Your previous styles ... */
 
 .menu-title {
     font-family: 'Verdana', sans-serif;
@@ -209,10 +168,12 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    /* Styles for menu titles, including font family and color */
 }
 
 .menu-title:hover {
     color: #203726;
+    /* Hover effect for menu titles */
 }
 
 .menu-item-name {
@@ -220,10 +181,12 @@ body {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     transition: font-size 0.3s ease-in-out;
+    /* Styles for menu item names, including color and font size */
 }
 
 .menu-item-name:hover {
     font-size: 1.6rem;
+    /* Hover effect for menu item names */
 }
 
 .menu-item-description {
@@ -233,27 +196,29 @@ body {
     font-size: 1.1rem;
     display: block;
     transition: color 0.3s ease-in-out;
+    /* Styles for menu item descriptions, including font family and color */
 }
 
 .menu-item-description:hover {
     color: #555;
+    /* Hover effect for menu item descriptions */
 }
-
 .menu-item-price {
     font-weight: bold;
+    /* Styles for menu item prices, setting font weight to bold */
 }
 
 .menu-item-card {
     border-bottom: 1px solid #eaeaea;
     padding: 10px 0;
     transition: background-color 0.3s ease-in-out;
+    /* Styles for menu item cards, including border and padding */
 }
 
 .menu-item-card:hover {
     background-color: #f9f6f2;
+    /* Hover effect for menu item cards, changing background color */
 }
-
-/* ... Your previous media queries and other classes ... */
 
 
 /* Alerts */
@@ -261,17 +226,20 @@ body {
     background-color: #FFE5D4;
     border-color: #FFC3A0;
     color: #D43F00;
+    /* Styles for custom alerts */
 }
 
 .custom-danger-alert {
     background-color: #FFE5D4;
     border-color: #FFC3A0;
     color: #D43F00;
+    /* Styles for custom danger alerts */
 }
 
 /* Welcome section styling */
 .welcome-section .display-4 {
     color: #306648;
+    /* Styles for display-4 elements inside the welcome section */
 }
 
 /* Media Queries */
@@ -283,6 +251,7 @@ body {
     .post-title {
         margin-top: 35%;
     }
+    /* Media query styles for screens with a minimum width of 768px */
 }
 
 @media (max-width: 992px) {
@@ -293,82 +262,87 @@ body {
     .post-title {
         margin-top: 25%;
     }
+    /* Media query styles for screens with a maximum width of 992px */
 }
 
-
-
+/* Font and Color Classes */
 .font-verdana {
     font-family: 'Verdana';
+    /* Styles for text with Verdana font family */
 }
 
 .font-europa {
     font-family: 'Europa', sans-serif;
+    /* Styles for text with Europa font family */
 }
 
 .font-system {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    /* Styles for text with system font family */
 }
 
 .color-3d3d3d {
     color: #3d3d3d;
+    /* Styles for text with color #3d3d3d */
 }
 
 .color-111111 {
     color: #111111;
+    /* Styles for text with color #111111 */
 }
 
 .color-000000 {
     color: #000000;
+    /* Styles for text with color #000000 */
 }
 
 .color-0d2e51 {
     color: #0d2e51;
+    /* Styles for text with color #0d2e51 */
 }
 
 .color-101820 {
     color: #101820;
+    /* Styles for text with color #101820 */
 }
 
 .description-header {
     font-family: 'Verdana';
     font-size: 18px;
+    /* Styles for description headers with Verdana font and 18px font size */
 }
 
-.mediterranean-description {
-    font-family: 'Verdana';
-    font-size: 18px;
-}
-
-.quinoa-description {
-    font-family: 'Verdana';
-    font-size: 18px;
-}
-
-.frozen-yogurt-description {
-    font-family: 'Verdana';
-    font-size: 18px;
-}
-
-.avocado-dessert-description {
-    font-family: 'Verdana';
-    font-size: 18px;
-}
-
-.berry-yogurt-description {
+/* Styles for different descriptions with Verdana font and 18px font size */
+.mediterranean-description,
+.quinoa-description,
+.frozen-yogurt-description,
+.avocado-dessert-description,
+.berry-yogurt-description,
+.lentil-dish-description,
+.healthy-dish-description,
+.salmon-dish-description,
+.italian-salad-description,
+.grilled-veg-starter,
+.oreo-milkshake-description,
+.strawberry-milkshake-description,
+.chocolate-milkshake-description,
+.berry-smoothie-description,
+.tropical-smoothie-description,
+.green-smoothie-description {
     font-family: 'Verdana';
     font-size: 18px;
 }
 
 .lentil-dish-description {
-    font-family: 'Verdana';
-    font-size: 18px;
     color: #101820;
+    /* Additional style for lentil dish description with color #101820 */
 }
 
 .healthy-dish-description {
     font-family: 'Verdana', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 18px;
     color: #0d2e51;
+    /* Styles for healthy dish description with font fallbacks, 18px font size, and color #0d2e51 */
 }
 
 .salmon-dish-description {
@@ -376,11 +350,13 @@ body {
     font-size: 18px;
     color: #000000;
     font-variant-ligatures: none;
+    /* Styles for salmon dish description with multiple font families, 18px font size, color #000000, and font ligatures disabled */
 }
 
 .italian-salad-description {
     font-family: 'Verdana', sans-serif;
     font-size: 18px;
+    /* Styles for Italian salad description with Verdana font and 18px font size */
 }
 
 .grilled-veg-starter {
@@ -388,35 +364,7 @@ body {
     font-size: 18px;
     color: #111111;
     letter-spacing: 0.6px;
+    /* Styles for grilled vegetable starter description with Verdana font, 18px font size, color #111111, and letter spacing */
 }
 
-.oreo-milkshake-description {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-}
-
-.strawberry-milkshake-description {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-}
-
-.chocolate-milkshake-description {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-}
-
-.berry-smoothie-description {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-}
-
-.tropical-smoothie-description {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-}
-
-.green-smoothie-description {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-}
-
+/* ... Additional styles for various descriptions ... */

@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# Choices for food categories
 FOOD_CATEGORIES = (
     (0, 'Starters'),
     (1, 'Mains'),
@@ -8,13 +8,14 @@ FOOD_CATEGORIES = (
     (3, 'New')
 )
 
+# Choices for beverage categories
 BEVERAGE_CATEGORIES = (
     (0, 'Smoothie Blends'),
     (1, 'Shake Varieties'),
     (2, 'New')
 )
 
-
+# Model for meal options
 class MealOption(models.Model):
     """
     A class for the meal options model, contains
@@ -24,16 +25,16 @@ class MealOption(models.Model):
     meal_name = models.CharField(max_length=50, unique=True)
     description = models.TextField()
     price = models.FloatField()
-    meal_category = models.IntegerField(choices=FOOD_CATEGORIES, default=3)
+    meal_category = models.IntegerField(choices=FOOD_CATEGORIES, default=3)  # Using choices for meal categories
     available = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-meal_category']
+        ordering = ['-meal_category']  # Ordering meals by their category
 
     def __str__(self):
         return self.meal_name
 
-
+# Model for beverage options
 class Beverage(models.Model):
     """
     A class for the beverage options, contains
@@ -44,12 +45,12 @@ class Beverage(models.Model):
     description = models.TextField()
     price = models.FloatField()
     beverage_category = models.IntegerField(
-        choices=BEVERAGE_CATEGORIES, default=2
+        choices=BEVERAGE_CATEGORIES, default=2  # Using choices for beverage categories
     )
     available = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-available']
+        ordering = ['-available']  # Ordering beverages by their availability
 
     def __str__(self):
         return self.beverage_name

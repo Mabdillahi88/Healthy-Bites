@@ -3,7 +3,6 @@ from crispy_forms.helper import FormHelper
 from phonenumber_field.formfields import PhoneNumberField
 from .models import MyContact
 
-
 class ContactForm(forms.ModelForm):
     """
     A form to capture contact details and messages.
@@ -20,12 +19,12 @@ class ContactForm(forms.ModelForm):
         Initialize the form and integrate with crispy_forms helper.
         """
         super().__init__(*args, **kwargs)
-        self.helper = FormHelper(self)
+        self.helper = FormHelper(self)  # Initialize the crispy_forms helper
 
     class Meta:
         """
         Meta information for ContactForm.
         Specifies the model and fields to use.
         """
-        model = MyContact
-        fields = ('name', 'phone', 'email', 'message')
+        model = MyContact  # Use the MyContact model
+        fields = ('name', 'phone', 'email', 'message')  # Define the fields to include in the form
