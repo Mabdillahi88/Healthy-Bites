@@ -339,6 +339,14 @@ The Blog Model contains the following:
 </details>
 
 
+Full database scheme
+
+<details><summary>Full database Scheme</summary>
+
+![Full database Scheme](docs/full_database_scheme.jpg)
+
+</details>
+
 ### Wireframes
 The wireframes were created using Balsamiq
 <details><summary></summary>
@@ -865,12 +873,29 @@ Validation Tools:
 </details>
 
 
+### LightHouse Validation
 
 
 
 
 ## Testing
 
+### Performing tests on various devices 
+The website was tested on the following devices:
+- Surface Pro 7 
+- iPhone 5/SE
+- iPad air
+
+Google Chrome Developer Tools Device Toggling was utilized to evaluate all webpages across all feasible device combinations
+
+### Browser compatibility
+
+- The following browsers have been put to the test:
+  - Googe Chrome 
+  - Firefox Browser
+  
+
+### Manual Testing
 
 1. As a user, I aim to effortlessly navigate the Healthy Bites platform, ensuring seamless access to its diverse features.
 
@@ -1384,12 +1409,128 @@ Validation Tools:
 | Error when adding new milkshakes in user favorites | A mismatched data type in the database. Corrected the data type to ensure users can add milkshakes to favorites without issues. |
 
 
+##### Back to [top](#table-of-contents)<hr>
 
 
+### Heroku Deployment
+
+The Healthy Bites application has been seamlessly deployed to the web using Heroku, with the codebase sourced from GitHub. The steps for this deployment process are as follows:
+
+1. Sign up for a new account on heroku.com to begin deploying the Healthy Bites application.
 
 
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+2. Initiate a new app and label it, for instance, "healthy-bites-restaurant", and then pick an appropriate geographical region.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+3. Within resources, search for "postgres". Proceed to integrate a Postgres database with the "healthy-bites-restaurant" app.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
 
 
+4. Take note of the DATABASE_URL. This should be configured as an environment variable both in Heroku and in your local setup (env.py) for "Healthy Bites".
 
 
+<details><summary>Sign up</summary>
 
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+5. Add the packages `dj-database-url` and `psycopg2-binary` to the "Healthy Bites" project by installing them.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+6. Generate a `Procfile` for the "Healthy Bites" project and input: `web: gunicorn healthy_bites.wsgi`.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+
+7. In "Healthy Bites" `settings.py`, set it to link with Heroku Postgres. Keep settings in `env.py`.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+
+8. In the `settings.py` of "Healthy Bites", make sure `DEBUG` is set to `False`.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+
+9. Inside "Healthy Bites" `settings.py`, add `localhost` and `healthy-bites-app.herokuapp.com` to `ALLOWED_HOSTS`.
+
+10. Check migration status using: `python3 manage.py showmigrations`.
+
+11. Apply migrations with: `python3 manage.py migrate`.
+
+12. Create an admin account: `python3 manage.py createsuperuser`.
+
+13. Populate categories from a file: `python3 manage.py loaddata categories.json`.
+
+14. Load products data: `python3 manage.py loaddata products.json`.
+
+15. Install `gunicorn`, then update `requirements.txt` using: `pip3 freeze > requirements.txt`.
+
+
+16. Turn off `collectstatic` on Heroku using: `heroku config:set DISABLE_COLLECTSTATIC=1 -a healthy-bites-app`.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+
+17. Set up the needed environment variables in Heroku.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+
+18. Link your app to GitHub and turn on auto-deploys.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+19. Press 'deploy' to launch your app on Heroku initially.
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+20. Use the given link to view your live app.
+
+
+<details><summary>Sign up</summary>
+
+![Sign up](docs/testing/user_story25.1.jpg)
+</details>
+
+21. If problems arise, use  the build logs to assist to solved the issues.
+
+<hr>
