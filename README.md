@@ -1419,62 +1419,62 @@ The Healthy Bites application has been seamlessly deployed to the web using Hero
 1. Sign up for a new account on heroku.com to begin deploying the Healthy Bites application.
 
 
-<details><summary>Sign up</summary>
+<details><summary>Step 1</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_1.1.jpg)
 </details>
 
 2. Initiate a new app and label it, for instance, "healthy-bites-restaurant", and then pick an appropriate geographical region.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 2</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_2.1.jpg)
 </details>
 
 3. Within resources, search for "postgres". Proceed to integrate a Postgres database with the "healthy-bites-restaurant" app.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 3</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_3.1.jpg)
 </details>
 
 
 4. Take note of the DATABASE_URL. This should be configured as an environment variable both in Heroku and in your local setup (env.py) for "Healthy Bites".
 
 
-<details><summary>Sign up</summary>
+<details><summary>Step 4</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_4.1.jpg)
 </details>
 
 5. Add the packages `dj-database-url` and `psycopg2-binary` to the "Healthy Bites" project by installing them.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 5</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_5.1.jpg)
 </details>
 
 6. Generate a `Procfile` for the "Healthy Bites" project and input: `web: gunicorn healthy_bites.wsgi`.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 6</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_6.1.jpg)
 </details>
 
 
 7. In "Healthy Bites" `settings.py`, set it to link with Heroku Postgres. Keep settings in `env.py`.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 7</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_7.1.jpg)
 </details>
 
 
 8. In the `settings.py` of "Healthy Bites", make sure `DEBUG` is set to `False`.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 8</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_8.1.jpg)
 </details>
 
 
@@ -1495,40 +1495,40 @@ The Healthy Bites application has been seamlessly deployed to the web using Hero
 
 16. Turn off `collectstatic` on Heroku using: `heroku config:set DISABLE_COLLECTSTATIC=1 -a healthy-bites-app`.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 16</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_16.1.jpg)
 </details>
 
 
 17. Set up the needed environment variables in Heroku.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 17</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_17.1.jpg)
 </details>
 
 
 18. Link your app to GitHub and turn on auto-deploys.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 18</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_18.1.jpg)
 </details>
 
 19. Press 'deploy' to launch your app on Heroku initially.
 
-<details><summary>Sign up</summary>
+<details><summary>Step 19</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_19.1.jpg)
 </details>
 
 20. Use the given link to view your live app.
 
 
-<details><summary>Sign up</summary>
+<details><summary>Step 20</summary>
 
-![Sign up](docs/testing/user_story25.1.jpg)
+![Heroku](docs/heroku/heroku_20.1.jpg)
 </details>
 
 21. If problems arise, use  the build logs to assist to solved the issues.
