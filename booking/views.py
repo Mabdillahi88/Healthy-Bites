@@ -11,9 +11,10 @@ from .models import Booking
 from .forms import BookingForm
 import datetime
 
+
 class UserReservationRequestView(LoginRequiredMixin, View):
     template_name = 'initiate_reservation_page.html'
-    success_message = 'Booking successful, waiting.'  # Updated message to match new statuses
+    success_message = 'Booking successful, waiting.'  # Updated message
 
     def get_booking_form(self, request):
         initial_data = {
@@ -23,7 +24,9 @@ class UserReservationRequestView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         booking_form = self.get_booking_form(request)
-        return render(request, self.template_name, {'booking_form': booking_form})  # Get request to display the booking form
+        return render(
+            request, self.template_name, {'booking_form': booking_form}
+        )  # Display the booking form
 
     def post(self, request, *args, **kwargs):
         booking_form = BookingForm(data=request.POST)
@@ -31,15 +34,19 @@ class UserReservationRequestView(LoginRequiredMixin, View):
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking.save()
-            messages.success(request, self.success_message)  # Display success message
+            messages.success(request, self.success_message)
             return redirect('acknowledgment_view')
-        return render(request, self.template_name, {'booking_form': booking_form})   # Post request to process form submission
+        return render(
+            request, self.template_name, {'booking_form': booking_form}
+        )
+
 
 class BookingAcknowledgmentPageView(LoginRequiredMixin, View):
     template_name = 'acknowledgment_view.html'
 
     def get(self, request, *args, **kwargs):
-        return render(request, self.template_name)  # Get request to display the acknowledgment page
+        return render(request, self.template_name)
+
 
 class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
     model = Booking
@@ -52,23 +59,26 @@ class UserSpecificBookingsDashboardView(LoginRequiredMixin, ListView):
         Booking.objects.filter(
             user=self.request.user,
             requested_date__lt=today
-        ).update(status='Timed Out')  # Update status to 'Timed Out' for expired bookings
+        ).update(status='Timed Out')
 
         user_bookings = Booking.objects.filter(
             user=self.request.user
         ).order_by('-created_date')
 
-        print(f"Bookings for user {self.request.user.username}: "
-              f"{user_bookings}")
+        print(
+            f"Bookings for user {self.request.user.username}: {user_bookings}"
+        )
+        return user_bookings
 
-        return user_bookings  # Get user-specific bookings
 
-class IndividualBookingModificationView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):   # Update view for individual booking modification  # noqa
+class IndividualBookingModificationView(
+        LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Booking
     form_class = BookingForm
     template_name = 'modify_reservation_form.html'
     success_message = 'Booking has been updated.'
     success_url = reverse_lazy('active_bookings_dashboard')
+
 
 class SpecificBookingTerminationView(LoginRequiredMixin, DeleteView):
     model = Booking
@@ -78,10 +88,12 @@ class SpecificBookingTerminationView(LoginRequiredMixin, DeleteView):
 
     def get_object(self, queryset=None):
         booking = get_object_or_404(Booking, pk=self.kwargs['pk'])
-        if booking.user != self.request.user and not self.request.user.is_superuser:   # Check user permissions  # noqa
-            raise PermissionDenied("You don't have permission to cancel this booking.")   # Raise permission denied if user doesn't have permission  # noqa
+        if booking.user != self.request.user and not self.request.user.is_superuser:  # noqa
+            raise PermissionDenied(
+                "You don't have permission to cancel this booking."
+            )
         return booking
 
     def delete(self, request, *args, **kwargs):
-        messages.success(request, self.success_message)  # Display success message
-        return super().delete(request, *args, **kwargs)  # Delete booking upon confirmation
+        messages.success(request, self.success_message)
+        return super().delete(request, *args, **kwargs)

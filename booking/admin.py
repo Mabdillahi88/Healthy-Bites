@@ -2,16 +2,17 @@ from django.contrib import admin, messages
 from rangefilter.filters import DateRangeFilter
 from .models import Table, Booking
 
+
 # Admin configuration for managing tables in the restaurant.
 @admin.register(Table)
 class TableAdmin(admin.ModelAdmin):
     """
-    Admin interface for managing tables. Allows for easy viewing 
+    Admin interface for managing tables. Allows for easy viewing
     of table details and searching based on table names.
     """
     # Fields to display in the list view
     list_display = ('name', 'id', 'max_seats')
-    
+
     # Fields that can be used for search in the admin panel
     search_fields = ('name', 'id')
 
@@ -50,7 +51,7 @@ class BookingAdmin(admin.ModelAdmin):
     def confirm_bookings(self, request, queryset):
         # A simple permission check, can be enhanced
         if not request.user.has_perm('app.change_booking'):
-            messages.error(request, 'You do not have permission to change bookings.')
+            messages.error(request, 'You do not have permission to change bookings.')   # noqa
             return
         queryset.update(status='Booking Confirmed')
     confirm_bookings.short_description = "Confirm selected bookings"

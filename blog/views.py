@@ -5,12 +5,14 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 
+
 # View for listing blog posts
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("created_date")
     template_name = "index.html"
     paginate_by = 6
+
 
 # View for displaying a single blog post and handling comments
 class PostDetail(View):
@@ -19,9 +21,7 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_date")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
+        liked = post.likes.filter(id=self.request.user.id).exists()
 
         return render(
             request,
@@ -39,9 +39,7 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_date")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
+        liked = post.likes.filter(id=self.request.user.id).exists()
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -50,10 +48,15 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, "Your comment has been added successfully!")
+            messages.success(
+                request, "Your comment has been added successfully!"
+            )
             comment_form = CommentForm()
         else:
-            messages.error(request, "There was an error adding your comment. Please try again.")
+            messages.error(
+                request,
+                "There was an error adding your comment. Please try again."
+            )
 
         return render(
             request,
@@ -66,6 +69,7 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
 
 # View for handling post likes
 class PostLike(View):

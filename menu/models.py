@@ -15,6 +15,7 @@ BEVERAGE_CATEGORIES = (
     (2, 'New')
 )
 
+
 # Model for meal options
 class MealOption(models.Model):
     """
@@ -25,7 +26,9 @@ class MealOption(models.Model):
     meal_name = models.CharField(max_length=50, unique=True)
     description = models.TextField()
     price = models.FloatField()
-    meal_category = models.IntegerField(choices=FOOD_CATEGORIES, default=3)  # Using choices for meal categories
+    meal_category = models.IntegerField(
+        choices=FOOD_CATEGORIES, default=3  # Using choices for meal categories
+    )
     available = models.BooleanField(default=False)
 
     class Meta:
@@ -33,6 +36,7 @@ class MealOption(models.Model):
 
     def __str__(self):
         return self.meal_name
+
 
 # Model for beverage options
 class Beverage(models.Model):
@@ -45,8 +49,8 @@ class Beverage(models.Model):
     description = models.TextField()
     price = models.FloatField()
     beverage_category = models.IntegerField(
-        choices=BEVERAGE_CATEGORIES, default=2  # Using choices for beverage categories
-    )
+        choices=BEVERAGE_CATEGORIES, default=2
+    )  # Using choices for beverage categories
     available = models.BooleanField(default=False)
 
     class Meta:

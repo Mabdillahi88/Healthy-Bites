@@ -2,6 +2,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Comment
 
+
 # Configuring Post model for the admin with Summernote for content
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
@@ -10,6 +11,7 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_date')
     list_display = ('title', 'slug', 'status', 'created_date')
     search_fields = ['title', 'content']
+
 
 # Configuring Comment model for the admin
 @admin.register(Comment)

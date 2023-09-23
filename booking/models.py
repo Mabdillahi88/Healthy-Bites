@@ -73,7 +73,7 @@ class Booking(models.Model):
     phone = PhoneNumberField(null=True)
 
     status = models.CharField(
-        max_length=25, choices=status_options, default='waiting'  # Updated default to 'waiting'
+        max_length=25, choices=status_options, default='waiting'
     )
     guest_choices = (
         (1, "1 Guest"),
