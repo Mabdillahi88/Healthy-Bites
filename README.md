@@ -348,9 +348,63 @@ Full database scheme
 </details>
 
 ### Wireframes
-The wireframes were created using Balsamiq
-<details><summary></summary>
-<img src="docs/wireframes.png">
+
+I used Balsamiq to design the wireframes.
+
+
+<details><summary>Blog Homepage</summary>
+
+![Blog Homepage](docs/wireframes/wireframe_blog_homepage.jpg)
+
+</details>
+
+<details><summary>Blog Post</summary>
+
+![Blog Post](docs/wireframes/wireframe_blog_post.jpg)
+
+</details>
+
+<details><summary>Book</summary>
+
+![Book](docs/wireframes/wireframe_book.jpg)
+
+</details>
+
+
+<details><summary>Contact Us</summary>
+
+![Contact Us](docs/wireframes/wireframe_contact_us.jpg)
+
+</details>
+
+<details><summary>Food menu</summary>
+
+![Food menu](docs/wireframes/wireframe_foodmenu.jpg)
+
+</details>
+
+<details><summary>Home</summary>
+
+![Home](docs/wireframes/wireframe_home.jpg)
+
+</details>
+
+<details><summary>Milkshake menu</summary>
+
+![Milkshake Menu](docs/wireframes/wireframe_milkshakemenu.jpg)
+
+</details>
+
+<details><summary>My Bookings</summary>
+
+![My Bookings](docs/wireframes/wireframe_mybookings.jpg)
+
+</details>
+
+<details><summary>Smmothie Menu</summary>
+
+![Smoothie Menu](docs/wireframes/wireframe_smoothiemenu.jpg)
+
 </details>
 
 
@@ -1534,3 +1588,20 @@ The Healthy Bites application has been seamlessly deployed to the web using Hero
 21. If problems arise, use  the build logs to assist to solved the issues.
 
 <hr>
+
+  ### Navigate to the GitHub Repository.
+1. Go to the GitHub repository
+2. Click on the "Fork" button located at the top right corner of the page.
+3. This action will create a personal copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://8000-mabdillahi8-healthybite-u7xozuv8v5t.ws-us104.gitpod.io/)
+
+  ### Cloning the repository in GitHub
+
+1. Navigate to the desired GitHub repository.
+2. Find the "Code" button above the list of files and click it.
+3. Ensure the "HTTPS" option is selected and copy the displayed link.
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be.
+6. Type git clone and paste the URL you copied earlier (it should look something like this: git clone 7. 
+  https://github.com/YOUR-USERNAME/YOUR-REPOSITORY).
+7. Press "Enter" to create your local clone.
