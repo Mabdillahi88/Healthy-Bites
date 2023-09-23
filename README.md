@@ -929,6 +929,12 @@ Validation Tools:
 
 ### LightHouse Validation
 
+I used Lighthouse to check performance.
+
+<details><summary>Home</summary>
+
+![home](docs/validations/wave_validation_blog_home.jpg)
+</details>
 
 
 
