@@ -933,7 +933,7 @@ I used Lighthouse to check performance.
 
 <details><summary>Home</summary>
 
-![home](docs/validations/wave_validation_blog_home.jpg)
+![home](docs/validations/lighthouse_home.jpg)
 </details>
 
 
@@ -945,76 +945,65 @@ I used Lighthouse to check performance.
 
 <details><summary>blog home</summary>
 
-![blog home](docs/validations/wave_validation_blog_home.jpg)
+![blog home](docs/validations/lighthouse_blogpost.jpg)
 </details>
 
 
 <details><summary>contact us</summary>
 
-![contact us](docs/validations/wave_validation_blog_home.jpg)
+![contact us](docs/validations/lighthouse_contact.jpg)
 </details>
 
 <details><summary>my booking</summary>
 
-![my booking](docs/validations/wave_validation_blog_home.jpg)
+![my booking](docs/validations/lighthouse_bookings.jpg)
 </details>
 
 <details><summary>book</summary>
 
-![book](docs/validations/wave_validation_blog_home.jpg)
+![book](docs/validations/lighthouse_book.jpg)
 </details>
 
 <details><summary>edit booking</summary>
 
-![dir booking](docs/validations/wave_validation_blog_home.jpg)
+![dir booking](docs/validations/lighthouse_editbook.jpg)
 </details>
 
 <details><summary>cancel booking</summary>
 
-![cancel booking](docs/validations/wave_validation_blog_home.jpg)
+![cancel booking](docs/validations/lighthouse_cancelbook.jpg)
 </details>
 
 <details><summary>login</summary>
 
-![login](docs/validations/wave_validation_blog_home.jpg)
+![login](docs/validations/lighthouse_login.jpg)
 </details>
 
 
 <details><summary>logout</summary>
 
-![logut](docs/validations/wave_validation_blog_home.jpg)
+![logut](docs/validations/lighthouse_logout.jpg)
 </details>
 
 <details><summary>food menu</summary>
 
-![food menu](docs/validations/wave_validation_blog_home.jpg)
+![food menu](docs/validations/lighthouse_foodmenu.jpg)
 </details>
 
 <details><summary>milkshake menu</summary>
 
-![milkshake menu](docs/validations/wave_validation_blog_home.jpg)
+![milkshake menu](docs/validations/lighthouse_milkshakes.jpg)
 </details>
 
 <details><summary>smoothie menu</summary>
 
-![smoothie menu](docs/validations/wave_validation_blog_home.jpg)
+![smoothie menu](docs/validations/lighthouse_smoothies.jpg)
 </details>
 
 <details><summary>register</summary>
 
-![register](docs/validations/wave_validation_blog_home.jpg)
+![register](docs/validations/lighthouse_register.jpg)
 </details>
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Testing
