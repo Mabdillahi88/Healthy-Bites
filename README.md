@@ -1118,7 +1118,7 @@ Google Chrome Developer Tools Device Toggling was utilized to evaluate all webpa
 
 
 
-4. As a User,  I can access the operating hours and contact information, ensuring I know when to visit and how to reach out through email, phone, or social channels.
+4. As a User, I can access the operating hours and contact information, ensuring I know when to visit and how to reach out through email, phone, or social channels.
 
 
 **Step** | **Expected Result** | **Actual Result**
