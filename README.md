@@ -401,7 +401,7 @@ I used Balsamiq to design the wireframes.
 
 </details>
 
-<details><summary>Smmothie Menu</summary>
+<details><summary>Smoothie Menu</summary>
 
 ![Smoothie Menu](docs/wireframes/wireframe_smoothiemenu.jpg)
 
