@@ -74,7 +74,7 @@ body {
 }
 
 .brand-color {
-    color: #306648; /* This is the color you've used for branding elsewhere, you can change it as needed */
+    color: #3a7a57; /* This is the color you've used for branding elsewhere, you can change it as needed */
     text-decoration: none; /* Removes the underline from the link */
     transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
