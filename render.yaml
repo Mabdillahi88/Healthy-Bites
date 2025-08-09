@@ -2,7 +2,7 @@ services:
   - type: web
     name: healthy-bites
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
     startCommand: gunicorn healthy_bites.wsgi:application
     envVars:
       - key: PYTHON_VERSION
@@ -10,11 +10,6 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
-        fromDatabase:
-          name: healthy-bites-db
-          property: connectionString
-
-databases:
-  - name: healthy-bites-db
-    databaseName: healthy_bites
-    user: healthy_bites
+        value: postgresql://neondb_owner:6zjlNtX1pOTr@ep-billowing-scene-a2ohubkr.eu-central-1.aws.neon.tech/juror_snarl_deed_889133
+      - key: CLOUDINARY_URL
+        value: cloudinary://185251151812222:5hzpPXHPDuvgy9XB8TLn_OLnB18@dummirpw8
