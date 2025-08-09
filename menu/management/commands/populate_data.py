@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from menu.models import MealOption, Beverage
 from blog.models import Post
 from django.contrib.sites.models import Site
+from django.utils import timezone
 
 User = get_user_model()
 
@@ -98,11 +99,15 @@ class Command(BaseCommand):
         # Create sample blog post if none exist
         if not Post.objects.exists():
             admin_user = User.objects.get(username='admin')
+            now = timezone.now()
             Post.objects.create(
                 title='Welcome to Healthy Bites!',
                 slug='welcome-to-healthy-bites',
                 author=admin_user,
+                created_date=now,
+                updated_date=now,
                 content='Welcome to our healthy eating blog. Discover nutritious recipes and wellness tips.',
+                excerpt='Welcome to our healthy eating blog where we share nutritious recipes, wellness tips, and insights into maintaining a healthy lifestyle.',
                 status=1  # Published
             )
             self.stdout.write('Created sample blog post')
