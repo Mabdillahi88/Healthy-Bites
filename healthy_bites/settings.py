@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-mabdillahi8-healthybite-u7xozuv8v5t.ws-us104.gitpod.io', 'healthy-bites-f515e8b2d14a.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-mabdillahi8-healthybite-u7xozuv8v5t.ws-us104.gitpod.io', 'healthy-bites-f515e8b2d14a.herokuapp.com', 'localhost', '.onrender.com']
 
 
 # Application definition
