@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from menu.models import MealOption, Beverage
 from blog.models import Post
+from booking.models import Table
 from django.contrib.sites.models import Site
 from django.utils import timezone
 
@@ -111,5 +112,14 @@ class Command(BaseCommand):
                 status=1  # Published
             )
             self.stdout.write('Created sample blog post')
+
+        # Create sample tables for booking if none exist
+        if not Table.objects.exists():
+            Table.objects.create(name='Table 1', max_seats=2)
+            Table.objects.create(name='Table 2', max_seats=4)
+            Table.objects.create(name='Table 3', max_seats=6)
+            Table.objects.create(name='Table 4', max_seats=2)
+            Table.objects.create(name='Table 5', max_seats=8)
+            self.stdout.write('Created sample tables for booking')
 
         self.stdout.write(self.style.SUCCESS('Database populated successfully!'))
