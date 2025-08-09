@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
-from menu.models import MenuItem
+from menu.models import MealOption, Beverage
 from blog.models import Post
 from django.contrib.sites.models import Site
 
@@ -21,57 +21,79 @@ class Command(BaseCommand):
         site.name = 'Healthy Bites'
         site.save()
 
-        # Create sample menu items if none exist
-        if not MenuItem.objects.exists():
-            # Smoothies
-            MenuItem.objects.create(
-                name='Green Power Smoothie',
-                description='Spinach, banana, apple, and protein powder',
-                price=7.99,
-                category='smoothie',
-                available=True
-            )
-            MenuItem.objects.create(
-                name='Berry Blast Smoothie',
-                description='Mixed berries, yogurt, and honey',
-                price=6.99,
-                category='smoothie',
-                available=True
-            )
-            
-            # Milkshakes
-            MenuItem.objects.create(
-                name='Chocolate Protein Shake',
-                description='Rich chocolate with whey protein',
+        # Create sample meal options if none exist
+        if not MealOption.objects.exists():
+            # Starters
+            MealOption.objects.create(
+                meal_name='Avocado Toast',
+                description='Fresh avocado on sourdough bread with cherry tomatoes',
                 price=8.99,
-                category='milkshake',
-                available=True
-            )
-            MenuItem.objects.create(
-                name='Vanilla Dream Shake',
-                description='Vanilla ice cream with almond milk',
-                price=7.99,
-                category='milkshake',
+                meal_category=0,  # Starters
                 available=True
             )
             
-            # Food items
-            MenuItem.objects.create(
-                name='Quinoa Power Bowl',
-                description='Quinoa with roasted vegetables and tahini',
+            # Mains
+            MealOption.objects.create(
+                meal_name='Quinoa Power Bowl',
+                description='Quinoa with roasted vegetables and tahini dressing',
                 price=12.99,
-                category='food',
+                meal_category=1,  # Mains
                 available=True
             )
-            MenuItem.objects.create(
-                name='Vegan Burger',
+            MealOption.objects.create(
+                meal_name='Vegan Burger',
                 description='Plant-based burger with sweet potato fries',
                 price=14.99,
-                category='food',
+                meal_category=1,  # Mains
                 available=True
             )
             
-            self.stdout.write('Created sample menu items')
+            # Desserts
+            MealOption.objects.create(
+                meal_name='Chocolate Protein Ball',
+                description='Raw cacao and almond protein balls',
+                price=5.99,
+                meal_category=2,  # Desserts
+                available=True
+            )
+            
+            self.stdout.write('Created sample meal options')
+
+        # Create sample beverages if none exist
+        if not Beverage.objects.exists():
+            # Smoothie Blends
+            Beverage.objects.create(
+                beverage_name='Green Power Smoothie',
+                description='Spinach, banana, apple, and protein powder',
+                price=7.99,
+                beverage_category=0,  # Smoothie Blends
+                available=True
+            )
+            Beverage.objects.create(
+                beverage_name='Berry Blast Smoothie',
+                description='Mixed berries, yogurt, and honey',
+                price=6.99,
+                beverage_category=0,  # Smoothie Blends
+                available=True
+            )
+            
+            # Shake Varieties
+            Beverage.objects.create(
+                beverage_name='Chocolate Protein Shake',
+                description='Rich chocolate with whey protein',
+                price=8.99,
+                beverage_category=1,  # Shake Varieties
+                available=True
+            )
+            Beverage.objects.create(
+                beverage_name='Vanilla Dream Shake',
+                description='Vanilla ice cream with almond milk',
+                price=7.99,
+                beverage_category=1,  # Shake Varieties
+                available=True
+            )
+            
+            self.stdout.write('Created sample beverages')
 
         # Create sample blog post if none exist
         if not Post.objects.exists():
